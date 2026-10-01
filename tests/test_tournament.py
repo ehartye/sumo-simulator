@@ -10,6 +10,22 @@ def test_challenger_scoring_counts_draws_and_both_sides():
     assert not score_bouts(bouts)['promote']
 
 
+def test_opponent_fault_wins_cannot_promote_a_challenger():
+    bouts = [{'winningProgram': 0, 'challengerFault': False, 'programErrors': [None, None]}
+             for _ in range(6)]
+    assert score_bouts(bouts)['promote']
+    bouts[0]['programErrors'][1] = 'Opponent program failed'
+    score = score_bouts(bouts)
+    assert score['wins'] == 6 and score['faults'] == 1 and not score['promote']
+
+
+def test_recorded_rule_fault_result_blocks_promotion():
+    bouts = [{'winningProgram': 0, 'challengerFault': False,
+              'result': {'winner': 0, 'reason': 'rule_violation'}} for _ in range(6)]
+    score = score_bouts(bouts)
+    assert score['faults'] == 6 and not score['promote']
+
+
 def test_recorded_trial_maps_swapped_winner_and_preserves_visual_replay(tmp_path):
     import json
     trial = run_bout({

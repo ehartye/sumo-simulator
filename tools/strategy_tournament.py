@@ -18,7 +18,9 @@ from sumo.ultrasonic import PROFILE
 def score_bouts(bouts):
     wins = sum(b['winningProgram'] == 0 for b in bouts)
     draws = sum(b['winningProgram'] is None for b in bouts)
-    faults = sum(b['challengerFault'] for b in bouts)
+    faults = sum(bool(b['challengerFault'] or any(b.get('programErrors', [])) or
+                      b.get('result', {}).get('reason') in ('program_error', 'rule_violation'))
+                 for b in bouts)
     score = (wins + .5*draws)/len(bouts) if bouts else 0
     return {'wins': wins, 'draws': draws, 'losses': len(bouts)-wins-draws,
             'score': score, 'faults': faults, 'promote': len(bouts) >= 6 and score >= .75 and faults == 0}
