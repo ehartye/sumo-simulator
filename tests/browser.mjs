@@ -37,6 +37,17 @@ try {
   assert(replay.ultrasonicSamples.length > 2000, 'Sensors log at 100 Hz independently of browser pumping');
   assert(replay.ultrasonicSamples.some(sample => sample.reason === 'echo' && sample.hitPoint && sample.hitObject));
   assert(replay.metadata.sensorLogFile && replay.metadata.sensorMetadataFile);
+  assert(replay.events.some(event => event.type === 'opponent_spotted'));
+  assert(replay.events.some(event => event.type === 'contact_started'), 'Default programs physically engage');
+  assert(replay.events.some(event => event.type === 'program_log' && event.message.startsWith('charge')));
+  assert.equal(replay.events.at(-1).type, 'match_ended');
+  assert.match(await page.locator('#event-summary').textContent(), /First robot contact/);
+  await page.locator('#event-filter').selectOption('contact');
+  const contactEvent = replay.events.find(event => event.type === 'contact_started');
+  await page.locator(`[data-event-id="${contactEvent.id}"]`).click();
+  assert(Math.abs(Number(await page.locator('#clock').textContent())-contactEvent.time) <= .026, 'Event seeks nearest replay frame');
+  await page.locator('#scrub').evaluate(input => { input.value = input.max; input.dispatchEvent(new Event('input')); });
+  await page.locator('#event-filter').selectOption('all');
   const diagnostic = await page.evaluate(() => fetch('/api/diagnostics').then(r => r.json()));
   assert.equal(diagnostic.samples.length, replay.ultrasonicSamples.length);
   assert(replay.frames.at(-1).rules.bots.every(bot => bot.phase === 'engaged' && !bot.violation), 'Both opening paths complete');
@@ -44,6 +55,7 @@ try {
   await page.locator('#code0').fill('raise ValueError("intentional browser test fault")');
   await page.click('#reset');
   await page.waitForFunction(() => document.querySelector('#clock').textContent === '0.00');
+  assert.match(await page.locator('#event-summary').textContent(), /No robot contact/);
   await page.click('#step');
   await page.waitForFunction(() => document.querySelector('#match-state').textContent.includes('program error'));
   const fault = await page.evaluate(() => fetch('/api/replay').then(r => r.json()));

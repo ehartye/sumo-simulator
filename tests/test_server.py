@@ -20,3 +20,11 @@ def test_http_match_replay_validation_and_program_failure():
         assert replay['metadata']['seed'] == 13
         assert len(replay['metadata']['robotHash']) == 64
         assert replay['frames'][-1]['result'] == result['result']
+        assert result['events'][-1]['type'] == 'match_ended'
+        assert replay['events'] == client.get('/api/events').json()['events']
+        assert replay['events'][-1]['result'] == result['result']
+        from pathlib import Path
+        import json
+        saved = [json.loads(line) for line in Path(replay['metadata']['eventLogFile']).read_text().splitlines()]
+        assert saved == replay['events']
+        assert client.post('/api/step', json={'seconds': .02}).json()['events'] == []

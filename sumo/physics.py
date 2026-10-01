@@ -60,9 +60,22 @@ class World:
         self.ultrasonic_latest = [None, None]
         self.steps = 0
         self.contacts = 0
+        self.events = []
+        self._opponent_visible = [False, False]
+        self._touching = False
+        self._result_logged = False
         mujoco.mj_forward(self.model, self.data)
         for bot in (0, 1):
             self.sensors(bot)
+
+    def record_event(self, kind, **details):
+        self.events.append({'id': len(self.events), 'time': round(float(self.data.time), 6),
+                            'type': kind, **details})
+
+    def record_result(self):
+        if self.result and not self._result_logged:
+            self.record_event('match_ended', result=dict(self.result))
+            self._result_logged = True
 
     def _wheel(self, bot, port):
         if bot not in (0, 1) or port not in ('A', 'B'):
@@ -144,17 +157,26 @@ class World:
                 mujoco.mj_kinematics(self.model, self.data)
                 for bot in (0, 1):
                     self.sensors(bot)
+            self.record_result()
 
     def _judge(self):
         floor = self.model.geom('outside_floor').id
         losers = set()
         self.contacts = 0
+        touching_parts = None
         for contact in self.data.contact:
             names = [mujoco.mj_id2name(self.model, mujoco.mjtObj.mjOBJ_GEOM, int(g)) or '' for g in contact.geom]
             if floor in contact.geom:
                 losers.update(int(name[1]) for name in names if name.startswith(('b0_', 'b1_')))
             if any(n.startswith('b0_') for n in names) and any(n.startswith('b1_') for n in names):
                 self.contacts += 1
+                if contact.dist <= 0:
+                    touching_parts = sorted(names)
+        touching = touching_parts is not None
+        if touching != self._touching:
+            self.record_event('contact_started' if touching else 'contact_ended',
+                              **({'parts': touching_parts} if touching else {}))
+            self._touching = touching
         if losers:
             self.result = {'winner': None if len(losers) == 2 else 1-next(iter(losers)),
                            'reason': 'outside_floor_contact', 'time': self.data.time}
@@ -188,6 +210,12 @@ class World:
         diagnostic['sampleTick'] = tick
         self.ultrasonic_latest[bot] = diagnostic
         self.ultrasonic_log.append(diagnostic)
+        # Observer annotation only: hardware returns distance, never target identity.
+        visible = diagnostic['reason'] == 'echo' and (diagnostic['hitObject'] or '').startswith(f'b{1-bot}_')
+        if visible != self._opponent_visible[bot]:
+            self.record_event('opponent_spotted' if visible else 'opponent_lost', bot=bot,
+                              distanceMm=diagnostic['distanceMm'], hitObject=diagnostic['hitObject'])
+            self._opponent_visible[bot] = visible
         distance = diagnostic['distanceMm']
         sensor = self.sensor_pose(bot, 'color')
         radius = math.hypot(sensor[0], sensor[2])
@@ -217,4 +245,5 @@ class World:
                            'motors': [{'port': p, 'speed': self.wheel_speed(bot, p), 'angle': self.wheel_angle(bot, p),
                                        'current': self.currents[bot][i], 'command': self.modes[bot][i]} for i,p in enumerate(('A','B'))],
                            'battery': self.voltage[bot]})
-        return {'time': self.data.time, 'bots': bodies, 'contacts': self.contacts, 'result': self.result, 'seed': self.seed}
+        return {'time': self.data.time, 'bots': bodies, 'contacts': self.contacts, 'result': self.result,
+                'seed': self.seed, 'eventCount': len(self.events)}

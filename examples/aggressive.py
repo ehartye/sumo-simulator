@@ -31,18 +31,31 @@ while abs(hub.imu.heading()) < 180:
 left.brake()
 right.brake()
 
+state = None
 while True:
+    distance = opponent.distance()
     if edge.reflection() > 55:
+        decision = 'border retreat'
+        if decision != state:
+            print(decision)
         left.run(-650)
         right.run(-650)
         wait(180)
         left.run(-450)
         right.run(450)
         wait(170)
-    elif opponent.distance() < 550:
+    # 2000 is Pybricks' no-valid-echo sentinel. Acquire across the whole ring.
+    elif distance < 2000:
+        decision = 'charge'
+        if decision != state:
+            print(decision, distance, 'mm')
         left.run(950)
         right.run(950)
     else:
+        decision = 'search'
+        if decision != state:
+            print(decision)
         left.run(350)
         right.run(-350)
+    state = decision
     wait(10)

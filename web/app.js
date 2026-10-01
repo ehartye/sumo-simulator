@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const $ = id => document.getElementById(id);
 let running = false, busy = false, initialized = false, frames = [], latest = null;
+let events = [], eventViewKey = '';
 let arena = { radius: .6096, height: .0254, border: .0508, timeout: 120 };
 const models = [], bodyObjects = [];
 const viewport = $('viewport');
@@ -69,7 +70,56 @@ async function api(path, body) {
   return data;
 }
 function fail(error) { running = false; $('run').textContent = '▶ Run match'; $('error').textContent = error.message; }
+function eventText(event) {
+  const bot = event.bot === 0 ? 'Blue' : 'Red';
+  switch (event.type) {
+    case 'opponent_spotted': return `${bot} · Opponent spotted · ${event.distanceMm} mm`;
+    case 'opponent_lost': return `${bot} · Opponent echo lost`;
+    case 'contact_started': return 'Robots made contact';
+    case 'contact_ended': return 'Robots separated';
+    case 'program_log': return `${bot} program · ${event.message}`;
+    case 'opening_phase': return `${bot} · ${event.phase}${event.opening ? ' · '+event.opening : ''}`;
+    case 'match_ended': return `${event.result.winner === null ? 'Draw' : event.result.winner === 0 ? 'Blue wins' : 'Red wins'} · ${event.result.reason.replaceAll('_', ' ')}`;
+    default: return event.type;
+  }
+}
+function displayEvents(frame) {
+  const filter = $('event-filter').value;
+  const occurred = events.filter(event => event.id < frame.eventCount);
+  const key = `${occurred.length}:${filter}`;
+  if (key === eventViewKey) return;
+  eventViewKey = key;
+  const first = type => occurred.find(event => event.type === type);
+  const spotted = first('opponent_spotted'), contact = first('contact_started');
+  $('event-summary').textContent = `${spotted ? 'First opponent echo '+spotted.time.toFixed(3)+' s' : 'No opponent spotted'} · ${contact ? 'First robot contact '+contact.time.toFixed(3)+' s' : 'No robot contact'} · ${occurred.length} events recorded`;
+  const filtered = occurred.filter(event => filter === 'all' ||
+    (filter === 'sensor' && event.type.startsWith('opponent_')) ||
+    (filter === 'contact' && event.type.startsWith('contact_')) ||
+    (filter === 'program' && event.type === 'program_log'));
+  $('event-list').replaceChildren(...filtered.slice(-300).map(event => {
+    const li = document.createElement('li'), button = document.createElement('button');
+    button.dataset.eventId = event.id;
+    button.className = event.bot === 0 ? 'event-blue' : event.bot === 1 ? 'event-red' : 'event-shared';
+    const time = document.createElement('time'); time.textContent = event.time.toFixed(3)+' s';
+    const text = document.createElement('span'); text.textContent = eventText(event);
+    button.append(time, text);
+    button.title = event.parts?.join(' ↔ ') || event.hitObject || 'Inspect nearest recorded frame';
+    button.onclick = () => control(async () => {
+      let nearest = 0;
+      frames.forEach((candidate, i) => { if (Math.abs(candidate.time-event.time) < Math.abs(frames[nearest].time-event.time)) nearest = i; });
+      $('scrub').value = nearest; display(frames[nearest]);
+    });
+    li.append(button); return li;
+  }));
+  if (!filtered.length) {
+    const li = document.createElement('li'); li.textContent = 'No matching events at this replay time.'; $('event-list').append(li);
+  } else if (filtered.length > 300) {
+    const li = document.createElement('li'); li.textContent = `Showing latest 300 of ${filtered.length} matching events. Save run includes all events.`; $('event-list').prepend(li);
+  }
+}
+$('event-filter').onchange = () => { if (latest) displayEvents(frames[Number($('scrub').value)] || latest); };
 function display(frame) {
+  displayEvents(frame);
   $('clock').textContent = frame.time.toFixed(2);
   const result = frame.result;
   $('match-state').textContent = result ? `${result.winner === null ? 'DRAW' : result.winner === 0 ? 'BLUE WINS' : 'RED WINS'} · ${result.reason.replaceAll('_',' ')}` : running ? 'MATCH IN PROGRESS' : 'PAUSED / INSPECT';
@@ -103,6 +153,8 @@ function display(frame) {
   });
 }
 function record(frame) {
+  events.push(...(frame.events || []));
+  delete frame.events;
   latest = frame;
   if (!frames.length || frame.time !== frames.at(-1).time) frames.push(frame);
   else frames[frames.length-1] = frame;
@@ -115,7 +167,7 @@ async function reset() {
   const seed = Number($('seed').value);
   if (!Number.isInteger(seed) || seed < 0) throw new Error('Seed must be a nonnegative integer.');
   const frame = await api('reset', { programs: [$('code0').value, $('code1').value], seed, timeout: arena.timeout });
-  frames = []; initialized = true; record(frame);
+  frames = []; events = []; eventViewKey = ''; initialized = true; record(frame);
   $('match-state').textContent = 'READY TO TEST';
 }
 async function guarded(action) {

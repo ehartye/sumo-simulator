@@ -44,7 +44,7 @@ def main():
                 winner = result['winner'] if result else None
                 bouts.append({'seed': args.seed+pair, 'swapped': swapped, 'result': result,
                               'winningProgram': None if winner is None else (1-winner if swapped else winner),
-                              'programs': final['programs']})
+                              'programs': final['programs'], 'events': list(runner.world.events)})
                 log_path = log_dir/f'{run_id}-{pair}-{int(swapped)}-ultrasonic.jsonl'
                 with log_path.open('w', encoding='utf-8') as stream:
                     for sample in runner.world.ultrasonic_log:

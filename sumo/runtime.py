@@ -264,6 +264,7 @@ class Runner:
         self.world, self.cpu_timeout, self.operation_limit = world, cpu_timeout, operation_limit
         from .rules import StartProtocol
         self.rules = StartProtocol(rules, world) if rules is not None else None
+        self._phases = [None, None]
         self.processes, self.connections = [], []
         self.programs = [{'status': 'running', 'error': None, 'operations': 0, 'logs': []} for _ in programs]
         self.waiting = [None, None]
@@ -401,6 +402,7 @@ class Runner:
         elif operation == 'print':
             self.programs[bot]['logs'].append(args[0])
             self.programs[bot]['logs'] = self.programs[bot]['logs'][-200:]
+            self.world.record_event('program_log', bot=bot, message=args[0])
         elif operation == 'motion':
             port, kind, speed, target, then, should_wait = args
             motion = {'kind': kind, 'then': then}
@@ -431,6 +433,11 @@ class Runner:
             self.programs[bot]['status'] = 'waiting'
 
     def _finish_faults(self):
+        if self.rules is not None:
+            for bot, state in enumerate(self.rules.bots):
+                if state['phase'] != self._phases[bot]:
+                    self.world.record_event('opening_phase', bot=bot, phase=state['phase'], opening=state['opening'])
+                    self._phases[bot] = state['phase']
         if self.world.result:
             return True
         violations = [bot for bot in range(2) if self.rules is not None and self.rules.bots[bot]['violation']]
@@ -440,6 +447,7 @@ class Runner:
         if errors:
             self.world.result = {'winner': None if len(errors) == 2 else 1-errors[0],
                                  'reason': 'rule_violation' if violations else 'program_error', 'time': self.world.data.time}
+            self.world.record_result()
         return bool(errors)
 
     def step(self, seconds):

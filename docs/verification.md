@@ -1,9 +1,9 @@
 # Verification record — 2026-10-01
 
 - `npm run build:robot`: valid GLB and physical export, 43 parts, 61 mates, one connected component, approximately 357.53 g. Nominal envelope 103.6 × 80.0 × 158.8 mm.
-- `.venv/Scripts/python -m pytest -q`: 68 passed. One dependency deprecation warning from Starlette/AnyIO.
+- `.venv/Scripts/python -m pytest -q`: 72 passed. One dependency deprecation warning from Starlette/AnyIO.
 - `node tests/browser.mjs`: passed; 12-second bounded bout, 241 replay frames, both opening paths engaged, no browser errors. Sensor revision also verified 2402 clock-driven samples, selected echo rays, status and complete diagnostic export. Verified run/pause/step, completion, fault replay, reset, mobile overflow and standalone robot review. An initial attempt during the full Agent Meshes integration suite timed out after the bout; the standalone rerun passed.
-- Paired CLI bouts, seed 7, 30-second limit: both completed as timeout draws with no program errors. These smoke runs demonstrate execution, not strategy quality or calibrated performance.
+- After correcting the example acquisition thresholds, six paired CLI bouts (seeds 7–9, sides swapped, 30-second limit) all logged charge decisions from both programs and inter-robot contact. First contact occurred at 5.775–5.828 s. Five bouts ended in outside-floor contact at 18.096–19.480 s; seed 7 with original sides reached the 30-second limit. Full report: `artifacts/event-validation.json`. These scenarios verify engagement, not calibrated hardware performance or general strategy quality.
 - Independent runtime review additionally checked seeds 0, 7 and 42: both opening examples completed legally.
 - Agent Meshes assembly/connectivity: 33 tests passed; TypeScript typecheck passed. Feature commits follow remote main f5fa7ee and are recorded on `feat/spike-robot-assets`.
 - Full Agent Meshes suite is **not green**: Blender/Unreal integration errors and timeouts; run interrupted. An unchanged upstream archive reproduces the Blender skin-sample failure because installed Blender 4.2.3 lacks `AnimData.action_slot`. Its seven carving tests pass in isolation. Temporary baseline files remain under the sibling's `.cache/spike-baseline` after automatic approval blocked cleanup; they are not committed.
@@ -12,6 +12,8 @@ Independent static review found and verified fixes for tire/bracket overlap, cas
 
 No physical specimen has been assembled, weighed or calibrated. Static connections do not certify insertion sequence, cable routing, strength or all possible interference. The motor output disc remains visually fixed while wheel axles/pins rotate. MuJoCo uses explicit collision proxies and approximate inertia/contact/control/sensors. See [calibration](calibration.md) before interpreting predicted wins as real robot performance.
 
-Wiki evidence, architecture and roadmap were committed and pushed on wiki `main` through f275940a. Code remains on feature branches; no code push or merge was performed.
+Wiki evidence, architecture and roadmap were committed and pushed on wiki `main` through 0ed84ccf. Code remains on feature branches; no code push or merge was performed.
 
 Ultrasonic revision: the old nine-ray fan's angular blind strips are covered by regression tests. New tests cover a dense 3D cone, mounting orientation, vertical detection, occlusion, whole-robot self-exclusion, hardware-clock sampling, log/metadata persistence and CLI logs. A reviewed 12-second seed-7 browser run produced 442 opposite-robot echoes and 1960 no-echo samples. Hardware specifications and uncalibrated policies are separated in [ultrasonic.md](ultrasonic.md).
+
+Match-event revision: reproduced the old examples making no contact in 20 s, then passed the engagement regression with corrected acquisition thresholds. Events are tested for sensor transitions, viewer-independent capture, physical contact excluding floor, separation, timestamped program messages, final results and API/disk consistency. The browser rerun passed with 241 frames, 86 events, actual contact, filters, contact-event replay seeking, reset clearing, mobile fit and no page errors. Seed 7 recorded the first opponent echo at 3.930 s, red's first charge decision at 4.100 s, and first robot contact at 5.775 s. Independent code review accepted the changes and reproduced all 72 passing tests.
