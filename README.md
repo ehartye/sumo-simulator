@@ -53,14 +53,20 @@ The target is **synchronous Pybricks v4 style**, implemented with CPython device
 | `Motor(Port.A/Port.B, positive_direction=...)` | `run`, `dc`, `stop`, `brake`, `hold`, `angle`, `speed`, `reset_angle` |
 | `run_time`, `run_angle`, `run_target` | `then=Stop.COAST/BRAKE/HOLD`, `wait=True/False`; approximate controller |
 | `ColorSensor(Port.C).reflection()` | Downward ring reflectance 0–100 |
-| `UltrasonicSensor(Port.D).distance()` | Nine-ray cone, millimeters; 2000 for no return |
+| `UltrasonicSensor(Port.D).distance()` | Dense 3D cone, millimeters; 2000 for no valid return |
 | `PrimeHub()` | Relative/unwrapped `imu.heading()`, `battery.voltage()` in mV |
 | `wait(ms)`, `StopWatch.time/reset` | Shared simulation clock, independent bot waits |
 | `Port`, `Direction`, `Stop`, `math`, limited `random` | Explicit enums and per-worker seeded PRNG |
 
-Use CLOCKWISE on A and COUNTERCLOCKWISE on B for forward motion. Encoders are integer degrees at 100 Hz; speed is sampled finite difference. Hardware calls consume a 1 ms scheduling slot, a declared approximation. Sensor noise depends on seed/bot/sample time, so viewer polling does not affect outcomes.
+Use CLOCKWISE on A and COUNTERCLOCKWISE on B for forward motion. Encoders are integer degrees at 100 Hz; speed is sampled finite difference. Hardware calls consume a 1 ms scheduling slot, a declared approximation. Sensors sample on the simulation clock at 100 Hz, including when no program reads them. Noise depends on seed/bot/sample time, so viewer polling does not affect outcomes.
 
 Async tasks, `multitask`, `DriveBase`, gears, advanced control tuning and unlisted modes/APIs fail explicitly. The device interface exposes no opponent pose. Python introspection can bypass the convenience restrictions; only run trusted scripts.
+
+## Sensor diagnostics
+
+The **Sensors** viewer button shows the selected echo ray and hit point. Each bot reports echo/no-echo/below-rated-range status; hover that status for sample timing and rejected-ray counts. `/api/diagnostics` exposes the current detailed log. Saved runs include `ultrasonicSamples`. Every UI match automatically writes a unique `.cache/runs/*-ultrasonic.jsonl` plus metadata JSON containing programs, seed, model assumptions and robot hash; reset preserves prior logs. CLI batches write sensor logs beside their output under `sensor-logs/` and reference them from the report.
+
+The sensor uses LEGO's nominal range, resolution, sampling rate and entrance-angle specification. Circular cone shape, reflection rejection, near-field policy and noise are explicitly uncalibrated. See [sensor evidence and diagnostic fields](docs/ultrasonic.md).
 
 ## Match rules and physics
 

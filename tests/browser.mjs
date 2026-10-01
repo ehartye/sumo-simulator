@@ -16,6 +16,10 @@ try {
   });
   await page.goto('http://127.0.0.1:8765');
   await page.waitForFunction(() => document.querySelectorAll('.reading').length === 8 && !document.querySelector('#loading'));
+  assert.match(await page.locator('#sensor-status0').textContent(), /No echo/);
+  await page.click('#sensor-view');
+  assert.equal(await page.locator('#sensor-view').getAttribute('aria-pressed'), 'false');
+  await page.click('#sensor-view');
   await page.screenshot({ path: 'artifacts/screenshots/workbench.png', fullPage: true });
   await page.click('#run');
   await page.waitForFunction(() => Number(document.querySelector('#clock').textContent) > .5);
@@ -30,6 +34,11 @@ try {
   await page.waitForFunction(() => /WINS|DRAW/.test(document.querySelector('#match-state').textContent), null, { timeout: 240000 });
   const replay = await page.evaluate(() => fetch('/api/replay').then(r => r.json()));
   assert(replay.frames.at(-1).result, 'Completed bout must be saved');
+  assert(replay.ultrasonicSamples.length > 2000, 'Sensors log at 100 Hz independently of browser pumping');
+  assert(replay.ultrasonicSamples.some(sample => sample.reason === 'echo' && sample.hitPoint && sample.hitObject));
+  assert(replay.metadata.sensorLogFile && replay.metadata.sensorMetadataFile);
+  const diagnostic = await page.evaluate(() => fetch('/api/diagnostics').then(r => r.json()));
+  assert.equal(diagnostic.samples.length, replay.ultrasonicSamples.length);
   assert(replay.frames.at(-1).rules.bots.every(bot => bot.phase === 'engaged' && !bot.violation), 'Both opening paths complete');
   await page.screenshot({ path: 'artifacts/screenshots/completed-bout.png', fullPage: true });
   await page.locator('#code0').fill('raise ValueError("intentional browser test fault")');

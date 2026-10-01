@@ -120,6 +120,7 @@ def make_model(robot, arena, step, friction, outward_start=False):
                 SubElement(elements[part['body']], 'geom', name=f'{prefix}{part["name"]}_{index}',
                            type=shape, pos=numbers(pos), quat=numbers(quat), size=numbers(size),
                            mass=str(part['massKg']/len(part['colliders'])),
+                           group=str(bot+1),
                            priority='1',
                            contype=str(2 if bot == 0 else 4), conaffinity=str(5 if bot == 0 else 3),
                            friction=f'{coefficient} 0.0005 0.00001', condim='6')

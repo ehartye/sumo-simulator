@@ -43,6 +43,13 @@ const halos = [0x1767c7, 0xcb5146].map(color => {
   const mesh = new THREE.Mesh(new THREE.RingGeometry(.085, .088, 64), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: .8, depthWrite: false }));
   mesh.rotation.x = -Math.PI / 2; scene.add(mesh); return mesh;
 });
+let showSensors = true;
+const sensorRays = [0x1767c7, 0xcb5146].map(color => {
+  const geometry = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()]);
+  const ray = new THREE.Line(geometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: .9 }));
+  const hit = new THREE.Mesh(new THREE.SphereGeometry(.005, 8, 6), new THREE.MeshBasicMaterial({ color }));
+  scene.add(ray, hit); return { ray, hit };
+});
 new ResizeObserver(() => { const { width, height } = viewport.getBoundingClientRect(); renderer.setSize(width, height); camera.aspect = width/height; camera.updateProjectionMatrix(); }).observe(viewport);
 function draw() { controls.update(); renderer.render(scene, camera); requestAnimationFrame(draw); }
 draw();
@@ -50,6 +57,10 @@ $('iso').onclick = () => { camera.position.set(1, 1.3, 1.3); controls.target.set
 $('top').onclick = () => { camera.position.set(0, 2.3, .001); controls.target.set(0, 0, 0); };
 $('details').onclick = () => $('build-dialog').showModal();
 $('close-details').onclick = () => $('build-dialog').close();
+$('sensor-view').onclick = () => {
+  showSensors = !showSensors; $('sensor-view').setAttribute('aria-pressed', String(showSensors));
+  if (latest) display(frames[Number($('scrub').value)] || latest);
+};
 
 async function api(path, body) {
   const response = await fetch(`/api/${path}`, body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
@@ -75,6 +86,20 @@ function display(frame) {
     const opening = frame.rules?.bots?.[i];
     $('status'+i).textContent = program?.error || (opening ? `${opening.phase}${opening.opening ? ' · '+opening.opening : ''}` : program?.status) || 'Ready';
     $('status'+i).classList.toggle('error', !!program?.error);
+    const sensor = bot.ultrasonic;
+    const { ray, hit } = sensorRays[i];
+    ray.visible = hit.visible = false;
+    if (sensor) {
+      const labels = { echo: 'Echo', no_echo: 'No echo', below_minimum: 'Below rated range (model policy)' };
+      $('sensor-status'+i).textContent = `${labels[sensor.reason]}${sensor.hitObject ? ' · '+sensor.hitObject.replace(/^b[01]_/, '').replace(/_\d+$/, '').replaceAll('_',' ') : ''}`;
+      $('sensor-status'+i).title = `Sample ${sensor.sampleTick} at ${sensor.sampleTime.toFixed(3)} s; ${sensor.counts.inRange} in-range rays, ${sensor.counts.grazing} grazing rays rejected. Save run includes the full diagnostic log.`;
+      if (sensor.hitPoint) {
+        const positions = ray.geometry.attributes.position;
+        positions.setXYZ(0, ...sensor.origin); positions.setXYZ(1, ...sensor.hitPoint);
+        positions.needsUpdate = true; ray.geometry.computeBoundingSphere();
+        hit.position.fromArray(sensor.hitPoint); ray.visible = hit.visible = showSensors;
+      }
+    }
   });
 }
 function record(frame) {

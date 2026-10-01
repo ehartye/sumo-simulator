@@ -2,11 +2,13 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from uuid import uuid4
 
 from .physics import World
 from .robot import ROOT
 from .runtime import Runner
 from .rules import ATOMIC_EAGLES_2022
+from .ultrasonic import PROFILE as ULTRASONIC_PROFILE
 
 
 def main():
@@ -29,6 +31,9 @@ def main():
     if not 1 <= args.pairs <= 100 or not 1 <= args.timeout <= 120 or args.seed < 0:
         parser.error('pairs must be 1..100, timeout 1..120, and seed nonnegative')
     programs = [args.blue.read_text(), args.red.read_text()]
+    log_dir = args.out.parent/'sensor-logs'
+    log_dir.mkdir(parents=True, exist_ok=True)
+    run_id = uuid4().hex[:12]
     bouts = []
     for pair in range(args.pairs):
         for swapped in (False, True):
@@ -40,12 +45,18 @@ def main():
                 bouts.append({'seed': args.seed+pair, 'swapped': swapped, 'result': result,
                               'winningProgram': None if winner is None else (1-winner if swapped else winner),
                               'programs': final['programs']})
+                log_path = log_dir/f'{run_id}-{pair}-{int(swapped)}-ultrasonic.jsonl'
+                with log_path.open('w', encoding='utf-8') as stream:
+                    for sample in runner.world.ultrasonic_log:
+                        stream.write(json.dumps(sample)+'\n')
+                bouts[-1]['sensorLogFile'] = str(log_path.resolve())
                 print(json.dumps(bouts[-1]))
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({'version': 1, 'fidelity': 'uncalibrated',
         'programs': programs, 'programHashes': [hashlib.sha256(p.encode()).hexdigest() for p in programs],
         'robotHash': hashlib.sha256((ROOT/'artifacts/robot/robot.json').read_bytes()).hexdigest(),
         'arena': vars(ATOMIC_EAGLES_2022.arena(args.timeout)), 'rules': ATOMIC_EAGLES_2022.info(),
+        'ultrasonicModel': ULTRASONIC_PROFILE,
         'bouts': bouts}, indent=2))
 
 

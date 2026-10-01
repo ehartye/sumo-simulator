@@ -6,6 +6,7 @@ import mujoco
 import numpy as np
 
 from .robot import load_robot, make_model, rotate, wxyz
+from .ultrasonic import sample as sample_ultrasonic
 
 
 @dataclass(frozen=True)
@@ -55,9 +56,13 @@ class World:
         self.result = None
         self.sensor_cache = [None, None]
         self.sensor_tick = [-1, -1]
+        self.ultrasonic_log = []
+        self.ultrasonic_latest = [None, None]
         self.steps = 0
         self.contacts = 0
         mujoco.mj_forward(self.model, self.data)
+        for bot in (0, 1):
+            self.sensors(bot)
 
     def _wheel(self, bot, port):
         if bot not in (0, 1) or port not in ('A', 'B'):
@@ -93,6 +98,7 @@ class World:
         address = self.model.jnt_qposadr[joint]
         self.data.qpos[address:address+3] = position
         mujoco.mj_forward(self.model, self.data)
+        self.sensor_tick = [-1, -1]
 
     def _apply_motors(self):
         self.data.qfrc_applied[:] = 0
@@ -131,6 +137,13 @@ class World:
             mujoco.mj_step(self.model, self.data)
             self.steps += 1
             self._judge()
+            tick = int((self.data.time+1e-9)*100)
+            if any(previous != tick for previous in self.sensor_tick):
+                # mj_step integrates qpos after computing body transforms.
+                # Refresh transforms before observing the completed timestep.
+                mujoco.mj_kinematics(self.model, self.data)
+                for bot in (0, 1):
+                    self.sensors(bot)
 
     def _judge(self):
         floor = self.model.geom('outside_floor').id
@@ -166,17 +179,16 @@ class World:
         # Noise depends on simulated sample identity, never viewer polling frequency.
         rng = np.random.default_rng(np.random.SeedSequence([self.seed, bot, tick]))
         position, quaternion = self.pose(bot)
-        # Nine sampled ultrasonic rays span the nominal cone; multi-path is not modeled.
         origin = self.sensor_pose(bot, 'distance')
-        distances = []
-        geomgroup = np.ones(6, dtype=np.uint8)
-        for yaw in np.linspace(-math.radians(35), math.radians(35), 9):
-            direction = rotate(quaternion, [math.sin(yaw), 0, math.cos(yaw)])
-            geomid = np.array([-1], dtype=np.int32)
-            distance = mujoco.mj_ray(self.model, self.data, origin, direction, geomgroup, 1, self.roots[bot], geomid)
-            if .05 <= distance <= 2:
-                distances.append(distance)
-        distance = round(np.clip(min(distances)*1000 + rng.normal(0, 5), 50, 2000)) if distances else 2000
+        eyes = next(p for p in self.robot['parts'] if p['name'] == 'eyes')
+        body = self.model.body(f'b{bot}_{eyes["body"]}').id
+        mount = np.column_stack([rotate(wxyz(eyes['rotation']), axis) for axis in np.eye(3)])
+        rotation = self.data.xmat[body].reshape(3, 3) @ mount
+        diagnostic = sample_ultrasonic(self.model, self.data, bot, origin, rotation, rng)
+        diagnostic['sampleTick'] = tick
+        self.ultrasonic_latest[bot] = diagnostic
+        self.ultrasonic_log.append(diagnostic)
+        distance = diagnostic['distanceMm']
         sensor = self.sensor_pose(bot, 'color')
         radius = math.hypot(sensor[0], sensor[2])
         # Approximate 6 mm footprint smooths the border; height/tipping gates the reading.
@@ -201,6 +213,7 @@ class World:
                 q = self.data.xquat[idx]
                 body_poses[body['name']] = {'position': self.data.xpos[idx].tolist(), 'rotation': [*q[1:].tolist(), float(q[0])]}
             bodies.append({'bodies': body_poses, 'sensors': self.sensors(bot),
+                           'ultrasonic': self.ultrasonic_latest[bot],
                            'motors': [{'port': p, 'speed': self.wheel_speed(bot, p), 'angle': self.wheel_angle(bot, p),
                                        'current': self.currents[bot][i], 'command': self.modes[bot][i]} for i,p in enumerate(('A','B'))],
                            'battery': self.voltage[bot]})

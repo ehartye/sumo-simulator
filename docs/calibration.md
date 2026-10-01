@@ -6,7 +6,7 @@ The current profile is **uncalibrated**. Do not use match win rate as proof that
 
 - LDraw official library downloaded 2026-10-01; archive hash and 279-file dependency closure recorded in `assets/ldraw-provenance.json`. Nominal scale is 0.4 mm/LDU; Agent Meshes rotates 180° around X to make +Y up, then centers each part. [LDraw specification](https://www.ldraw.org/article/218.html).
 - LEGO medium angular motor 45603 at 7.2 V: nominal free speed 185 rpm, stall torque 18 N·cm, stall current 800 mA. Free-speed tolerance ±15%; encoder 1° resolution, ±3° accuracy and 100 Hz update. The model linearly interpolates the torque-speed endpoints, which is an approximation. [LEGO sheet](https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt692436dd1e8fa71c/5f8801d5c8a27c1d9614c27e/techspecs_technicmediumangularmotor.pdf?locale=en-us).
-- Nominal ultrasonic range 50–2000 mm, ±20 mm accuracy and approximately ±35° cone, with range-dependent response. The simulator samples nine horizontal rays, not acoustic propagation. [LEGO sheet](https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt64c2b9534cf10f68/5f8801b8bc43790f5c4389ea/techspecs_technicdistancesensor.pdf?locale=en-us).
+- Nominal ultrasonic range 50–2000 mm, ±20 mm accuracy and approximately ±35° cone, with range-dependent response. The simulator samples a dense circular 3D cone, not acoustic propagation. [LEGO sheet](https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt64c2b9534cf10f68/5f8801b8bc43790f5c4389ea/techspecs_technicdistancesensor.pdf?locale=en-us).
 - Hub nominal 56 × 32 × 88 mm, consistent with imported source bounds. [LEGO sheet](https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltf512a371e82f6420/5f8801baf4f4cf0fa39d2feb/techspecs_techniclargehub.pdf?locale=en-us).
 - Part-level mass records: BrickLink IDs `53444c01`, `55422c01`, `54696c01`, `37308c01`, `37316c01`, `39367pb01`, `39370`, `52629`, `32524`, `2780`, `4519`, `64179`, `39793`, `6558`. All exact URLs are in the assembly manifest; retail packaging dimensions/mass were not used.
 - [Pybricks synchronous/cooperative tools](https://docs.pybricks.com/en/stable/tools/index.html). Upstream virtual motor simulation does not provide a ready-made external chassis-load coupling in the examined [pinned driver](https://github.com/pybricks/pybricks-micropython/blob/81bb7272c8296e087085fef4d71d4f9c98c8ebc7/lib/pbio/drv/motor_driver/motor_driver_virtual_simulation.c). The current CPython subset is a deliberate initial implementation; native firmware coupling remains future work.
@@ -24,7 +24,7 @@ The base-set stock manifest preserves 112 replacement-catalog rows; alternative 
 | Battery | 7.2 V supply minus .35 Ω × total motor current, 5 V floor | Loaded voltage/current traces and protection behavior |
 | Motor control | Linear back-EMF model, simple proportional speed/hold loops | Loaded ramps, stall/push force, braking, turn response |
 | Color | 6 mm border transition, black 8/white 88, 0.8-point noise | Actual reflectance vs surface, height, tilt and ambient light |
-| Ultrasonic | Nine horizontal rays, 5 mm Gaussian noise | Angle/range/occlusion map, missed and mixed returns |
+| Ultrasonic | Fixed circular ±35° cone sampled at 1°; 45° per-ray surface-incidence rejection; 5 mm Gaussian noise; below-rated-range returns marked invalid | Measured beam shape vs range, surface/material response, near field, cross-talk and latency |
 | IMU | .05°/s drift plus .08° sample noise | Heading bias/drift under motion and vibration |
 | Encoders | 1° quantization at 100 Hz, finite-difference speed | Real filtered speed, latency and zeroing behavior |
 
@@ -39,3 +39,5 @@ These values are centralized in the small physics/runtime modules. They are not 
 5. Before fitting, set tolerances for speed, stopping distance, turn angle, push force and detection error based on intended use and measurement uncertainty. Keep separate, previously unseen trials for final evaluation. Publish predicted/measured traces, errors and parameter confidence, including failed trials.
 
 Only after the held-out results meet those predeclared tolerances should the profile be labeled calibrated. A native Pybricks runtime would improve software equivalence; it would not remove the need for these physical measurements.
+
+Ultrasonic source specifications, live experimental evidence, model assumptions and automatic diagnostic logs are documented in [ultrasonic.md](ultrasonic.md). The 50 mm rated minimum does not establish real sensor behavior at contact.
