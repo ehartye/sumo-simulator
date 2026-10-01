@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const $ = id => document.getElementById(id);
 let running = false, busy = false, initialized = false, frames = [], latest = null;
 let events = [], eventViewKey = '';
+let loadedReplay = null, liveArena = null;
 let arena = { radius: .6096, height: .0254, border: .0508, timeout: 120 };
 const models = [], bodyObjects = [];
 const viewport = $('viewport');
@@ -70,6 +71,60 @@ async function api(path, body) {
   return data;
 }
 function fail(error) { running = false; $('run').textContent = '▶ Run match'; $('error').textContent = error.message; }
+function setArena(value) {
+  arena = value;
+  ring.geometry.dispose(); ring.geometry = new THREE.CylinderGeometry(arena.radius, arena.radius, arena.height, 128); ring.position.y = arena.height/2;
+  surface.geometry.dispose(); surface.geometry = new THREE.RingGeometry(arena.radius-arena.border, arena.radius, 128); surface.position.y = arena.height+.0003;
+  document.querySelector('.scene-label').textContent = `Ø ${(arena.radius*2000).toFixed(1)} mm · ${(arena.border*1000).toFixed(1)} mm white border`;
+}
+function validateReplay(replay) {
+  const invalid = () => { throw new Error('Invalid replay. Load a version 1 saved run with arena, programs, frames, and events.'); };
+  const vector = (value, size) => Array.isArray(value) && value.length === size && value.every(Number.isFinite);
+  const result = value => value === null || (value && [null, 0, 1].includes(value.winner) && typeof value.reason === 'string');
+  const metadata = replay?.metadata, area = metadata?.arena;
+  if (replay?.version !== 1 || !area || !['radius', 'height', 'border', 'timeout'].every(key => Number.isFinite(area[key]) && area[key] > 0) || area.border >= area.radius ||
+      !Number.isInteger(metadata.seed) || metadata.seed < 0 || metadata.seed > 2147483647 ||
+      !Array.isArray(metadata.programs) || metadata.programs.length !== 2 || !metadata.programs.every(program => typeof program === 'string') ||
+      !Array.isArray(replay.frames) || !replay.frames.length || !Array.isArray(replay.events)) invalid();
+  let previousTime = -1;
+  for (const frame of replay.frames) {
+    if (!Number.isFinite(frame.time) || frame.time < previousTime || !result(frame.result) ||
+        !Number.isInteger(frame.eventCount) || frame.eventCount < 0 || frame.eventCount > replay.events.length ||
+        !Array.isArray(frame.bots) || frame.bots.length !== 2) invalid();
+    previousTime = frame.time;
+    for (const bot of frame.bots) {
+      if (!bot.bodies?.chassis || !Object.values(bot.bodies).every(pose => vector(pose?.position, 3) && vector(pose?.rotation, 4)) ||
+          !Number.isFinite(bot.battery) || !Number.isFinite(bot.sensors?.distance) || !Number.isFinite(bot.sensors?.reflection) ||
+          !Array.isArray(bot.motors) || bot.motors.length !== 2 || !bot.motors.every(motor => Number.isFinite(motor.speed))) invalid();
+      const sensor = bot.ultrasonic;
+      if (sensor && (!Number.isFinite(sensor.sampleTime) || !sensor.counts || typeof sensor.reason !== 'string' ||
+          (sensor.hitObject != null && typeof sensor.hitObject !== 'string') ||
+          (sensor.hitPoint && (!vector(sensor.hitPoint, 3) || !vector(sensor.origin, 3))))) invalid();
+    }
+  }
+  previousTime = -1;
+  replay.events.forEach((event, i) => {
+    if (event.id !== i || !Number.isFinite(event.time) || event.time < previousTime || event.time > replay.frames.at(-1).time || typeof event.type !== 'string' ||
+        (event.type === 'match_ended' && (!event.result || !result(event.result))) ||
+        (event.parts != null && (!Array.isArray(event.parts) || !event.parts.every(part => typeof part === 'string')))) invalid();
+    previousTime = event.time;
+  });
+  return replay;
+}
+async function loadReplay(file) {
+  let replay;
+  try { replay = validateReplay(JSON.parse(await file.text())); }
+  catch (error) { throw new Error(error instanceof SyntaxError ? 'Invalid JSON. Choose a saved run JSON file.' : error.message); }
+  loadedReplay = replay;
+  initialized = false; frames = replay.frames; events = replay.events; eventViewKey = ''; latest = frames.at(-1);
+  setArena(replay.metadata.arena);
+  replay.metadata.programs.forEach((program, i) => { $('code'+i).value = program; $('preset'+i).selectedIndex = -1; });
+  $('seed').value = replay.metadata.seed;
+  $('error').textContent = '';
+  $('replay-source').textContent = `Loaded replay · ${file.name} · Run or Step starts a new match`;
+  $('scrub').max = frames.length-1; $('scrub').value = frames.length-1;
+  display(latest);
+}
 function eventText(event) {
   const bot = event.bot === 0 ? 'Blue' : 'Red';
   switch (event.type) {
@@ -166,7 +221,8 @@ async function reset() {
   running = false; $('run').textContent = '▶ Run match'; $('error').textContent = '';
   const seed = Number($('seed').value);
   if (!Number.isInteger(seed) || seed < 0) throw new Error('Seed must be a nonnegative integer.');
-  const frame = await api('reset', { programs: [$('code0').value, $('code1').value], seed, timeout: arena.timeout });
+  const frame = await api('reset', { programs: [$('code0').value, $('code1').value], seed, timeout: liveArena.timeout });
+  loadedReplay = null; setArena(liveArena); $('replay-source').textContent = 'Live match';
   frames = []; events = []; eventViewKey = ''; initialized = true; record(frame);
   $('match-state').textContent = 'READY TO TEST';
 }
@@ -191,8 +247,12 @@ $('run').onclick = () => {
 };
 $('step').onclick = () => control(async () => { if (!initialized) await reset(); record(await api('step', { seconds: .05 })); });
 $('scrub').oninput = () => { running = false; $('run').textContent = '▶ Run match'; if (frames.length) display(frames[Number($('scrub').value)]); };
-$('download').onclick = () => guarded(async () => { const replay = await api('replay'); const url = URL.createObjectURL(new Blob([JSON.stringify(replay)], { type: 'application/json' })); const link = document.createElement('a'); link.href = url; link.download = `spike-sumo-seed-${replay.metadata.seed ?? 0}.json`; link.click(); URL.revokeObjectURL(url); });
-document.querySelectorAll('input[type=file]').forEach(input => input.onchange = async () => { if (input.files[0]) { $('code'+input.dataset.bot).value = await input.files[0].text(); initialized = false; running = false; $('run').textContent = '▶ Run match'; } });
+$('download').onclick = () => guarded(async () => { const replay = loadedReplay || await api('replay'); const url = URL.createObjectURL(new Blob([JSON.stringify(replay)], { type: 'application/json' })); const link = document.createElement('a'); link.href = url; link.download = `spike-sumo-seed-${replay.metadata.seed ?? 0}.json`; link.click(); URL.revokeObjectURL(url); });
+$('load-replay').onchange = () => {
+  const file = $('load-replay').files[0]; $('load-replay').value = '';
+  if (file) control(() => loadReplay(file));
+};
+document.querySelectorAll('input[data-bot]').forEach(input => input.onchange = async () => { if (input.files[0]) { $('code'+input.dataset.bot).value = await input.files[0].text(); initialized = false; running = false; $('run').textContent = '▶ Run match'; } });
 for (const i of [0, 1]) $('code'+i).oninput = () => { initialized = false; running = false; $('run').textContent = '▶ Run match'; };
 $('seed').onchange = () => { initialized = false; running = false; $('run').textContent = '▶ Run match'; };
 async function pump() {
@@ -201,10 +261,7 @@ async function pump() {
 }
 async function boot() {
   const info = await api('info');
-  arena = info.arena;
-  ring.geometry.dispose(); ring.geometry = new THREE.CylinderGeometry(arena.radius, arena.radius, arena.height, 128); ring.position.y = arena.height/2;
-  surface.geometry.dispose(); surface.geometry = new THREE.RingGeometry(arena.radius-arena.border, arena.radius, 128); surface.position.y = arena.height+.0003;
-  document.querySelector('.scene-label').textContent = `Ø ${(arena.radius*2000).toFixed(1)} mm · ${(arena.border*1000).toFixed(1)} mm white border`;
+  liveArena = info.arena; setArena(liveArena);
   $('rules-description').textContent = 'Facing away · wait 3 seconds · touch white and turn, or pivot 180° on one stationary wheel. Provisional Atomic Eagles 2022 arena; user-specified pivot.';
   const gltf = await new GLTFLoader().loadAsync('/assets/model.glb');
   for (const i of [0, 1]) {
