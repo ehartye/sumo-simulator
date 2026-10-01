@@ -63,3 +63,17 @@ def test_default_programs_detect_and_make_contact():
                 break
         assert all(not b['violation'] for b in frame['rules']['bots'])
         assert contact, 'Default strategies never made robot-to-robot contact'
+
+
+def test_promoted_pressure_programs_open_legally_and_keep_close_echo_memory():
+    root = Path(__file__).resolve().parents[1]
+    programs = [(root/'examples'/name).read_text() for name in ('pressure_full_duty.py', 'pressure_memory.py')]
+    with Runner(World(seed=11, arena=ATOMIC_EAGLES_2022.arena(12), outward_start=True), programs, rules=ATOMIC_EAGLES_2022) as runner:
+        first = runner.step(2.9)
+        assert all(bot['phase'] == 'waiting' for bot in first['rules']['bots'])
+        last = runner.step(9.1)
+        assert all(bot['phase'] == 'engaged' and not bot['violation'] for bot in last['rules']['bots'])
+        assert all(program['error'] is None for program in last['programs'])
+        events = runner.world.events
+        assert any(event['type'] == 'contact_started' for event in events)
+        assert any(event['type'] == 'program_log' and event['message'].startswith('push memory') for event in events)

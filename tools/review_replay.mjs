@@ -1,10 +1,12 @@
-// Usage: node tools/review_replay.mjs path/to/bout.json [more-bouts.json ...]
+// Usage: node tools/review_replay.mjs [--recovery] path/to/bout.json [more-bouts.json ...]
 // Uses the running local UI; screenshots are saved beside each replay.
 import { chromium } from '../../agent-meshes/node_modules/playwright/index.mjs';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
-if (!process.argv[2]) throw new Error('Pass at least one saved replay JSON file.');
+const recovery = process.argv.includes('--recovery');
+const paths = process.argv.slice(2).filter(arg => arg !== '--recovery');
+if (!paths.length) throw new Error('Pass at least one saved replay JSON file.');
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1000, height: 900 }, deviceScaleFactor: 1 });
 const errors = [];
@@ -14,7 +16,7 @@ try {
   await page.waitForFunction(() => !document.querySelector('#loading'));
   await page.addStyleTag({ content: '#viewport{min-height:430px;max-height:430px}.competitor,.intro,header{display:none}.workbench{display:block}.arena-panel{border:0}main{padding:12px}' });
   const montage = await browser.newPage({ viewport: { width: 1200, height: 900 } });
-  for (const path of process.argv.slice(2)) {
+  for (const path of paths) {
     const replay = JSON.parse(await readFile(path, 'utf8'));
     await page.locator('#load-replay').setInputFiles(resolve(path));
     await page.waitForFunction(expected => document.querySelector('#replay-source').textContent.includes(expected.name) &&
@@ -24,7 +26,13 @@ try {
     if (await page.locator('#error').textContent()) throw new Error(await page.locator('#error').textContent());
     const end = replay.frames.at(-1).time;
     const firstContact = replay.events.find(event => event.type === 'contact_started');
-    const moments = [['First contact', firstContact?.time ?? Math.min(5, end)], ['2 seconds before resolution', Math.max(0, end - 2)], ['0.2 seconds before resolution', Math.max(0, end - .2)], ['Resolution', end]];
+    let moments = [['First contact', firstContact?.time ?? Math.min(5, end)], ['2 seconds before resolution', Math.max(0, end - 2)], ['0.2 seconds before resolution', Math.max(0, end - .2)], ['Resolution', end]];
+    if (recovery) {
+      const suspicion = replay.events.find(event => event.type === 'program_log' && event.message.startsWith('suspected lockup'));
+      if (!suspicion) throw new Error(`No logged lockup recovery in ${path}`);
+      const complete = replay.events.find(event => event.type === 'program_log' && event.bot === suspicion.bot && event.time > suspicion.time && event.message.startsWith('recovery complete'));
+      moments = [['Before suspicion', Math.max(0, suspicion.time-.2)], ['Suspected lockup', suspicion.time], ['Escape turn', Math.min(end, suspicion.time+.25)], ['Recovery complete', complete?.time ?? Math.min(end, suspicion.time+1.6)]];
+    }
     const captures = [];
     for (const [label, target] of moments) {
       let index = 0;
@@ -47,7 +55,7 @@ try {
       }
     }, { title: `${path} · seed ${replay.metadata.seed} · ${JSON.stringify(replay.frames.at(-1).result)}`, captures });
     await montage.evaluate(() => Promise.all([...document.images].map(image => image.decode())));
-    const output = path.replace(/\.json$/i, '') + '-sequence.png';
+    const output = path.replace(/\.json$/i, '') + (recovery ? '-recovery.png' : '-sequence.png');
     await montage.screenshot({ path: output, fullPage: true });
     console.log(JSON.stringify({ replay: path, output, moments: captures.map(capture => capture.label) }));
   }

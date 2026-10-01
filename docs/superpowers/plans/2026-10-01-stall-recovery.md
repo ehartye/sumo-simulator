@@ -1,0 +1,15 @@
+# Stall recovery and geometric search
+
+Continue the ten-loop tournament with two explicit new challengers, without changing physics, sensor assumptions, rules or runtime.
+
+1. Verify current official PrimeHub and motor capabilities and wiki evidence before using heading. Keep controllers within the existing synchronous Pybricks subset. Heading is clockwise, unwrapped, relative to startup; it is not position. Do not implement uncalibrated acceleration or `stationary()` as ground-speed truth.
+2. Test suspected-lockup classification using persistent close returns, range/heading stability and motor rotation across a 1.4 s window. Compare a short reverse plus gyro-bounded hook against a variant choosing the hook/search direction using recent target heading and uncertain wheel/gyro dead reckoning. Treat missed echoes as unknown. Geometry may favor ring clearance, never secretly expose observer pose/contact.
+3. Keep front color checks active during all recovery phases; cap reverse/turn duration, clear stale attack memory, log evidence and recovery/reacquisition decisions. Record elapsed time and encoder travel since white. Increase position uncertainty during pressure/slip; a single border touch supplies a radial constraint, not an exact pose. Use only a brief retreat when the geometric estimate gives enough rear clearance; otherwise turn without retreat.
+4. Preserve immutable sources as loops 11/12. Run seeds 11/23/37 on both sides against loop 03, 120 s. Promote only >=75% with neither program faulting. Freeze selected source and validate unused seeds on both sides against loop 03 and close-memory baseline. Inspect recovery events and corresponding replay frames, not only scoreboard.
+5. Add both controllers to UI presets, publish a promoted selection only when evidence qualifies, and leave a demonstrated recovery replay viewable. Update tournament report and wiki architecture/roadmap; run Python and relevant browser checks and independent review.
+
+Success means recovery actually triggers, controllers open legally and make contact, and logs/replays show what happened afterward. Better recovery is distinct from better winning score. Motor stall versus tire-slip lockup remains a heuristic; backwards movement has a risk with only a front color sensor. Full pose tracking and a calibrated IMU model are future work, not part of these controller experiments.
+
+## Execution result
+
+Completed: two pilots, bounded revisions 11b/12b, then a third pressure-hook hypothesis based on inspected false-positive and blocked-turn evidence. All five six-bout training sets and two eight-bout frozen hook comparisons are preserved (46 additional bouts). The selected hook is 5W/2D/1L versus full duty and 0W/4D/4L versus memory. Gyro turns can remain mechanically blocked and the first inspected hook suspicion occurred after separation. Tests verify bounded failure behavior, not true ground-stall measurement. The prior validation seeds were fresh for these controllers, not untouched across the whole project. All three presets are retained; no hardware or physics change was used to improve scores.

@@ -1,0 +1,12 @@
+{
+  "loop": 11,
+  "champion": "stall_hook",
+  "opponent": "pressure_full_duty",
+  "score": {
+    "wins": 5,
+    "draws": 1,
+    "losses": 0
+  },
+  "replayUrl": "/trials/loop-11b/seed-23-swap-1.json",
+  "variantRevision": "b"
+}

@@ -1,0 +1,2615 @@
+{
+  "bouts": 146,
+  "fidelity": "uncalibrated",
+  "replayAvailability": "Local artifacts, not tracked in Git",
+  "physicsBaseline": "93aab99",
+  "reports": [
+    {
+      "directory": "holdout-baseline",
+      "challenger": "experiments\\strategies\\03_full_duty.py",
+      "incumbent": "experiments\\strategies\\baseline_aggressive.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "36e8acc4caac9a21bc3eb47242cd323d118400b3168dfe9db6d58174f1974ef8"
+      ],
+      "score": {
+        "wins": 4,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 45.9959999999835
+          },
+          "winningProgram": 1,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 26.36600000000924
+          },
+          "winningProgram": 0,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 44.21199999998766
+          },
+          "winningProgram": 1,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 26.36600000000924
+          },
+          "winningProgram": 0,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 46.01399999998346
+          },
+          "winningProgram": 1,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 15.82199999999667
+          },
+          "winningProgram": 0,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-307-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 28.351000000011666
+          },
+          "winningProgram": 1,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 95.94500000009407
+          },
+          "winningProgram": 0,
+          "firstContact": 7.444,
+          "replay": "artifacts\\strategy-tournament\\holdout-baseline\\seed-401-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "holdout-memory-baseline",
+      "challenger": "experiments\\strategies\\01_close_memory.py",
+      "incumbent": "experiments\\strategies\\baseline_aggressive.py",
+      "programHashes": [
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523",
+        "36e8acc4caac9a21bc3eb47242cd323d118400b3168dfe9db6d58174f1974ef8"
+      ],
+      "score": {
+        "wins": 8,
+        "draws": 0,
+        "losses": 0,
+        "score": 1.0,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-307-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\holdout-memory-baseline\\seed-401-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "holdout-predecessor",
+      "challenger": "experiments\\strategies\\03_full_duty.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 4,
+        "draws": 4,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-307-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\holdout-predecessor\\seed-401-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "holdout-rival",
+      "challenger": "experiments\\strategies\\03_full_duty.py",
+      "incumbent": "experiments\\strategies\\09_edge_pressure.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "53c8e0f02a248f9840e6a2ba7e1921b67429fd7e66fa4d9b4f87d33aa6fbb116"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 4,
+        "losses": 1,
+        "score": 0.625,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.40199999999654
+          },
+          "winningProgram": 0,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.40199999999654
+          },
+          "winningProgram": 0,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 19.318000000000627
+          },
+          "winningProgram": 1,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-307-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.40199999999654
+          },
+          "winningProgram": 0,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\holdout-rival\\seed-401-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "holdout-stall-duty",
+      "challenger": "experiments\\strategies\\11b_stall_hook.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "6cded53705e490eb677132be51a273628ac2d7d86a684425e3326e7e7a4c39a9",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 5,
+        "draws": 2,
+        "losses": 1,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.121999999969226
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-101-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.7 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2410"
+            }
+          ]
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-211-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.7 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2405"
+            },
+            {
+              "time": 56.793,
+              "message": "suspected lockup spinning-wheel duel range mm 225 heading span 0.4 turn 1 alternating fallback reverse ms 80 since white ms 49429 wheel travel mm 3555 uncertainty mm 4608"
+            }
+          ]
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 60.92199999994872
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-307-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.6 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2405"
+            }
+          ]
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-duty\\seed-401-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.6 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2410"
+            },
+            {
+              "time": 56.793,
+              "message": "suspected lockup spinning-wheel duel range mm 224 heading span 0.5 turn 1 alternating fallback reverse ms 80 since white ms 49429 wheel travel mm 3555 uncertainty mm 4611"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "holdout-stall-memory",
+      "challenger": "experiments\\strategies\\11b_stall_hook.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "6cded53705e490eb677132be51a273628ac2d7d86a684425e3326e7e7a4c39a9",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 4,
+        "losses": 4,
+        "score": 0.25,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.8059999999956
+          },
+          "winningProgram": 1,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.8059999999956
+          },
+          "winningProgram": 1,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 21.404000000003176
+          },
+          "winningProgram": 1,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-307-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 307,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-307-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.8059999999956
+          },
+          "winningProgram": 1,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-401-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 401,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\holdout-stall-memory\\seed-401-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-01",
+      "challenger": "experiments\\strategies\\01_close_memory.py",
+      "incumbent": "experiments\\strategies\\baseline_aggressive.py",
+      "programHashes": [
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523",
+        "36e8acc4caac9a21bc3eb47242cd323d118400b3168dfe9db6d58174f1974ef8"
+      ],
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 0,
+        "score": 1.0,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.338000000014095
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.174000000004117
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 30.345000000014103
+          },
+          "winningProgram": 0,
+          "firstContact": 6.003,
+          "replay": "artifacts\\strategy-tournament\\loop-01\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-02",
+      "challenger": "experiments\\strategies\\02_long_pressure.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "d66dee3210a02e35aa3f3e24b3a196d7b018423646319f991cc16fe02a207393",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 6,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.521,
+          "replay": "artifacts\\strategy-tournament\\loop-02\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-03",
+      "challenger": "experiments\\strategies\\03_full_duty.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 78.54000000001096
+          },
+          "winningProgram": 0,
+          "firstContact": 4.483,
+          "replay": "artifacts\\strategy-tournament\\loop-03\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-04",
+      "challenger": "experiments\\strategies\\04_timed_hook.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "ccacec6ee6fdd9d78d148c4f4659c67db3e1d25bd0e9fee271b9a0eaa88e4f24",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 51.383999999970946
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-04\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-05",
+      "challenger": "experiments\\strategies\\05_duel_memory.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "c689769f1743bbeeb0d8d2e46a3ee948d79f32acd45ff40ca47a4470e39a705b",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 55.408999999961566
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 32.40100000001519
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 55.408999999961566
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 32.40100000001519
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 55.408999999961566
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 32.40100000001519
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-05\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-06",
+      "challenger": "experiments\\strategies\\06_heading_pressure.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "3f7d95fb42bbbe9f43ea7df479c1418c18e21d30989c8eeebb3455ff50511ebc",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 6,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.466,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.495,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.466,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.466,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.468,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.494,
+          "replay": "artifacts\\strategy-tournament\\loop-06\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-07",
+      "challenger": "experiments\\strategies\\07_full_scan.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "6c323109b04c463e0792babacab6cf7e6ee6e99e63271ecd8cf307876d76ecc5",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 0,
+        "losses": 3,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.784999999997245
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.901000000005006
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.784999999997245
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.901000000005006
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.784999999997245
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.901000000005006
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-07\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-08",
+      "challenger": "experiments\\strategies\\08_range_alignment.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "978040652b5cd058e1d064e2f22460d54735928590d548d9bc65d0d62699d585",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 1,
+        "draws": 4,
+        "losses": 1,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.051000000003967
+          },
+          "winningProgram": 0,
+          "firstContact": 4.647,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 55.357999999961685
+          },
+          "winningProgram": 1,
+          "firstContact": 4.638,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.583,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.584,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.583,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.582,
+          "replay": "artifacts\\strategy-tournament\\loop-08\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-09",
+      "challenger": "experiments\\strategies\\09_edge_pressure.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "53c8e0f02a248f9840e6a2ba7e1921b67429fd7e66fa4d9b4f87d33aa6fbb116",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 3,
+        "losses": 1,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.40199999999654
+          },
+          "winningProgram": 1,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 19.318000000000627
+          },
+          "winningProgram": 0,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 19.318000000000627
+          },
+          "winningProgram": 0,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 6.122,
+          "replay": "artifacts\\strategy-tournament\\loop-09\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-10",
+      "challenger": "experiments\\strategies\\10_opposite_pivot.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "287f0f7efc2de17635396472c75845ea41fbb85d3a7781095d414b738d41d28a",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 6,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.442,
+          "replay": "artifacts\\strategy-tournament\\loop-10\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-11",
+      "challenger": "experiments\\strategies\\11_stall_hook.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "c310dbcf3efcefeba3e35763d1ecbf412cefc658c12ce4990b34133f67c733bb",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 28.398000000011724
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 28.037,
+              "message": "suspected lockup spinning-wheel duel range mm 162 heading span 0.5 turn 1 alternating fallback reverse ms 80 since white ms None wheel travel mm 0 uncertainty mm 2763"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 28.398000000011724
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-23-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 28.398000000011724
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-11\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-11b",
+      "challenger": "experiments\\strategies\\11b_stall_hook.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "6cded53705e490eb677132be51a273628ac2d7d86a684425e3326e7e7a4c39a9",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 5,
+        "draws": 1,
+        "losses": 0,
+        "score": 0.9166666666666666,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.5 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2410"
+            },
+            {
+              "time": 56.793,
+              "message": "suspected lockup spinning-wheel duel range mm 223 heading span 0.4 turn 1 alternating fallback reverse ms 80 since white ms 49429 wheel travel mm 3555 uncertainty mm 4612"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.121999999969226
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.6 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2410"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 27.362000000010458
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.121999999969226
+          },
+          "winningProgram": 0,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-11b\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.287,
+              "message": "suspected lockup spinning-wheel duel range mm 2000 heading span 23.7 turn -1 alternating fallback reverse ms 80 since white ms 5923 wheel travel mm 1100 uncertainty mm 2410"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "loop-12",
+      "challenger": "experiments\\strategies\\12_stall_geometry.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "97502e20845f3eff34d25d98a75dc2bbd00fd4569adc0a1fbcb44d73d9931530",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 4,
+        "draws": 1,
+        "losses": 1,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 37.381,
+              "message": "suspected lockup spinning-wheel duel range mm 70 heading span 17.2 turn -1 alternating fallback reverse ms 0 since white ms 5156 wheel travel mm 1286 uncertainty mm 1191"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 73.05299999998476
+          },
+          "winningProgram": 1,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-11-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 102.3800000001248
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-23-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 37.381,
+              "message": "suspected lockup spinning-wheel duel range mm 61 heading span 17.1 turn -1 alternating fallback reverse ms 0 since white ms 5156 wheel travel mm 1286 uncertainty mm 1182"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 105.92800000014174
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 95.921,
+              "message": "suspected lockup spinning-wheel duel range mm 74 heading span 16.3 turn 1 alternating fallback reverse ms 0 since white ms 4270 wheel travel mm 1323 uncertainty mm 21043"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 102.3800000001248
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 37.381,
+              "message": "suspected lockup spinning-wheel duel range mm 72 heading span 17.2 turn -1 alternating fallback reverse ms 0 since white ms 5156 wheel travel mm 1286 uncertainty mm 1190"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 34.445000000010424
+          },
+          "winningProgram": 0,
+          "firstContact": 4.458,
+          "replay": "artifacts\\strategy-tournament\\loop-12\\seed-37-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-12b",
+      "challenger": "experiments\\strategies\\12b_stall_geometry.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "4d1c3ed71c81212094cce6a0805b192a24f200b08c6c98ebae1d7ec0bca9c185",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 3,
+        "losses": 3,
+        "score": 0.25,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 61 heading span 0.0 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.539,
+              "message": "suspected lockup repeated close encounters range mm 53 heading span 0.0 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5412"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 58 heading span 0.0 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.539,
+              "message": "suspected lockup repeated close encounters range mm 64 heading span 0.0 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5412"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-12b\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 55 heading span 0.0 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.539,
+              "message": "suspected lockup repeated close encounters range mm 58 heading span 0.0 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5412"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "loop-13",
+      "challenger": "experiments\\strategies\\13_stall_pressure.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "4d4733836684b1d482c5e98f81ac90d24949dc1dc580ec2e2d937d3ebd49c44f",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 1,
+        "losses": 5,
+        "score": 0.08333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-11-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 60.995999999948545
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 61 heading span 1.9 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.449,
+              "message": "suspected lockup repeated close encounters range mm 50 heading span 2.5 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5578"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-23-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 60.995999999948545
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 58 heading span 1.8 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.449,
+              "message": "suspected lockup repeated close encounters range mm 51 heading span 2.5 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5578"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.04899999997406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-37-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.455,
+          "replay": "artifacts\\strategy-tournament\\loop-13\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 32.647,
+              "message": "suspected lockup repeated close encounters range mm 55 heading span 1.7 turn 1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 3060"
+            },
+            {
+              "time": 40.449,
+              "message": "suspected lockup repeated close encounters range mm 50 heading span 2.5 turn -1 alternating fallback reverse ms 0 since white ms None wheel travel mm 0 uncertainty mm 5578"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "stress-friction-064",
+      "challenger": "experiments/strategies/03_full_duty.py",
+      "incumbent": "experiments/strategies/01_close_memory.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 4,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.64,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.501,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-064\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.64,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.501,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-064\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.64,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.501,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-064\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.64,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.501,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-064\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    },
+    {
+      "directory": "stress-friction-096",
+      "challenger": "experiments/strategies/03_full_duty.py",
+      "incumbent": "experiments/strategies/01_close_memory.py",
+      "programHashes": [
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 0,
+        "draws": 4,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 101,
+          "swapped": false,
+          "friction": 0.96,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.478,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-096\\seed-101-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 101,
+          "swapped": true,
+          "friction": 0.96,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.478,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-096\\seed-101-swap-1.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": false,
+          "friction": 0.96,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.478,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-096\\seed-211-swap-0.json",
+          "suspectedLockups": []
+        },
+        {
+          "seed": 211,
+          "swapped": true,
+          "friction": 0.96,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.478,
+          "replay": "artifacts\\strategy-tournament\\stress-friction-096\\seed-211-swap-1.json",
+          "suspectedLockups": []
+        }
+      ]
+    }
+  ]
+}

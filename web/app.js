@@ -199,7 +199,8 @@ function display(frame) {
     if (sensor) {
       const labels = { echo: 'Echo', no_echo: 'No echo', below_minimum: 'Below rated range (model policy)' };
       $('sensor-status'+i).textContent = `${labels[sensor.reason]}${sensor.hitObject ? ' · '+sensor.hitObject.replace(/^b[01]_/, '').replace(/_\d+$/, '').replaceAll('_',' ') : ''}`;
-      $('sensor-status'+i).title = `Sample ${sensor.sampleTick} at ${sensor.sampleTime.toFixed(3)} s; ${sensor.counts.inRange} in-range rays, ${sensor.counts.grazing} grazing rays rejected. Save run includes the full diagnostic log.`;
+      const savedDetail = loadedReplay && !loadedReplay.ultrasonicSamples ? 'This replay contains diagnostics at each recorded frame.' : 'Save run includes the full diagnostic log.';
+      $('sensor-status'+i).title = `Sample ${sensor.sampleTick} at ${sensor.sampleTime.toFixed(3)} s; ${sensor.counts.inRange} in-range rays, ${sensor.counts.grazing} grazing rays rejected. ${savedDetail}`;
       if (sensor.hitPoint) {
         const positions = ray.geometry.attributes.position;
         positions.setXYZ(0, ...sensor.origin); positions.setXYZ(1, ...sensor.hitPoint);
@@ -241,8 +242,8 @@ async function control(action) {
 function showBestSelection() {
   $('load-best').disabled = $('inspect-best').disabled = !bestSelection;
   if (!bestSelection) { $('best-label').textContent = 'No tested strategy selected yet'; return; }
-  const { champion, loop, score, revision } = bestSelection;
-  $('best-label').textContent = `${revision === appliedRevision ? 'Loaded' : 'Available'} best · ${champion.name.replaceAll('_', ' ')} · loop ${loop} · ${score.wins}W / ${score.draws}D / ${score.losses}L`;
+  const { champion, opponent, loop, score, revision } = bestSelection;
+  $('best-label').textContent = `${revision === appliedRevision ? 'Loaded' : 'Available'} incumbent · ${champion.name.replaceAll('_', ' ')} · loop ${loop} · ${score.wins}W / ${score.draws}D / ${score.losses}L vs ${opponent.name.replaceAll('_', ' ')}`;
 }
 function applyBestSelection() {
   if (!bestSelection) return;

@@ -3,6 +3,20 @@ from fastapi.testclient import TestClient
 from sumo.server import app
 
 
+def test_promoted_strategy_selection_and_scoped_replay_access():
+    with TestClient(app) as client:
+        selection = client.get('/api/strategy-selection')
+        assert selection.status_code == 200
+        data = selection.json()
+        assert len(data['revision']) == 64
+        assert data['loop'] >= 1
+        examples = client.get('/api/info').json()['examples']
+        for role in ('champion', 'opponent'):
+            assert data[role]['source'] == examples[data[role]['name']]
+        assert data['replayUrl'].startswith('/trials/')
+        assert client.get('/trials/missing.json').status_code == 404
+
+
 def test_http_match_replay_validation_and_program_failure():
     with TestClient(app) as client:
         info = client.get('/api/info').json()

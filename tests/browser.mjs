@@ -16,6 +16,11 @@ try {
   });
   await page.goto('http://127.0.0.1:8765');
   await page.waitForFunction(() => document.querySelectorAll('.reading').length === 8 && !document.querySelector('#loading'));
+  // Keep both opening paths in this fixture as the promoted UI default evolves.
+  await page.locator('#preset0').selectOption('aggressive');
+  await page.locator('#preset1').selectOption('patient');
+  await page.click('#reset');
+  await page.waitForFunction(() => document.querySelector('#match-state').textContent === 'READY TO TEST');
   assert.match(await page.locator('#sensor-status0').textContent(), /No echo/);
   await page.click('#sensor-view');
   assert.equal(await page.locator('#sensor-view').getAttribute('aria-pressed'), 'false');

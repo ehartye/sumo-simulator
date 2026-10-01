@@ -10,9 +10,11 @@
 
 - [x] Add tested experiment scoring and reproducible paired-bout runner in `tools/strategy_tournament.py`; retain every candidate under `experiments/strategies/`, immutable numbered results/replays under `artifacts/strategy-tournament/`.
 - [x] Add saved-run loading to existing viewer, preserving live match controls and explicitly separating loaded replay from a new live run; test and visually inspect.
-- [ ] Execute loops 01–10 sequentially. Record hypothesis, exact program, incumbent, six outcomes, event-based diagnosis, visual evidence, promotion decision and next hypothesis in `docs/strategy-tournament.md`.
-- [ ] Run held-out comparisons and traction stress checks. Audit legality, contact, decision timing and losses, including at least one visual sequence leading to resolution.
-- [ ] Put the winning program in examples without overwriting historical baselines. Add regression coverage for legal startup and physical engagement; run relevant tests and browser verification; request independent code/evidence review.
-- [ ] Update wiki evidence/architecture/roadmap, publish report and leave the UI ready to inspect the winning approach.
+- [x] Execute loops 01–10 sequentially. Record hypothesis, exact program, incumbent, six outcomes, event-based diagnosis, visual evidence, promotion decision and next hypothesis in `docs/strategy-tournament.md`.
+- [x] Run held-out comparisons and traction stress checks. Audit legality, contact, decision timing and losses, including at least one visual sequence leading to resolution.
+- [x] Put the winning program in examples without overwriting historical baselines. Add regression coverage for legal startup and physical engagement; run relevant tests and browser verification; request independent code/evidence review.
+- [x] Update wiki evidence/architecture/roadmap, publish report and leave the UI ready to inspect the winning approach.
 
 **Limits:** Wins are model-conditioned. A short-lived echo can vanish below the model's rated minimum range; any persistence policy must stay bounded and retain border priority. The controller must never receive the observer's target identity, pose, contact truth or outcome. Draws and non-transitive matchups remain visible; ten loops do not imply ten promotions or universal dominance.
+
+Completed with 100 original bouts and a subsequent user-requested stall-recovery extension. Independent review tightened promotion to reject either program faulting; original results were all fault-free and unchanged. See strategy-tournament.md for non-transitive results and every failed challenger.

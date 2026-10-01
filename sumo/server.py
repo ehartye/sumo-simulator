@@ -103,6 +103,22 @@ def reset(request: Start):
         return {**snapshot, 'events': list(world.events)}
 
 
+@app.get('/api/strategy-selection')
+def strategy_selection():
+    path = ROOT/'experiments/champion.json'
+    if not path.exists():
+        return None
+    raw = path.read_bytes()
+    selection = json.loads(raw)
+    examples = {p.stem: p for p in (ROOT/'examples').glob('*.py')}
+    for role in ('champion', 'opponent'):
+        name = selection[role]
+        source = examples[name].read_text(encoding='utf-8')
+        selection[role] = {'name': name, 'source': source}
+        raw += source.encode()
+    return {**selection, 'revision': hashlib.sha256(raw).hexdigest()}
+
+
 @app.post('/api/step')
 def step(request: Step):
     with lock:
@@ -147,6 +163,7 @@ def diagnostics():
 app.mount('/assets', StaticFiles(directory=ROOT/'artifacts/robot'), name='assets')
 app.mount('/vendor', StaticFiles(directory=ROOT/'node_modules/three'), name='vendor')
 app.mount('/ui', StaticFiles(directory=ROOT/'web'), name='ui')
+app.mount('/trials', StaticFiles(directory=ROOT/'artifacts/strategy-tournament', check_dir=False), name='trials')
 
 
 @app.get('/')

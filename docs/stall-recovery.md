@@ -1,0 +1,29 @@
+# Stall recovery, gyro and geometric search
+
+The three new programs are `stall_hook`, `stall_geometry` and `stall_pressure`. They use only the existing synchronous device subset: motor angle/commands, color reflection, ultrasonic distance, clock and `PrimeHub.imu.heading()`. They do not read observer pose, contact state, opponent identity or outcomes.
+
+## Hardware contract checked before implementation
+
+The [official PrimeHub reference](https://docs.pybricks.com/en/stable/hubs/primehub.html) defines heading as clockwise-positive, unwrapped degrees relative to program start. The hub provides gyro and accelerometer channels, calibration/readiness and mounting-axis configuration. A physical run must configure its actual mounting, allow stationary calibration and verify readiness before the competition countdown. The simulator implements heading only; its yaw-derived noise/drift channel is an uncalibrated approximation, not the firmware's complete fused 3D estimator.
+
+Pinned [v4.0.1 Python bindings](https://github.com/pybricks/pybricks-micropython/blob/v4.0.1/pybricks/common/pb_type_imu.c) request 3D heading. Pinned [IMU implementation](https://github.com/pybricks/pybricks-micropython/blob/v4.0.1/lib/pbio/src/imu.c) requires all motors coasting for `stationary()`. That calibration condition cannot identify a powered pushing lockup. Neither that API nor accelerometer-derived perfect speed has been added to the simulator.
+
+The [motor reference](https://docs.pybricks.com/en/stable/pupdevices/motor.html) describes motor stall as failure to attain the motor target under maximum actuation. Spinning tires can hide a motionless chassis. [Maintainer discussion #2233](https://github.com/orgs/pybricks/discussions/2233) also distinguishes load/stall estimation under `run()` from `dc()`. [Discussion #1735](https://github.com/orgs/pybricks/discussions/1735) confirms that gyro measures rotation, and cautions against expecting accurate velocity from this accelerometer. The new controllers therefore infer **suspected** lockup rather than claiming to measure ground standstill.
+
+## Detection and recovery
+
+The stable-return detector needs at least 1.3 s of a rolling 1.5 s history, three close returns below 200 mm spanning no more than 30 mm, net heading change at most 8 degrees and heading span at most 45 degrees. Low motor rotation distinguishes a possible motor jam; spinning encoders suggest a wheel-spin duel. These thresholds are experimental policy, not hardware specifications. A second watchdog catches repeated close encounters over five seconds without substantial range reduction and with bounded yaw, identifying reacquisition/search dithering separately. Successful straight pushing can produce similar readings: false suspicion remains possible.
+
+Recovery releases pressure briefly, turns toward a 28-degree relative gyro target with an 800 ms deadline, arcs for 450 ms and resumes sensing. A two-second cooldown prevents immediate retriggering. Color checks run during every phase; border retreat lasts at most 160 ms, then brakes if white persists. The startup pivot has an eight-second deadline and faults rather than illegally proceeding without completing the opening. Logs include the suspicion type, sensor evidence, turn direction/basis, reverse duration, achieved yaw/error, timeout, recovery completion, and elapsed time/encoder travel since white.
+
+`stall_hook` alternates escape direction and tests an 80 ms retreat. The front color sensor cannot see the rear rim while backing; this is a deliberate experimental tradeoff, not a safe physical guarantee. `stall_geometry` suppresses the retreat when its uncertain position estimate does not suggest enough clearance. Its uncertainty is a heuristic, not a certified error bound.
+
+`stall_pressure` requires a fresh valid return below 140 mm before acting, performs no lockup retreat, and uses one forward-powered wheel during its bounded escape turn. This third hypothesis follows visual evidence that the earlier detector could alert while bots were apart, and that counterrotation could remain blocked in a close duel. It still failed to beat the fixed full-duty opponent; the stricter gate reduces one false-alert case without establishing accurate contact detection.
+
+## What geometry can establish
+
+The geometric variant integrates 56 mm wheel rotation with gyro heading from the known rule placement (152.4 mm outward from center), biases a short left/right hook toward estimated ring clearance, and otherwise favors recent positive echo heading or alternates. It records wheel travel and elapsed time since white. Recent close encounters increase slip uncertainty; old/noisy position information loses influence. White constrains the front sensor to an annulus; projecting to the white-band midpoint updates radius while retaining uncertainty. A single white touch cannot reveal its azimuth or the inward normal without another prior.
+
+Search attempts a complete gyro sweep rather than repeatedly reversing each second. An echo interrupts the sweep to charge, so intermittent detections can still cause partial sweeps. An invalid 2000 mm return means unknown, never an empty sector. A positive return identifies a cone of possible bearings, not its center exactly. Opponent motion and slip prevent hard geometric exclusion of large arena regions. The policy uses these estimates to rank actions; it does not claim a mapped opponent position.
+
+Results and immutable source/replay paths are recorded in [the tournament report](strategy-tournament.md). The first pilot sources remain preserved even when a revised detector or bounded border behavior replaces them in UI examples.
