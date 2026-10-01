@@ -21,7 +21,8 @@ try {
   ] };
   for (let time = 0; time <= 2; time++) {
     const frame = structuredClone(source.frames[0]);
-    frame.time = time; frame.eventCount = time + 1;
+    // Simulation steps accumulate floats; event logging rounds to six decimals.
+    frame.time = time === 2 ? 1.9999999999998905 : time; frame.eventCount = time + 1;
     for (const pose of Object.values(frame.bots[0].bodies)) pose.position[2] += time * .05;
     frame.result = time === 2 ? report.events[2].result : null;
     report.frames.push(frame);

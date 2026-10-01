@@ -104,7 +104,8 @@ function validateReplay(replay) {
   }
   previousTime = -1;
   replay.events.forEach((event, i) => {
-    if (event.id !== i || !Number.isFinite(event.time) || event.time < previousTime || event.time > replay.frames.at(-1).time || typeof event.type !== 'string' ||
+    // Events round simulation time to six decimals; snapshots retain step accumulation.
+    if (event.id !== i || !Number.isFinite(event.time) || event.time < previousTime || event.time > replay.frames.at(-1).time + 1e-6 || typeof event.type !== 'string' ||
         (event.type === 'match_ended' && (!event.result || !result(event.result))) ||
         (event.parts != null && (!Array.isArray(event.parts) || !event.parts.every(part => typeof part === 'string')))) invalid();
     previousTime = event.time;
