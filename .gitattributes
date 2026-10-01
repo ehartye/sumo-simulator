@@ -1,0 +1,2 @@
+# Preserve upstream bytes: the LDraw dependency closure is SHA-256 pinned.
+assets/ldraw/** -text
