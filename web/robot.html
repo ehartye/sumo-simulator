@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPIKE robot · Build review</title>
+<script type="importmap">{"imports":{"three":"/vendor/build/three.module.js","three/addons/":"/vendor/examples/jsm/"}}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eaf0f5;color:#182c3c;font:14px "Trebuchet MS",sans-serif}header{position:absolute;z-index:2;top:24px;left:30px;right:30px;pointer-events:none}h1{font:600 30px Bahnschrift,sans-serif;margin:0 0 8px}header p{margin:5px 0;color:#567082}#views{position:absolute;z-index:2;bottom:75px;left:50%;transform:translateX(-50%);display:flex;gap:6px;background:#eaf0f5dd;padding:8px;border-radius:9px}button,a{padding:10px 16px;border:1px solid #b9c9d5;border-radius:5px;background:#f7f9fb;color:#182c3c;cursor:pointer;text-decoration:none;font:inherit}button:hover{background:#d8e4ed}button:focus-visible,a:focus-visible{outline:3px solid #1767c7}footer{position:absolute;bottom:18px;left:25px;right:25px;text-align:center;color:#567082;font-size:12px;pointer-events:none}canvas{display:block}#error{color:#a3322c}#lab{position:absolute;right:28px;top:28px;z-index:3}@media(max-width:650px){header{top:18px;left:18px}h1{font-size:23px}header p{font-size:11px}#lab{top:auto;bottom:125px;right:18px;font-size:11px}button{padding:9px 12px}footer{font-size:11px}}
+</style></head><body>
+<header><h1>SPIKE / Build review</h1><p>Drag to rotate · Scroll to zoom · Right-drag to pan</p><p id="build-stats">Loading part manifest…</p><p id="connection-stats"></p><p id="error"></p></header>
+<a id="lab" href="/">Open sumo lab ↗</a>
+<nav id="views" aria-label="Robot views"><button data-view="iso">3D</button><button data-view="front">Front</button><button data-view="side">Side</button><button data-view="top">Top</button></nav>
+<footer>Static pin, axle and socket alignment checked against part geometry. Physical assembly and cable routing still need a bench check.</footer>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+const scene=new THREE.Scene(); scene.background=new THREE.Color('#eaf0f5');
+const camera=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.001,10);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;document.body.append(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,.043,0);controls.minDistance=.06;controls.maxDistance=1.5;controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xffffff,0x657384,2.6));
+for(const [position,intensity]of [[[.2,.4,.3],3],[[-.2,.15,-.2],1.2]]){const light=new THREE.DirectionalLight(0xffffff,intensity);light.position.fromArray(position);scene.add(light);}
+const grid=new THREE.GridHelper(.5,25,0xb0c2cf,0xd2dde5);grid.position.y=-.001;scene.add(grid);
+const views={iso:[.25,.21,.3],front:[0,.043,.46],side:[.46,.043,0],top:[0,.50,.0001]};
+function view(name){camera.up.set(0,name==='top'?0:1,name==='top'?-1:0);camera.position.fromArray(views[name]);controls.target.set(0,.043,0);controls.update();}
+view('iso');document.querySelectorAll('[data-view]').forEach(button=>button.onclick=()=>view(button.dataset.view));
+try{
+const [gltf,robot]=await Promise.all([new GLTFLoader().loadAsync('/assets/model.glb'),fetch('/assets/robot.json').then(r=>r.json())]);scene.add(gltf.scene);
+document.getElementById('build-stats').textContent=robot.bounds.max.map((v,i)=>((v-robot.bounds.min[i])*1000).toFixed(1)).join(' × ')+' mm (W × H × L) · Catalog mass '+(robot.totalMassKg*1000).toFixed(2)+' g';
+document.getElementById('connection-stats').textContent=robot.parts.length+' kit parts · '+robot.connections.length+' mating connections · '+(robot.connectivity.allPartsConnected?'One connected assembly':'Disconnected components');
+document.body.dataset.loaded='true';
+}catch(error){document.getElementById('error').textContent=error.message;}
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
+</script></body></html>

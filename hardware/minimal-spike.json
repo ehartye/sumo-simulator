@@ -1,0 +1,4444 @@
+{
+  "version": 1,
+  "name": "SPIKE connected minimal sumo",
+  "libraryPath": "../assets/ldraw",
+  "bodies": [
+    {
+      "name": "chassis",
+      "parent": null,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "left_wheel",
+      "parent": "chassis",
+      "position": [
+        -0.04,
+        0.028,
+        0.032
+      ],
+      "hingeAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "right_wheel",
+      "parent": "chassis",
+      "position": [
+        0.04,
+        0.028,
+        0.032
+      ],
+      "hingeAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "caster",
+      "parent": "chassis",
+      "position": [
+        0,
+        0.0104,
+        -0.056
+      ],
+      "ballJoint": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "hub",
+      "ldraw": "45601c01.dat",
+      "color": 15,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.056,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "massKg": 0.14982,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=53444c01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.024,
+            -0.012,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            -0.024,
+            -0.012,
+            0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            -0.024,
+            -0.012,
+            -0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            0.024,
+            -0.012,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_4",
+          "kind": "pin-hole",
+          "position": [
+            0.024,
+            -0.012,
+            0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_5",
+          "kind": "pin-hole",
+          "position": [
+            0.024,
+            -0.012,
+            -0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_6",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            -0.012,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_7",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            -0.012,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_8",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            -0.012,
+            -0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_9",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.004,
+            -0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_10",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            -0.012,
+            -0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_11",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.004,
+            -0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_12",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.004,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_13",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.004,
+            0.04
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9402s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.056,
+            0.032,
+            0.088
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massComponents": [
+        {
+          "name": "hub_without_battery",
+          "massKg": 0.06312,
+          "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=53444c01"
+        },
+        {
+          "name": "battery",
+          "massKg": 0.0867,
+          "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=55422c01"
+        }
+      ],
+      "massNote": "Battery counted once; white hub face and molded yellow battery/body retained."
+    },
+    {
+      "name": "left_motor",
+      "ldraw": "54696p01.dat",
+      "color": 15,
+      "body": "chassis",
+      "position": [
+        -0.02,
+        0.028,
+        0.0078
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.7071067812,
+        0.7071067812
+      ],
+      "massKg": 0.04953,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=54696c01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.004,
+            0.0322
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9364s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.004,
+            0.0162
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9364s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.004,
+            -0.0318
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9366s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9363s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_4",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9363s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_5",
+          "kind": "axle-hole",
+          "position": [
+            0.0,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "LDraw axl3hole.dat: anchor within the actual coaxial engagement interval"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.032,
+            0.0716
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_hub_pin_0",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.024,
+        0.04,
+        0.04
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "left_hub_pin_1",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.024,
+        0.04,
+        0.024
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "left_hub_pin_2",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.024,
+        0.04,
+        -0.024
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "left_tire",
+      "ldraw": "39367p01.dat",
+      "color": 322,
+      "body": "left_wheel",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.7071067812,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.0143,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=39367pb01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            -0.008,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/39367s03.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.008,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/39367s03.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "axle-hole",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "LDraw axl3hole.dat: anchor within the actual coaxial engagement interval"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "cylinder",
+          "radius": 0.028,
+          "height": 0.014,
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.7071067812,
+            0.0,
+            0.0,
+            0.7071067812
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_wheel_pin_0",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "left_wheel",
+      "position": [
+        0.004,
+        -0.008,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.7071067812,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "left_wheel_pin_1",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "left_wheel",
+      "position": [
+        0.004,
+        0.008,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.7071067812,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "left_axle",
+      "ldraw": "4519.dat",
+      "color": 14,
+      "body": "left_wheel",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00043,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=4519",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "axle",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 4519.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "axle",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 4519.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.0236,
+            0.0048,
+            0.0048
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_motor",
+      "ldraw": "54696p01.dat",
+      "color": 15,
+      "body": "chassis",
+      "position": [
+        0.02,
+        0.028,
+        0.0078
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -0.7071067812,
+        0.7071067812
+      ],
+      "massKg": 0.04953,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=54696c01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.004,
+            0.0322
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9364s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.004,
+            0.0162
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9364s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.004,
+            -0.0318
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9366s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9363s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_4",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/u9363s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_5",
+          "kind": "axle-hole",
+          "position": [
+            0.0,
+            0.012,
+            0.0242
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "LDraw axl3hole.dat: anchor within the actual coaxial engagement interval"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.032,
+            0.0716
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_hub_pin_0",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.024,
+        0.04,
+        0.04
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_hub_pin_1",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.024,
+        0.04,
+        0.024
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_hub_pin_2",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.024,
+        0.04,
+        -0.024
+      ],
+      "rotation": [
+        0.7071067812,
+        0.7071067812,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_tire",
+      "ldraw": "39367p01.dat",
+      "color": 322,
+      "body": "right_wheel",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.7071067812,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.0143,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=39367pb01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.008,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/39367s03.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            -0.008,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/39367s03.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "axle-hole",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "LDraw axl3hole.dat: anchor within the actual coaxial engagement interval"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "cylinder",
+          "radius": 0.028,
+          "height": 0.014,
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.7071067812,
+            0.0,
+            0.0,
+            0.7071067812
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_wheel_pin_0",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "right_wheel",
+      "position": [
+        -0.004,
+        0.008,
+        0.0
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_wheel_pin_1",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "right_wheel",
+      "position": [
+        -0.004,
+        -0.008,
+        0.0
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_axle",
+      "ldraw": "4519.dat",
+      "color": 14,
+      "body": "right_wheel",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "massKg": 0.00043,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=4519",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "axle",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 4519.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "axle",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 4519.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.0236,
+            0.0048,
+            0.0048
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "front_frame",
+      "ldraw": "64179.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.036,
+        0.048
+      ],
+      "rotation": [
+        -0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.0053,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=64179",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_4",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            -0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_5",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            -0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.008,
+            0.008,
+            0.056
+          ],
+          "position": [
+            -0.016,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.008,
+            0.008,
+            0.056
+          ],
+          "position": [
+            0.016,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.008
+          ],
+          "position": [
+            0,
+            0,
+            -0.024
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.008
+          ],
+          "position": [
+            0,
+            0,
+            0.024
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "front_frame_pin_-16_44",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.044,
+        0.044
+      ],
+      "rotation": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "front_frame_pin_16_44",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.044,
+        0.044
+      ],
+      "rotation": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "rear_frame",
+      "ldraw": "64179.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.052,
+        -0.048
+      ],
+      "rotation": [
+        -0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.0053,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=64179",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            -0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            -0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_4",
+          "kind": "pin-hole",
+          "position": [
+            -0.016,
+            0.0,
+            -0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_5",
+          "kind": "pin-hole",
+          "position": [
+            0.016,
+            0.0,
+            -0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "s/64179s01.dat \u00e2\u2020\u2019 connhole.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.008,
+            0.008,
+            0.056
+          ],
+          "position": [
+            -0.016,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.008,
+            0.008,
+            0.056
+          ],
+          "position": [
+            0.016,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.008
+          ],
+          "position": [
+            0,
+            0,
+            -0.024
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.008
+          ],
+          "position": [
+            0,
+            0,
+            0.024
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rear_frame_pin_-16_44",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.044,
+        -0.044
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "rear_frame_pin_-16_60",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.06,
+        -0.044
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "rear_frame_pin_16_44",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.044,
+        -0.044
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "rear_frame_pin_16_60",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.06,
+        -0.044
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "eyes_bridge",
+      "ldraw": "32524.dat",
+      "color": 322,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.06,
+        0.056
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00174,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=32524",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            0.016
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 beamhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            -0.016
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 beamhole.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 beamhole.dat"
+        },
+        {
+          "name": "attachment_3",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            -0.024
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 peghole.dat face plus 10 LDU depth to engagement center"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.0072,
+            0.008,
+            0.0552
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eyes_bridge_pin_-16",
+      "ldraw": "6558.dat",
+      "color": 1,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.06,
+        0.048
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00037,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=6558",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eyes_bridge_pin_16",
+      "ldraw": "6558.dat",
+      "color": 1,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.06,
+        0.048
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00037,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=6558",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eyes",
+      "ldraw": "37316.dat",
+      "color": 15,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.06,
+        0.0758
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "massKg": 0.03438,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=37316c01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.024,
+            0.0,
+            -0.0118
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9470s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.024,
+            0.0,
+            -0.0118
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "source": "s/u9470s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.056,
+            0.0232,
+            0.0316
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eyes_pin_-24",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.024,
+        0.06,
+        0.06
+      ],
+      "rotation": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "eyes_pin_24",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.024,
+        0.06,
+        0.06
+      ],
+      "rotation": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "color_bridge",
+      "ldraw": "32524.dat",
+      "color": 322,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.028,
+        0.056
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "massKg": 0.00174,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=32524",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            0.016
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 beamhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0,
+            -0.016
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "32524.dat \u00e2\u2020\u2019 beamhole.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.0072,
+            0.008,
+            0.0552
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "color_sensor",
+      "ldraw": "37308.dat",
+      "color": 15,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.0282,
+        0.072
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.01285,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=37308c01",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            -0.008,
+            -0.0078
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9408s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            -0.008,
+            -0.0078
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/u9408s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.0232,
+            0.0236
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_sensor_block",
+      "ldraw": "39793.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.024,
+        0.028,
+        0.064
+      ],
+      "rotation": [
+        -0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.002,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=39793",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "39793.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.008,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/39793s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.0232
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_sensor_block_pin",
+      "ldraw": "6558.dat",
+      "color": 1,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.028,
+        0.056
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00037,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=6558",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "left_color_pin",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.012,
+        0.036,
+        0.064
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "right_sensor_block",
+      "ldraw": "39793.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.024,
+        0.028,
+        0.064
+      ],
+      "rotation": [
+        -0.7071067812,
+        0.0,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.002,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=39793",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "39793.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            -0.008,
+            0.0,
+            0.008
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/39793s01.dat \u00e2\u2020\u2019 connhol3.dat"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.008,
+            0.0232
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_sensor_block_pin",
+      "ldraw": "6558.dat",
+      "color": 1,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.028,
+        0.056
+      ],
+      "rotation": [
+        0.7071067812,
+        0.0,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00037,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=6558",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin",
+          "position": [
+            -0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "pin",
+          "position": [
+            0.008,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 6558.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.024,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right_color_pin",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.012,
+        0.036,
+        0.064
+      ],
+      "rotation": [
+        0.0,
+        -0.7071067812,
+        0.7071067812,
+        0.0
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "caster_holder",
+      "ldraw": "39370.dat",
+      "color": 322,
+      "body": "chassis",
+      "position": [
+        0.0,
+        0.0222,
+        -0.056
+      ],
+      "rotation": [
+        0.0,
+        0.7071067812,
+        0.0,
+        0.7071067812
+      ],
+      "massKg": 0.00411,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=39370",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0058,
+            -0.016
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/39370s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_1",
+          "kind": "pin-hole",
+          "position": [
+            0.0,
+            0.0058,
+            0.016
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "s/39370s01.dat \u00e2\u2020\u2019 connhole.dat"
+        },
+        {
+          "name": "attachment_2",
+          "kind": "socket",
+          "position": [
+            0.0,
+            -0.0118,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "39370 socket circular surfaces centered at raw Y=44 LDU"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.0223998871,
+            0.0348,
+            0.0392
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "caster_pin_-16",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        -0.016,
+        0.028,
+        -0.052
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "caster_pin_16",
+      "ldraw": "2780.dat",
+      "color": 0,
+      "body": "chassis",
+      "position": [
+        0.016,
+        0.028,
+        -0.052
+      ],
+      "rotation": [
+        -0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "massKg": 0.00015,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=2780",
+      "connectors": [
+        {
+          "name": "end_a",
+          "kind": "pin",
+          "position": [
+            -0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        },
+        {
+          "name": "end_b",
+          "kind": "pin",
+          "position": [
+            0.004,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "source": "LDraw 2780.dat: nominal shaft engagement geometry"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "box",
+          "size": [
+            0.016,
+            0.0062408,
+            0.0064004246
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "massNote": "Catalog approximate 0.15 g for the modeled slotted mold; unslotted variants are 0.20 g."
+    },
+    {
+      "name": "caster_ball",
+      "ldraw": "52629.dat",
+      "color": 15,
+      "body": "caster",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "massKg": 0.00499,
+      "massSource": "https://www.bricklink.com/v2/catalog/catalogitem.page?P=52629",
+      "connectors": [
+        {
+          "name": "attachment_0",
+          "kind": "ball",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "source": "52629 sphere center at raw origin"
+        }
+      ],
+      "colliders": [
+        {
+          "shape": "sphere",
+          "radius": 0.0096,
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_hub_pin_0",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_hub_pin_0",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "left_hub_pin_1",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "left_hub_pin_1",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "left_hub_pin_2",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "left_hub_pin_2",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "left_wheel_pin_0",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "left_tire",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_wheel_pin_0",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_4"
+      },
+      "b": {
+        "part": "left_wheel_pin_1",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "left_tire",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "left_wheel_pin_1",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "left_motor",
+        "connector": "attachment_5"
+      },
+      "b": {
+        "part": "left_axle",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "left_tire",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "left_axle",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "right_hub_pin_0",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "right_hub_pin_0",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "right_hub_pin_1",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_4"
+      },
+      "b": {
+        "part": "right_hub_pin_1",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "right_hub_pin_2",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_5"
+      },
+      "b": {
+        "part": "right_hub_pin_2",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "right_wheel_pin_0",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "right_tire",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "right_wheel_pin_0",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_4"
+      },
+      "b": {
+        "part": "right_wheel_pin_1",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "right_tire",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "right_wheel_pin_1",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "right_motor",
+        "connector": "attachment_5"
+      },
+      "b": {
+        "part": "right_axle",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "right_tire",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "right_axle",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_6"
+      },
+      "b": {
+        "part": "front_frame_pin_-16_44",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "front_frame_pin_-16_44",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_7"
+      },
+      "b": {
+        "part": "front_frame_pin_16_44",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "front_frame_pin_16_44",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_8"
+      },
+      "b": {
+        "part": "rear_frame_pin_-16_44",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "rear_frame_pin_-16_44",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_9"
+      },
+      "b": {
+        "part": "rear_frame_pin_-16_60",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "rear_frame_pin_-16_60",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_10"
+      },
+      "b": {
+        "part": "rear_frame_pin_16_44",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "rear_frame_pin_16_44",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_11"
+      },
+      "b": {
+        "part": "rear_frame_pin_16_60",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "rear_frame_pin_16_60",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_12"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_-16",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_-16",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes_bridge",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_-16",
+        "connector": "attachment_2"
+      }
+    },
+    {
+      "a": {
+        "part": "hub",
+        "connector": "attachment_13"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_16",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_16",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes_bridge",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "eyes_bridge_pin_16",
+        "connector": "attachment_2"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes_bridge",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "eyes_pin_-24",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "eyes_pin_-24",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes_bridge",
+        "connector": "attachment_3"
+      },
+      "b": {
+        "part": "eyes_pin_24",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "eyes",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "eyes_pin_24",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_4"
+      },
+      "b": {
+        "part": "left_sensor_block_pin",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "color_bridge",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_sensor_block_pin",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "left_sensor_block",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_sensor_block_pin",
+        "connector": "attachment_2"
+      }
+    },
+    {
+      "a": {
+        "part": "left_sensor_block",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "left_color_pin",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "color_sensor",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "left_color_pin",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "front_frame",
+        "connector": "attachment_5"
+      },
+      "b": {
+        "part": "right_sensor_block_pin",
+        "connector": "attachment_0"
+      }
+    },
+    {
+      "a": {
+        "part": "color_bridge",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "right_sensor_block_pin",
+        "connector": "attachment_1"
+      }
+    },
+    {
+      "a": {
+        "part": "right_sensor_block",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "right_sensor_block_pin",
+        "connector": "attachment_2"
+      }
+    },
+    {
+      "a": {
+        "part": "right_sensor_block",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "right_color_pin",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "color_sensor",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "right_color_pin",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_4"
+      },
+      "b": {
+        "part": "caster_pin_-16",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "caster_holder",
+        "connector": "attachment_0"
+      },
+      "b": {
+        "part": "caster_pin_-16",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "rear_frame",
+        "connector": "attachment_5"
+      },
+      "b": {
+        "part": "caster_pin_16",
+        "connector": "end_a"
+      }
+    },
+    {
+      "a": {
+        "part": "caster_holder",
+        "connector": "attachment_1"
+      },
+      "b": {
+        "part": "caster_pin_16",
+        "connector": "end_b"
+      }
+    },
+    {
+      "a": {
+        "part": "caster_holder",
+        "connector": "attachment_2"
+      },
+      "b": {
+        "part": "caster_ball",
+        "connector": "attachment_0"
+      }
+    }
+  ],
+  "requireConnected": true
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spike-sumo-simulator"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["mujoco==3.3.7", "numpy>=2.0,<3", "fastapi==0.118.0", "uvicorn==0.37.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2", "httpx>=0.28,<1"]
+
+[project.scripts]
+sumo = "sumo.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sumo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,123 @@
+{
+  "setNumber": "45678-1",
+  "sourceUrl": "https://brickset.com/inventories/45678-1",
+  "notes": [
+    "One selected row per mold family; hub and battery are accounted separately.",
+    "Electronics are catalog equivalents of later kit replacement IDs.",
+    "2780 is the slotted pin geometry; its approximate 0.15 g mass differs from unslotted molds."
+  ],
+  "usage": [
+    {
+      "ldraw": "45601c01.dat",
+      "elementId": "6464165",
+      "name": "HUB, NO. 8",
+      "color": "Bright Yellow",
+      "used": 1,
+      "available": 1
+    },
+    {
+      "ldraw": "45601c01.dat",
+      "elementId": "6482346",
+      "name": "RECHARGEABLE BATTERY, NO. 2",
+      "color": "Bright Yellow",
+      "used": 1,
+      "available": 1
+    },
+    {
+      "ldraw": "54696p01.dat",
+      "elementId": "6359210",
+      "name": "MOTOR, NO. 12",
+      "color": "White",
+      "used": 2,
+      "available": 2
+    },
+    {
+      "ldraw": "2780.dat",
+      "elementId": "6279875",
+      "name": "CONNECTOR PEG W. FRICTION",
+      "color": "Black",
+      "used": 22,
+      "available": 92
+    },
+    {
+      "ldraw": "39367p01.dat",
+      "elementId": "6253244",
+      "name": "WHEEL DIA.56",
+      "color": "Multicombination",
+      "used": 2,
+      "available": 4
+    },
+    {
+      "ldraw": "4519.dat",
+      "elementId": "6130007",
+      "name": "CROSS AXLE 3M",
+      "color": "Bright Yellow",
+      "used": 2,
+      "available": 10
+    },
+    {
+      "ldraw": "64179.dat",
+      "elementId": "6016154",
+      "name": "BEAM FRAME 5X7 \u00c3\u0192\u00cb\u0153 4.85",
+      "color": "Black",
+      "used": 2,
+      "available": 2
+    },
+    {
+      "ldraw": "32524.dat",
+      "elementId": "6261638",
+      "name": "TECHNIC 7M BEAM",
+      "color": "Medium Azur",
+      "used": 2,
+      "available": 7
+    },
+    {
+      "ldraw": "6558.dat",
+      "elementId": "4514553",
+      "name": "CONNECTOR PEG W. FRICTION 3M",
+      "color": "Bright Blue",
+      "used": 4,
+      "available": 14
+    },
+    {
+      "ldraw": "37316.dat",
+      "elementId": "6302968",
+      "name": "SENSOR DISTANCE, NO. 1",
+      "color": "White",
+      "used": 1,
+      "available": 1
+    },
+    {
+      "ldraw": "37308.dat",
+      "elementId": "6217705",
+      "name": "SENSOR COLOUR, NO. 2",
+      "color": "White",
+      "used": 1,
+      "available": 1
+    },
+    {
+      "ldraw": "39793.dat",
+      "elementId": "6265644",
+      "name": "FRAME 3X3",
+      "color": "Black",
+      "used": 2,
+      "available": 6
+    },
+    {
+      "ldraw": "39370.dat",
+      "elementId": "6261590",
+      "name": "BEAM 3X5 W/ DIA. 19 WHEEL CUP",
+      "color": "Medium Azur",
+      "used": 1,
+      "available": 1
+    },
+    {
+      "ldraw": "52629.dat",
+      "elementId": "6261647",
+      "name": "DIA. 19 WHEEL BALL",
+      "color": "White",
+      "used": 1,
+      "available": 1
+    }
+  ]
+}

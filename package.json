@@ -1,0 +1,10 @@
+{
+  "name": "spike-sumo-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:robot": "node ../agent-meshes/src/cli.ts assemble hardware/minimal-spike.json artifacts/robot",
+    "start": ".venv/Scripts/python.exe -m sumo.cli serve"
+  },
+  "dependencies": { "three": "0.186.0" }
+}
