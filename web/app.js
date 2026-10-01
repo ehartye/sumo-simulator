@@ -6,6 +6,7 @@ const $ = id => document.getElementById(id);
 let running = false, busy = false, initialized = false, frames = [], latest = null;
 let events = [], eventViewKey = '';
 let loadedReplay = null, liveArena = null;
+let bestSelection = null, appliedRevision = null, automaticPrograms = null, examples = {};
 let arena = { radius: .6096, height: .0254, border: .0508, timeout: 120 };
 const models = [], bodyObjects = [];
 const viewport = $('viewport');
@@ -237,6 +238,46 @@ async function control(action) {
   while (busy) await new Promise(resolve => setTimeout(resolve, 10));
   await guarded(action);
 }
+function showBestSelection() {
+  $('load-best').disabled = $('inspect-best').disabled = !bestSelection;
+  if (!bestSelection) { $('best-label').textContent = 'No tested strategy selected yet'; return; }
+  const { champion, loop, score, revision } = bestSelection;
+  $('best-label').textContent = `${revision === appliedRevision ? 'Loaded' : 'Available'} best · ${champion.name.replaceAll('_', ' ')} · loop ${loop} · ${score.wins}W / ${score.draws}D / ${score.losses}L`;
+}
+function applyBestSelection() {
+  if (!bestSelection) return;
+  [bestSelection.champion, bestSelection.opponent].forEach(({ name, source }, i) => {
+    examples[name] = source;
+    for (const corner of [0, 1]) {
+      if (![...$('preset'+corner).options].some(option => option.value === name)) {
+        const option = document.createElement('option'); option.value = name; option.textContent = name.replaceAll('_', ' '); $('preset'+corner).append(option);
+      }
+    }
+    $('preset'+i).value = name; $('code'+i).value = source;
+  });
+  automaticPrograms = [$('code0').value, $('code1').value];
+  appliedRevision = bestSelection.revision; initialized = false; $('error').textContent = '';
+  showBestSelection();
+}
+async function refreshBestSelection(manual = false) {
+  bestSelection = await api('strategy-selection');
+  showBestSelection();
+  const unchanged = automaticPrograms?.every((program, i) => $('code'+i).value === program);
+  if (manual) applyBestSelection();
+  else if (bestSelection && bestSelection.revision !== appliedRevision && !running && !busy && !loadedReplay && unchanged) await control(applyBestSelection);
+}
+$('load-best').onclick = () => control(() => refreshBestSelection(true));
+$('inspect-best').onclick = () => control(async () => {
+  if (!bestSelection) return;
+  const response = await fetch(bestSelection.replayUrl);
+  if (!response.ok) throw new Error('Winning replay is unavailable. Try Load latest best to refresh.');
+  await loadReplay({ name: `loop ${bestSelection.loop} winning bout`, text: () => response.text() });
+});
+async function pollBestSelection() {
+  try { await refreshBestSelection(); }
+  catch { /* Keep the current match and retry if the local server is restarting. */ }
+  setTimeout(pollBestSelection, 10000);
+}
 $('reset').onclick = () => control(reset);
 $('run').onclick = () => {
   if (running) { running = false; $('run').textContent = '▶ Run match'; if (latest) display(latest); return; }
@@ -262,6 +303,7 @@ async function pump() {
 }
 async function boot() {
   const info = await api('info');
+  examples = { ...info.examples };
   liveArena = info.arena; setArena(liveArena);
   $('rules-description').textContent = 'Facing away · wait 3 seconds · touch white and turn, or pivot 180° on one stationary wheel. Provisional Atomic Eagles 2022 arena; user-specified pivot.';
   const gltf = await new GLTFLoader().loadAsync('/assets/model.glb');
@@ -272,17 +314,19 @@ async function boot() {
     for (const object of Object.values(objects)) { if (!object) throw new Error('Missing named robot body in GLB'); scene.attach(object); }
     bodyObjects.push(objects);
     for (const object of Object.values(objects)) object.traverse(child => { if (child.isMesh) { child.castShadow = true; child.receiveShadow = true; } });
-    const names = Object.keys(info.examples);
+    const names = Object.keys(examples);
     for (const name of names) { const option = document.createElement('option'); option.value = name; option.textContent = name.replaceAll('_',' '); $('preset'+i).append(option); }
     $('preset'+i).selectedIndex = Math.min(i, names.length-1);
-    $('code'+i).value = info.examples[$('preset'+i).value] || '';
-    $('preset'+i).onchange = () => { $('code'+i).value = info.examples[$('preset'+i).value]; initialized = false; running = false; $('run').textContent = '▶ Run match'; };
+    $('code'+i).value = examples[$('preset'+i).value] || '';
+    $('preset'+i).onchange = () => { $('code'+i).value = examples[$('preset'+i).value]; initialized = false; running = false; $('run').textContent = '▶ Run match'; };
   }
   $('mass').textContent = `${(info.robot.totalMassKg*1000).toFixed(2)} g`;
   $('dimensions').textContent = `${(info.robot.totalMassKg*1000).toFixed(2)} g · ${info.robot.bounds.max.map((v,i) => ((v-info.robot.bounds.min[i])*1000).toFixed(1)).join(' × ')} mm (width × height × length)`;
   const table = document.createElement('table');
   for (const part of info.robot.parts) { const row = table.insertRow(); row.insertCell().textContent = part.name.replaceAll('_',' '); row.insertCell().textContent = part.ldraw; row.insertCell().textContent = `${(part.massKg*1000).toFixed(2)} g`; }
   $('bom').append(table);
-  await guarded(reset); $('loading').remove(); pump();
+  automaticPrograms = [$('code0').value, $('code1').value];
+  try { await refreshBestSelection(); } catch { /* Selection is optional on older servers. */ }
+  await guarded(reset); $('loading').remove(); pump(); setTimeout(pollBestSelection, 10000);
 }
 boot().catch(fail);
