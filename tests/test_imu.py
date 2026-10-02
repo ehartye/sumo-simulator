@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 
 from sumo.physics import Arena, World
-from sumo.robot import multiply
+from sumo.robot import multiply, rotate
 from sumo.runtime import Runner
 
 
@@ -129,7 +129,7 @@ def test_runtime_and_saved_trial_metadata_declare_uncalibrated_tilt(tmp_path):
     from sumo.server import info
     from tools.strategy_tournament import run_bout
 
-    assert RUNTIME_PROFILE == 'sync-subset-v2'
+    assert RUNTIME_PROFILE == 'sync-subset-v3'
     assert 'imu.tilt(calibrated=True)' in SUPPORTED_API['pybricks.hubs'][0]
     assert info()['imuTiltModel'] == IMU_TILT_PROFILE
     path = tmp_path/'tilt-bout.json'
@@ -139,3 +139,91 @@ def test_runtime_and_saved_trial_metadata_declare_uncalibrated_tilt(tmp_path):
     assert metadata['runtime'] == RUNTIME_PROFILE
     assert metadata['imuTiltModel']['fidelity'] == 'uncalibrated'
     assert metadata['imuTiltModel'] == IMU_TILT_PROFILE
+
+
+@pytest.mark.parametrize('driven_port, clockwise_sign', [('A', -1), ('B', 1)])
+def test_heading_matches_actual_left_and_right_turns(driven_port, clockwise_sign):
+    # Historical A is on -X (physical right); driving A turns the +Z nose
+    # toward +X (physical left). Pybricks must report that turn as negative.
+    source = f'''
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor
+from pybricks.parameters import Port, Direction
+from pybricks.tools import wait
+hub = PrimeHub()
+a = Motor(Port.A)
+b = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+assert hub.imu.heading() == 0
+{'a' if driven_port == 'A' else 'b'}.dc(60)
+{'b' if driven_port == 'A' else 'a'}.hold()
+wait(300)
+assert hub.imu.heading()*{clockwise_sign} > 25
+'''
+    world = World(seed=19, arena=Arena(radius=2))
+    with Runner(world, [source, 'pass']) as runner:
+        final = runner.run_until_done(max_seconds=.4)
+        assert final['programs'][0]['status'] == 'done', final['programs']
+        forward = rotate(world.pose(0)[1], [0, 0, 1])
+        assert forward[0]*clockwise_sign < -.2
+
+
+def test_clockwise_heading_is_relative_and_unwrapped_through_a_full_turn():
+    source = '''
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor
+from pybricks.parameters import Port, Direction
+from pybricks.tools import wait
+hub = PrimeHub()
+a = Motor(Port.A)
+b = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+assert hub.imu.heading() == 0
+a.dc(60)
+b.dc(-60)
+wait(2000)
+assert hub.imu.heading() < -360
+'''
+    # Both initial headings (0 and 180 degrees) must yield startup-relative 0.
+    with Runner(World(seed=19, arena=Arena(radius=2)), [source, source]) as runner:
+        final = runner.run_until_done(max_seconds=2.1)
+        assert [program['status'] for program in final['programs']] == ['done', 'done'], final['programs']
+
+
+class LegacyHeadingRunner(Runner):
+    """Frozen v2 RPC sign, with the same World and scheduler as v3."""
+    def _dispatch(self, bot, operation, args):
+        if operation == 'heading':
+            self._reply(bot, self.headings[bot])
+        else:
+            super()._dispatch(bot, operation, args)
+
+
+def test_internal_yaw_conversion_preserves_exact_values_rpc_timing_and_mechanics():
+    source = '''
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor
+from pybricks.parameters import Port, Direction
+from pybricks.tools import StopWatch, wait
+hub = PrimeHub()
+a = Motor(Port.A)
+b = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+watch = StopWatch()
+for duty in (50, -30, 70):
+    a.dc(duty)
+    b.dc(-duty)
+    for sample in range(5):
+        print(hub.imu.heading(), watch.time())
+        wait(20)
+'''
+    converted = source.replace('hub.imu.heading()', '-hub.imu.heading()')
+    records = []
+    for runner_class, program in ((LegacyHeadingRunner, source), (Runner, converted)):
+        world = World(seed=31, arena=Arena(radius=2))
+        with runner_class(world, [program, program]) as runner:
+            frames = []
+            for _ in range(20):
+                frames.append(runner.step(.02))
+                frames[-1]['qpos'] = world.data.qpos.tolist()
+                frames[-1]['qvel'] = world.data.qvel.tolist()
+            records.append({'frames': frames, 'events': world.events,
+                            'ultrasonic': world.ultrasonic_log})
+    assert records[0] == records[1]

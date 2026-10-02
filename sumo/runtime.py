@@ -14,7 +14,7 @@ import traceback
 from types import ModuleType
 
 
-RUNTIME_PROFILE = 'sync-subset-v2'
+RUNTIME_PROFILE = 'sync-subset-v3'
 
 
 SUPPORTED_API = {
@@ -32,6 +32,7 @@ SUPPORTED_API = {
                     'Encoders: integer degrees at 100 Hz; speed is the finite difference of these samples.',
                     'Motor run_* supports then=Stop.HOLD and wait=True/False.',
                     'Motor angle/speed use degrees and degrees/second; battery voltage uses millivolts.',
+                    'IMU heading is startup-relative, unwrapped and clockwise-positive (corrected in sync-subset-v3).',
                     'IMU tilt returns (pitch, roll) in degrees in the fixed robot neutral frame; calibrated=False is unsupported. Tilt error model is uncalibrated.',
                     'A program error loses the match; errors on the same scheduler tick draw. Completed programs coast.',
                     'No security sandbox; trusted local programs only.'],
@@ -405,7 +406,9 @@ class Runner:
         elif operation == 'sensor':
             value = self.sensor_values[bot][args[0]]
         elif operation == 'heading':
-            value = self.headings[bot]
+            # World retains its legacy absolute CCW yaw for observer/replay
+            # parity; the hardware API uses Pybricks' clockwise-positive sign.
+            value = -self.headings[bot]
         elif operation == 'voltage':
             value = round(self.world.voltage[bot]*1000)
         elif operation == 'print':
