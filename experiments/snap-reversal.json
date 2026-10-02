@@ -1,0 +1,1090 @@
+{
+  "trainingBouts": 48,
+  "runtime": "sync-subset-v3",
+  "fidelity": "uncalibrated",
+  "trials": [
+    {
+      "loop": 24,
+      "opponent": "duty",
+      "programHash": "1e765acda267f15d3fe2265d9b3f2a9e55dde515720a6f9e53f3b2264dbbcd02",
+      "score": {
+        "wins": 3,
+        "draws": 2,
+        "losses": 1,
+        "score": 0.6666666666666666,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 50,
+        "closeDuelAlerts": 3,
+        "notCloseDuelAlerts": 47,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 45,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 1,
+        "jitterOnlyAlerts": 1,
+        "incompletePostWindows": 1
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 19.946069521337105,
+      "enemyMaxTiltDeg": 179.99957804747754,
+      "enemyInversions": 4,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-11-swap-0.json",
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.825616466174157,
+          "enemyMaxTiltDeg": 176.53596823064953,
+          "enemyInverted": true
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-11-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 45.14699999998548
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.47434876598153,
+          "enemyMaxTiltDeg": 176.52099499039377,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-23-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 13.282999999998077
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.259606283297202,
+          "enemyMaxTiltDeg": 31.419766796041735,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-23-swap-1.json",
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.86390044709717,
+          "enemyMaxTiltDeg": 179.99957804747754,
+          "enemyInverted": true
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-37-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 35.59600000000774
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 9.035032239536259,
+          "enemyMaxTiltDeg": 179.98566253257619,
+          "enemyInverted": true
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 34.904000000009354
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.946069521337105,
+          "enemyMaxTiltDeg": 23.39340382682802,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 24,
+      "opponent": "memory",
+      "programHash": "1e765acda267f15d3fe2265d9b3f2a9e55dde515720a6f9e53f3b2264dbbcd02",
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 0,
+        "score": 1.0,
+        "faults": 0,
+        "promote": true
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 36,
+        "closeDuelAlerts": 36,
+        "notCloseDuelAlerts": 0,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 0,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 36,
+        "incompletePostWindows": 0
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 2.529896340128807,
+      "enemyMaxTiltDeg": 18.195462554642337,
+      "enemyInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-11-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.529896340128807,
+          "enemyMaxTiltDeg": 17.984406175947388,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-11-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.4996054247027724,
+          "enemyMaxTiltDeg": 18.195462554642337,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-23-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.529896340128807,
+          "enemyMaxTiltDeg": 17.984406175947388,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-23-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.4996054247027724,
+          "enemyMaxTiltDeg": 18.195462554642337,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-37-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.529896340128807,
+          "enemyMaxTiltDeg": 17.984406175947388,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 2.4996054247027724,
+          "enemyMaxTiltDeg": 18.195462554642337,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 25,
+      "opponent": "duty",
+      "programHash": "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 50,
+        "closeDuelAlerts": 8,
+        "notCloseDuelAlerts": 42,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 37,
+        "newSustainedSeparations": 1,
+        "newSustainedContactFreeIntervals": 2,
+        "jitterOnlyAlerts": 9,
+        "incompletePostWindows": 2
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 19.323240744772267,
+      "enemyMaxTiltDeg": 176.5039892219985,
+      "enemyInversions": 1,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 57.47599999995675
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.95661035553025,
+          "enemyMaxTiltDeg": 20.82711355511339,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-11-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.39600000001287
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-23-swap-0.json",
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.323240744772267,
+          "enemyMaxTiltDeg": 176.5039892219985,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-23-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.40000000001286
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-37-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 16.80799999999756
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.978020597559027,
+          "enemyMaxTiltDeg": 14.973557292507682,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.37500000001292
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 25,
+      "opponent": "memory",
+      "programHash": "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 52,
+        "closeDuelAlerts": 28,
+        "notCloseDuelAlerts": 24,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 14,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 13,
+        "jitterOnlyAlerts": 16,
+        "incompletePostWindows": 1
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 19.97495841551243,
+      "enemyMaxTiltDeg": 176.49308239719556,
+      "enemyInversions": 1,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 21.04600000000274
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.910925689734864,
+          "enemyMaxTiltDeg": 31.359708242003492,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-11-swap-1.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 37.233000000003926
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 16.610389242238618,
+          "enemyMaxTiltDeg": 19.802203395491368,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-23-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 82.9880000000322
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.891377747388205,
+          "enemyMaxTiltDeg": 176.49308239719556,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-23-swap-1.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 31.057000000014973
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.97495841551243,
+          "enemyMaxTiltDeg": 10.43298587388758,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-37-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 61.22199999994802
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 16.651397256340807,
+          "enemyMaxTiltDeg": 18.457731536807742,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 48.81799999997693
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 13.579183181920195,
+          "enemyMaxTiltDeg": 17.982848423461437,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 26,
+      "opponent": "duty",
+      "programHash": "8c432a1debfd6a029ae481350f9a03ec7d6f88a8f5b12a571fda39748b7d4594",
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 31,
+        "closeDuelAlerts": 4,
+        "notCloseDuelAlerts": 27,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 26,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 2,
+        "jitterOnlyAlerts": 2,
+        "incompletePostWindows": 2
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 18.09078242543368,
+      "enemyMaxTiltDeg": 176.48523654474513,
+      "enemyInversions": 1,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 22.12700000000406
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 18.09078242543368,
+          "enemyMaxTiltDeg": 11.805883463048032,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-11-swap-1.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.820000000004907
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 18.01696080794949,
+          "enemyMaxTiltDeg": 20.474483268295952,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-23-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 43.017999999990444
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.979686543754756,
+          "enemyMaxTiltDeg": 176.48523654474513,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-23-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 34.698000000009834
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 5.899799543035573,
+          "enemyMaxTiltDeg": 20.474483268295952,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-37-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 22.12700000000406
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 18.09078242543368,
+          "enemyMaxTiltDeg": 11.805883463048032,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.82100000001188
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 6.218695383060661,
+          "enemyMaxTiltDeg": 20.474483268295952,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 26,
+      "opponent": "memory",
+      "programHash": "8c432a1debfd6a029ae481350f9a03ec7d6f88a8f5b12a571fda39748b7d4594",
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 66,
+        "closeDuelAlerts": 19,
+        "notCloseDuelAlerts": 47,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 44,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 10,
+        "jitterOnlyAlerts": 4,
+        "incompletePostWindows": 2
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 19.997485072570807,
+      "enemyMaxTiltDeg": 176.49624151291854,
+      "enemyInversions": 3,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.56099999999617
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 18.29477169099781,
+          "enemyMaxTiltDeg": 32.771521198082134,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-11-swap-1.json",
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.997485072570807,
+          "enemyMaxTiltDeg": 176.4765780489267,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-23-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 50.74399999997244
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 14.15415522013015,
+          "enemyMaxTiltDeg": 32.771521198082134,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-23-swap-1.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 56.54499999995892
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.997485072570807,
+          "enemyMaxTiltDeg": 176.46729882258887,
+          "enemyInverted": true
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-37-swap-0.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 31.075000000014995
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.691928282373674,
+          "enemyMaxTiltDeg": 18.220604681023996,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.1319999999692
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.997485072570807,
+          "enemyMaxTiltDeg": 176.49624151291854,
+          "enemyInverted": true
+        }
+      ]
+    },
+    {
+      "loop": 27,
+      "opponent": "duty",
+      "programHash": "391128fa8f7a7559f4d7b7ae6ccf1f670004abacec5523c12dc97631e107c341",
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 49,
+        "closeDuelAlerts": 7,
+        "notCloseDuelAlerts": 42,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 37,
+        "newSustainedSeparations": 1,
+        "newSustainedContactFreeIntervals": 1,
+        "jitterOnlyAlerts": 9,
+        "incompletePostWindows": 1
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 19.323240744772267,
+      "enemyMaxTiltDeg": 176.5039892219985,
+      "enemyInversions": 1,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 55.94799999996031
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.93230113933342,
+          "enemyMaxTiltDeg": 20.82711355511339,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-11-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.39600000001287
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-23-swap-0.json",
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.323240744772267,
+          "enemyMaxTiltDeg": 176.5039892219985,
+          "enemyInverted": true
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-23-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.40000000001286
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-37-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 16.80799999999756
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.978020597559027,
+          "enemyMaxTiltDeg": 14.973557292507682,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.37500000001292
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 19.15728815860451,
+          "enemyMaxTiltDeg": 20.436441297697694,
+          "enemyInverted": false
+        }
+      ]
+    },
+    {
+      "loop": 27,
+      "opponent": "memory",
+      "programHash": "391128fa8f7a7559f4d7b7ae6ccf1f670004abacec5523c12dc97631e107c341",
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 43,
+        "closeDuelAlerts": 41,
+        "notCloseDuelAlerts": 2,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 2,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 2,
+        "jitterOnlyAlerts": 39,
+        "incompletePostWindows": 3
+      },
+      "crossingAlerts": 0,
+      "ownMaxTiltDeg": 17.970903396176965,
+      "enemyMaxTiltDeg": 19.802203395491368,
+      "enemyInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-11-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.970903396176965,
+          "enemyMaxTiltDeg": 12.180243152920381,
+          "enemyInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-11-swap-1.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 37.233000000003926
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 16.610389242238618,
+          "enemyMaxTiltDeg": 19.802203395491368,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-23-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.970903396176965,
+          "enemyMaxTiltDeg": 12.180243152920381,
+          "enemyInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-23-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 31.72400000001579
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 13.579183181920195,
+          "enemyMaxTiltDeg": 17.930184865127433,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-37-swap-0.json",
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 17.970903396176965,
+          "enemyMaxTiltDeg": 12.180243152920381,
+          "enemyInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-37-swap-1.json",
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 31.72400000001579
+          },
+          "crossingAlerts": 0,
+          "ownMaxTiltDeg": 13.579183181920195,
+          "enemyMaxTiltDeg": 17.930184865127433,
+          "enemyInverted": false
+        }
+      ]
+    }
+  ],
+  "validationBouts": 8,
+  "directChallenge": {
+    "challenger": 25,
+    "opponent": "21b",
+    "seeds": [
+      881,
+      991,
+      1103,
+      1217
+    ],
+    "programHashes": [
+      "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+      "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+    ],
+    "score": {
+      "wins": 3,
+      "draws": 0,
+      "losses": 5,
+      "score": 0.375,
+      "faults": 0,
+      "promote": false
+    },
+    "bouts": [
+      {
+        "seed": 881,
+        "swapped": false,
+        "result": {
+          "winner": 1,
+          "reason": "outside_floor_contact",
+          "time": 119.7640000002078
+        },
+        "winningProgram": 1,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-881-swap-0.json"
+      },
+      {
+        "seed": 881,
+        "swapped": true,
+        "result": {
+          "winner": 0,
+          "reason": "outside_floor_contact",
+          "time": 49.76599999997472
+        },
+        "winningProgram": 1,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-881-swap-1.json"
+      },
+      {
+        "seed": 991,
+        "swapped": false,
+        "result": {
+          "winner": 1,
+          "reason": "outside_floor_contact",
+          "time": 38.72000000000046
+        },
+        "winningProgram": 1,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-991-swap-0.json"
+      },
+      {
+        "seed": 991,
+        "swapped": true,
+        "result": {
+          "winner": 1,
+          "reason": "outside_floor_contact",
+          "time": 55.837999999960566
+        },
+        "winningProgram": 0,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-991-swap-1.json"
+      },
+      {
+        "seed": 1103,
+        "swapped": false,
+        "result": {
+          "winner": 0,
+          "reason": "outside_floor_contact",
+          "time": 67.29399999995726
+        },
+        "winningProgram": 0,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1103-swap-0.json"
+      },
+      {
+        "seed": 1103,
+        "swapped": true,
+        "result": {
+          "winner": 0,
+          "reason": "outside_floor_contact",
+          "time": 99.40400000011059
+        },
+        "winningProgram": 1,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1103-swap-1.json"
+      },
+      {
+        "seed": 1217,
+        "swapped": false,
+        "result": {
+          "winner": 0,
+          "reason": "outside_floor_contact",
+          "time": 53.36099999996634
+        },
+        "winningProgram": 0,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1217-swap-0.json"
+      },
+      {
+        "seed": 1217,
+        "swapped": true,
+        "result": {
+          "winner": 0,
+          "reason": "outside_floor_contact",
+          "time": 31.687000000015743
+        },
+        "winningProgram": 1,
+        "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1217-swap-1.json"
+      }
+    ]
+  },
+  "selectedRemains": "weave_hook / 21b",
+  "physicsAndConcurrencyUnchanged": true
+}

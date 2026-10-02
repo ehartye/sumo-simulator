@@ -80,6 +80,8 @@ Three [lockup recovery presets](docs/stall-recovery.md) are available: `stall_ho
 
 The additional search uses shallow forward arcs with one driven wheel at a time, rather than stationary spinning. Sustained blind-drive and close-engagement watchdogs log suspicion; bounded gyro hooks and stock-hub pitch/roll guards test responses. [Offline recovery analysis](tools/recovery_analysis.py) measures actual posture, travel and separation from saved observer frames, never controller inputs. The selected `weave_hook` is a training-best complete program, with weaker fresh-seed results and timing-sensitive outcomes. It is not a proven universal or hardware champion.
 
+The [mat-crossing and snap-reversal experiments](docs/snap-reversal.md) add `crossing_hook`, `snap_reverse`, `snap_coast` and `snap_steering`. Their 48 training bouts and eight fresh direct bouts distinguish executed reversal/contact release from improved results. `weave_hook` remains selected.
+
 Runtime v3 corrects the hardware heading API to Pybricks' clockwise-positive convention. Live feedback presets explicitly convert to their existing internal CCW yaw. Archived v1/v2 programs and replay fields retain their historical convention: use them for inspection with the recorded profile, or adapt signed heading reads before a new v3 run. [IMU conventions and assumptions](docs/imu.md) distinguish the hardware API from the legacy absolute observer yaw field. No mechanics or random streams changed.
 
 ## Match rules and physics

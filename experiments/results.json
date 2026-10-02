@@ -1,9 +1,9 @@
 {
-  "bouts": 314,
+  "bouts": 370,
   "fidelity": "uncalibrated",
   "replayAvailability": "Local artifacts, not tracked in Git",
   "physicsBaseline": "93aab99",
-  "distinctBouts": 290,
+  "distinctBouts": 346,
   "compatibilityRepeats": 24,
   "runtimeExtensions": [
     "sync-subset-v2 tilt",
@@ -9209,6 +9209,2758 @@
       ]
     },
     {
+      "directory": "loop-24-duty",
+      "challenger": "experiments\\strategies\\24_crossing_hook.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "1e765acda267f15d3fe2265d9b3f2a9e55dde515720a6f9e53f3b2264dbbcd02",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 2,
+        "losses": 1,
+        "score": 0.6666666666666666,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-11-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action forward hook yaw span deg 62"
+            },
+            {
+              "time": 17.04,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 11670 since white ms (-1 unknown) 4302 wheel travel mm 302 turn 1 action forward hook yaw span deg 164"
+            },
+            {
+              "time": 20.531,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15163 since white ms (-1 unknown) 7795 wheel travel mm 773 turn -1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 24.041,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 18673 since white ms (-1 unknown) 11305 wheel travel mm 1256 turn 1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 29.688,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 410 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 5310 wheel travel mm 740 turn -1 action forward hook yaw span deg 61"
+            },
+            {
+              "time": 35.456,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8768 since white ms (-1 unknown) 3903 wheel travel mm 263 turn 1 action forward hook yaw span deg 213"
+            },
+            {
+              "time": 39.0,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12312 since white ms (-1 unknown) 7447 wheel travel mm 749 turn -1 action forward hook yaw span deg 59"
+            },
+            {
+              "time": 50.742,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 217 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4079 wheel travel mm 401 turn 1 action forward hook yaw span deg 224"
+            },
+            {
+              "time": 54.233,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6492 since white ms (-1 unknown) 7570 wheel travel mm 874 turn -1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 94.07,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 181 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 3925 wheel travel mm 406 turn 1 action forward hook yaw span deg 211"
+            },
+            {
+              "time": 97.614,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6545 since white ms (-1 unknown) 7469 wheel travel mm 893 turn -1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 104.702,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 662 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5622 wheel travel mm 1029 turn 1 action forward hook yaw span deg 74"
+            },
+            {
+              "time": 110.037,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3435 since white ms (-1 unknown) 3920 wheel travel mm 260 turn -1 action forward hook yaw span deg 210"
+            },
+            {
+              "time": 113.617,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7015 since white ms (-1 unknown) 7500 wheel travel mm 760 turn 1 action forward hook yaw span deg 61"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 45.14699999998548
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-11-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action forward hook yaw span deg 63"
+            },
+            {
+              "time": 16.329,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10979 since white ms (-1 unknown) 4251 wheel travel mm 273 turn 1 action forward hook yaw span deg 114"
+            },
+            {
+              "time": 19.82,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 14470 since white ms (-1 unknown) 7742 wheel travel mm 745 turn -1 action forward hook yaw span deg 132"
+            },
+            {
+              "time": 26.699,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 195 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 6317 wheel travel mm 635 turn 1 action forward hook yaw span deg 81"
+            },
+            {
+              "time": 30.192,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6494 since white ms (-1 unknown) 9810 wheel travel mm 1119 turn -1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 37.002,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 634 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5051 wheel travel mm 792 turn 1 action forward hook yaw span deg 72"
+            },
+            {
+              "time": 40.771,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6770 since white ms (-1 unknown) 8820 wheel travel mm 1242 turn -1 action forward hook yaw span deg 54"
+            },
+            {
+              "time": 44.402,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10401 since white ms (-1 unknown) 12451 wheel travel mm 1667 turn 1 action forward hook yaw span deg 55"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 13.282999999998077
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-23-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 735 turn -1 action forward hook yaw span deg 150"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-23-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action forward hook yaw span deg 63"
+            },
+            {
+              "time": 16.293,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4147 since white ms (-1 unknown) 4251 wheel travel mm 273 turn 1 action forward hook yaw span deg 110"
+            },
+            {
+              "time": 23.07,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 36 echo age ms (-1 unknown) 3296 since white ms (-1 unknown) 3870 wheel travel mm 280 turn -1 action forward hook yaw span deg 205"
+            },
+            {
+              "time": 29.153,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 363 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 9953 wheel travel mm 1272 turn 1 action forward hook yaw span deg 74"
+            },
+            {
+              "time": 37.232,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6839 since white ms (-1 unknown) 4007 wheel travel mm 287 turn -1 action forward hook yaw span deg 213"
+            },
+            {
+              "time": 45.729,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 598 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 5159 wheel travel mm 843 turn 1 action forward hook yaw span deg 61"
+            },
+            {
+              "time": 52.245,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 397 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 6477 wheel travel mm 1011 turn -1 action forward hook yaw span deg 95"
+            },
+            {
+              "time": 59.112,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 476 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4847 wheel travel mm 711 turn 1 action forward hook yaw span deg 107"
+            },
+            {
+              "time": 67.069,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 554 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5538 wheel travel mm 945 turn -1 action forward hook yaw span deg 83"
+            },
+            {
+              "time": 73.153,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 389 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4461 wheel travel mm 550 turn 1 action forward hook yaw span deg 196"
+            },
+            {
+              "time": 82.35,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3609 since white ms (-1 unknown) 3852 wheel travel mm 283 turn -1 action forward hook yaw span deg 210"
+            },
+            {
+              "time": 87.651,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8910 since white ms (-1 unknown) 3922 wheel travel mm 262 turn 1 action forward hook yaw span deg 206"
+            },
+            {
+              "time": 93.197,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 37 echo age ms (-1 unknown) 3298 since white ms (-1 unknown) 3785 wheel travel mm 312 turn -1 action forward hook yaw span deg 211"
+            },
+            {
+              "time": 96.688,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6789 since white ms (-1 unknown) 7276 wheel travel mm 784 turn 1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 104.423,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3677 since white ms (-1 unknown) 3782 wheel travel mm 275 turn -1 action forward hook yaw span deg 207"
+            },
+            {
+              "time": 109.689,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 570 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4929 wheel travel mm 797 turn 1 action forward hook yaw span deg 75"
+            },
+            {
+              "time": 113.705,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3105 since white ms (-1 unknown) 3921 wheel travel mm 347 turn -1 action forward hook yaw span deg 210"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 35.59600000000774
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-37-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action forward hook yaw span deg 62"
+            },
+            {
+              "time": 17.04,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 11670 since white ms (-1 unknown) 4302 wheel travel mm 302 turn 1 action forward hook yaw span deg 163"
+            },
+            {
+              "time": 20.531,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15163 since white ms (-1 unknown) 7795 wheel travel mm 773 turn -1 action forward hook yaw span deg 59"
+            },
+            {
+              "time": 24.041,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 18673 since white ms (-1 unknown) 11305 wheel travel mm 1256 turn 1 action forward hook yaw span deg 62"
+            },
+            {
+              "time": 29.616,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 389 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 5344 wheel travel mm 713 turn -1 action forward hook yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 34.904000000009354
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-24-duty\\seed-37-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action forward hook yaw span deg 63"
+            },
+            {
+              "time": 16.293,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4147 since white ms (-1 unknown) 4251 wheel travel mm 273 turn 1 action forward hook yaw span deg 110"
+            },
+            {
+              "time": 23.089,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 29 echo age ms (-1 unknown) 3296 since white ms (-1 unknown) 3887 wheel travel mm 281 turn -1 action forward hook yaw span deg 206"
+            },
+            {
+              "time": 26.58,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6789 since white ms (-1 unknown) 7380 wheel travel mm 753 turn 1 action forward hook yaw span deg 58"
+            },
+            {
+              "time": 30.09,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10299 since white ms (-1 unknown) 10890 wheel travel mm 1236 turn -1 action forward hook yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-24-memory",
+      "challenger": "experiments\\strategies\\24_crossing_hook.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "1e765acda267f15d3fe2265d9b3f2a9e55dde515720a6f9e53f3b2264dbbcd02",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 0,
+        "score": 1.0,
+        "faults": 0,
+        "promote": true
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 111 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action forward hook yaw span deg 341"
+            },
+            {
+              "time": 14.497,
+              "message": "suspected lockup range mm 105 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3406 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 19.289,
+              "message": "suspected lockup range mm 108 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5072 turn -1 action forward hook yaw span deg 311"
+            },
+            {
+              "time": 24.081,
+              "message": "suspected lockup range mm 107 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6732 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 28.873,
+              "message": "suspected lockup range mm 106 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8395 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 33.665,
+              "message": "suspected lockup range mm 110 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10052 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 38.457,
+              "message": "suspected lockup range mm 110 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11717 turn -1 action forward hook yaw span deg 314"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.963,
+              "message": "suspected lockup range mm 109 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2581 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 18.755,
+              "message": "suspected lockup range mm 114 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4245 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 23.547,
+              "message": "suspected lockup range mm 110 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5898 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 28.339,
+              "message": "suspected lockup range mm 106 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7561 turn -1 action forward hook yaw span deg 310"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action forward hook yaw span deg 208"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-23-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 109 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action forward hook yaw span deg 341"
+            },
+            {
+              "time": 14.497,
+              "message": "suspected lockup range mm 107 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3406 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 19.289,
+              "message": "suspected lockup range mm 105 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5072 turn -1 action forward hook yaw span deg 311"
+            },
+            {
+              "time": 24.081,
+              "message": "suspected lockup range mm 103 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6732 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 28.873,
+              "message": "suspected lockup range mm 101 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8395 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 33.665,
+              "message": "suspected lockup range mm 101 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10052 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 38.457,
+              "message": "suspected lockup range mm 113 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11717 turn -1 action forward hook yaw span deg 313"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.963,
+              "message": "suspected lockup range mm 104 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2581 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 18.755,
+              "message": "suspected lockup range mm 97 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4245 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 23.547,
+              "message": "suspected lockup range mm 101 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5898 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 28.339,
+              "message": "suspected lockup range mm 109 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7561 turn -1 action forward hook yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action forward hook yaw span deg 208"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 102 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action forward hook yaw span deg 341"
+            },
+            {
+              "time": 14.497,
+              "message": "suspected lockup range mm 109 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3406 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 19.289,
+              "message": "suspected lockup range mm 107 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5072 turn -1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 24.081,
+              "message": "suspected lockup range mm 103 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6732 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 28.873,
+              "message": "suspected lockup range mm 103 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8395 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 33.665,
+              "message": "suspected lockup range mm 106 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10052 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 38.457,
+              "message": "suspected lockup range mm 109 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11717 turn -1 action forward hook yaw span deg 313"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-24-memory\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 13.963,
+              "message": "suspected lockup range mm 109 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2581 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 18.755,
+              "message": "suspected lockup range mm 97 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4245 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 23.547,
+              "message": "suspected lockup range mm 100 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5898 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 28.339,
+              "message": "suspected lockup range mm 100 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7561 turn -1 action forward hook yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action forward hook yaw span deg 208"
+            }
+          ],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-25-duty",
+      "challenger": "experiments\\strategies\\25_snap_reverse.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 57.47599999995675
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 33.053,
+              "message": "suspected lockup range mm 113 nominal straight mm 1720 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 6283 wheel travel mm 1913 turn -1 action snap reverse yaw span deg 342"
+            },
+            {
+              "time": 37.654,
+              "message": "suspected lockup range mm 111 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 10884 wheel travel mm 3488 turn 1 action snap reverse yaw span deg 333"
+            },
+            {
+              "time": 42.728,
+              "message": "suspected lockup range mm 107 nominal straight mm 1496 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 15958 wheel travel mm 5063 turn -1 action snap reverse yaw span deg 276"
+            },
+            {
+              "time": 47.329,
+              "message": "suspected lockup range mm 104 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 20559 wheel travel mm 6636 turn 1 action snap reverse yaw span deg 334"
+            },
+            {
+              "time": 52.017,
+              "message": "suspected lockup range mm 109 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 25247 wheel travel mm 8211 turn -1 action snap reverse yaw span deg 336"
+            },
+            {
+              "time": 56.705,
+              "message": "suspected lockup range mm 106 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 29935 wheel travel mm 9791 turn 1 action snap reverse yaw span deg 333"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 11.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6424 since white ms (-1 unknown) -1 wheel travel mm 1178 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 15.319,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9951 since white ms (-1 unknown) -1 wheel travel mm 1570 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 25.478,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 58 echo age ms (-1 unknown) 3245 since white ms (-1 unknown) 3921 wheel travel mm 312 turn 1 action snap reverse yaw span deg 206"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 57.351,
+              "message": "tip guard pitch deg -16.2 roll deg -0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.39600000001287
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-11-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.28,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8906 since white ms (-1 unknown) 3903 wheel travel mm 263 turn -1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 705 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 31.793,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 14416 wheel travel mm 1621 turn 1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-23-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 735 turn -1 action snap reverse yaw span deg 150"
+            },
+            {
+              "time": 15.266,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9896 since white ms (-1 unknown) 4024 wheel travel mm 303 turn 1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 22.459,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4809 since white ms (-1 unknown) 4285 wheel travel mm 279 turn -1 action snap reverse yaw span deg 179"
+            },
+            {
+              "time": 39.261,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 203 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 4253 wheel travel mm 448 turn 1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 44.476,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 80 echo age ms (-1 unknown) 3177 since white ms (-1 unknown) 3889 wheel travel mm 323 turn -1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 51.551,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3175 since white ms (-1 unknown) 3938 wheel travel mm 299 turn 1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 59.283,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 513 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5245 wheel travel mm 785 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 63.175,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 339 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 9137 wheel travel mm 1445 turn 1 action snap reverse yaw span deg 32"
+            },
+            {
+              "time": 67.869,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7695 since white ms (-1 unknown) 3922 wheel travel mm 232 turn -1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 71.379,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 11205 since white ms (-1 unknown) 7432 wheel travel mm 677 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 78.885,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 144 echo age ms (-1 unknown) 3039 since white ms (-1 unknown) 3906 wheel travel mm 368 turn -1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 85.504,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 5815 since white ms (-1 unknown) 3922 wheel travel mm 263 turn 1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 93.376,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 275 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 4166 wheel travel mm 498 turn -1 action snap reverse yaw span deg 209"
+            },
+            {
+              "time": 98.609,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4008 since white ms (-1 unknown) 4096 wheel travel mm 287 turn 1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 102.032,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7431 since white ms (-1 unknown) 7519 wheel travel mm 730 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 105.472,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10871 since white ms (-1 unknown) 10959 wheel travel mm 1173 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 108.912,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 14311 since white ms (-1 unknown) 14399 wheel travel mm 1616 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 112.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 17751 since white ms (-1 unknown) 17839 wheel travel mm 2059 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 115.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 21191 since white ms (-1 unknown) 21279 wheel travel mm 2501 turn -1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.40000000001286
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-23-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.297,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8923 since white ms (-1 unknown) 3920 wheel travel mm 260 turn -1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 31.549,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 19175 since white ms (-1 unknown) 14172 wheel travel mm 1593 turn 1 action snap reverse yaw span deg 61"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 16.80799999999756
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-37-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 11.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6424 since white ms (-1 unknown) -1 wheel travel mm 1178 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 15.319,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9951 since white ms (-1 unknown) -1 wheel travel mm 1571 turn -1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 16.713,
+              "message": "tip guard pitch deg -16.0 roll deg 0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.37500000001292
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-25-duty\\seed-37-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.297,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8923 since white ms (-1 unknown) 3920 wheel travel mm 260 turn -1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 31.776,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 14399 wheel travel mm 1621 turn 1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-25-memory",
+      "challenger": "experiments\\strategies\\25_snap_reverse.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 21.04600000000274
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 111 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap reverse yaw span deg 341"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 13.302,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3523 since white ms (-1 unknown) -1 wheel travel mm 2163 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 16.759,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6980 since white ms (-1 unknown) -1 wheel travel mm 2580 turn -1 action snap reverse yaw span deg 86"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 20.552,
+              "message": "tip guard pitch deg -6.1 roll deg 12.1 action retreat"
+            },
+            {
+              "time": 20.905,
+              "message": "tip guard pitch deg -13.4 roll deg -0.1 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 37.233000000003926
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 21.29,
+              "message": "suspected lockup range mm 103 nominal straight mm 1665 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3313 turn 1 action snap reverse yaw span deg 302"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1443 turn 1 action snap reverse yaw span deg 75"
+            },
+            {
+              "time": 16.557,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6475 since white ms (-1 unknown) -1 wheel travel mm 1808 turn -1 action snap reverse yaw span deg 53"
+            },
+            {
+              "time": 28.742,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3264 since white ms (-1 unknown) 3940 wheel travel mm 297 turn -1 action snap reverse yaw span deg 212"
+            },
+            {
+              "time": 33.264,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 614 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8462 wheel travel mm 1196 turn 1 action snap reverse yaw span deg 202"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.4 action retreat"
+            },
+            {
+              "time": 17.05,
+              "message": "tip guard pitch deg -6.0 roll deg 12.3 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 82.9880000000322
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-23-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 109 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap reverse yaw span deg 341"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 13.302,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3523 since white ms (-1 unknown) -1 wheel travel mm 2171 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 16.953,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 239 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 2751 turn -1 action snap reverse yaw span deg 78"
+            },
+            {
+              "time": 20.393,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6458 since white ms (-1 unknown) -1 wheel travel mm 3203 turn 1 action snap reverse yaw span deg 33"
+            },
+            {
+              "time": 24.757,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3262 since white ms (-1 unknown) 3904 wheel travel mm 315 turn -1 action snap reverse yaw span deg 209"
+            },
+            {
+              "time": 28.161,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6668 since white ms (-1 unknown) 7310 wheel travel mm 750 turn 1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 31.656,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10163 since white ms (-1 unknown) 10805 wheel travel mm 1039 turn -1 action snap reverse yaw span deg 64"
+            },
+            {
+              "time": 35.13,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13637 since white ms (-1 unknown) 14279 wheel travel mm 1479 turn 1 action snap reverse yaw span deg 69"
+            },
+            {
+              "time": 38.73,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 239 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 17877 wheel travel mm 2108 turn -1 action snap reverse yaw span deg 96"
+            },
+            {
+              "time": 42.762,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 296 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) 21911 wheel travel mm 2824 turn 1 action snap reverse yaw span deg 148"
+            },
+            {
+              "time": 46.361,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6601 since white ms (-1 unknown) 25510 wheel travel mm 3168 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 49.818,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10058 since white ms (-1 unknown) 28967 wheel travel mm 3608 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 59.416,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3471 since white ms (-1 unknown) 3888 wheel travel mm 272 turn -1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 63.933,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 353 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8405 wheel travel mm 1084 turn 1 action snap reverse yaw span deg 65"
+            },
+            {
+              "time": 67.339,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6407 since white ms (-1 unknown) 11811 wheel travel mm 1530 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 74.546,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13614 since white ms (-1 unknown) 3905 wheel travel mm 262 turn 1 action snap reverse yaw span deg 214"
+            },
+            {
+              "time": 80.837,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 37 echo age ms (-1 unknown) 3298 since white ms (-1 unknown) 3923 wheel travel mm 287 turn -1 action snap reverse yaw span deg 207"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 28.444,
+              "message": "tip guard pitch deg -7.0 roll deg 15.4 action retreat"
+            },
+            {
+              "time": 43.132,
+              "message": "tip guard pitch deg -6.7 roll deg 14.4 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 31.057000000014973
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 18.239,
+              "message": "suspected lockup range mm 109 nominal straight mm 1396 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2878 turn -1 action snap reverse yaw span deg 294"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1442 turn 1 action snap reverse yaw span deg 75"
+            },
+            {
+              "time": 21.853,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3523 since white ms (-1 unknown) -1 wheel travel mm 3266 turn 1 action snap reverse yaw span deg 55"
+            },
+            {
+              "time": 25.294,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 137 echo age ms (-1 unknown) 3055 since white ms (-1 unknown) -1 wheel travel mm 3802 turn -1 action snap reverse yaw span deg 68"
+            },
+            {
+              "time": 28.855,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6616 since white ms (-1 unknown) -1 wheel travel mm 4240 turn 1 action snap reverse yaw span deg 83"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.5 action retreat"
+            },
+            {
+              "time": 30.913,
+              "message": "tip guard pitch deg -14.7 roll deg 0.5 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 61.22199999994802
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 102 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap reverse yaw span deg 341"
+            },
+            {
+              "time": 38.894,
+              "message": "suspected lockup range mm 114 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 8873 wheel travel mm 2116 turn -1 action snap reverse yaw span deg 302"
+            },
+            {
+              "time": 43.565,
+              "message": "suspected lockup range mm 111 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 13544 wheel travel mm 3703 turn 1 action snap reverse yaw span deg 312"
+            },
+            {
+              "time": 48.186,
+              "message": "suspected lockup range mm 105 nominal straight mm 1619 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 18165 wheel travel mm 5235 turn -1 action snap reverse yaw span deg 328"
+            },
+            {
+              "time": 52.874,
+              "message": "suspected lockup range mm 97 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 22853 wheel travel mm 6814 turn 1 action snap reverse yaw span deg 314"
+            },
+            {
+              "time": 60.951,
+              "message": "suspected lockup range mm 106 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 30930 wheel travel mm 8811 turn 1 action snap reverse yaw span deg 312"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 13.302,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3523 since white ms (-1 unknown) -1 wheel travel mm 2145 turn 1 action snap reverse yaw span deg 58"
+            },
+            {
+              "time": 17.265,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 195 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 2697 turn -1 action snap reverse yaw span deg 69"
+            },
+            {
+              "time": 20.773,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6509 since white ms (-1 unknown) -1 wheel travel mm 3108 turn 1 action snap reverse yaw span deg 65"
+            },
+            {
+              "time": 26.907,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3403 since white ms (-1 unknown) -1 wheel travel mm 3786 turn -1 action snap reverse yaw span deg 55"
+            },
+            {
+              "time": 34.413,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 324 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4392 wheel travel mm 545 turn 1 action snap reverse yaw span deg 209"
+            },
+            {
+              "time": 56.471,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3506 since white ms (-1 unknown) 26450 wheel travel mm 7228 turn -1 action snap reverse yaw span deg 57"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 23.695,
+              "message": "tip guard pitch deg -6.2 roll deg -13.3 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 48.81799999997693
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-25-memory\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 18.239,
+              "message": "suspected lockup range mm 112 nominal straight mm 1396 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2878 turn -1 action snap reverse yaw span deg 294"
+            },
+            {
+              "time": 30.049,
+              "message": "suspected lockup range mm 113 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5181 turn 1 action snap reverse yaw span deg 311"
+            },
+            {
+              "time": 34.704,
+              "message": "suspected lockup range mm 99 nominal straight mm 1633 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6748 turn -1 action snap reverse yaw span deg 320"
+            },
+            {
+              "time": 39.341,
+              "message": "suspected lockup range mm 100 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8345 turn 1 action snap reverse yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1442 turn 1 action snap reverse yaw span deg 75"
+            },
+            {
+              "time": 21.853,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3523 since white ms (-1 unknown) -1 wheel travel mm 3262 turn 1 action snap reverse yaw span deg 57"
+            },
+            {
+              "time": 25.361,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7031 since white ms (-1 unknown) -1 wheel travel mm 3623 turn -1 action snap reverse yaw span deg 57"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.4 action retreat"
+            },
+            {
+              "time": 46.621,
+              "message": "tip guard pitch deg -6.0 roll deg -12.1 action retreat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "loop-26-duty",
+      "challenger": "experiments\\strategies\\26_snap_coast.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "8c432a1debfd6a029ae481350f9a03ec7d6f88a8f5b12a571fda39748b7d4594",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 22.12700000000406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 14.955,
+              "message": "suspected lockup range mm 113 nominal straight mm 1504 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2476 turn 1 action snap coast yaw span deg 364"
+            },
+            {
+              "time": 19.799,
+              "message": "suspected lockup range mm 109 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4019 turn -1 action snap coast yaw span deg 333"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap coast yaw span deg 62"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 22.049,
+              "message": "tip guard pitch deg -17.7 roll deg 1.7 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.820000000004907
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-11-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 11.915,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3106 since white ms (-1 unknown) -1 wheel travel mm 1177 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 15.704,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6895 since white ms (-1 unknown) -1 wheel travel mm 1645 turn -1 action snap coast yaw span deg 89"
+            },
+            {
+              "time": 19.267,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 29 echo age ms (-1 unknown) 3315 since white ms (-1 unknown) -1 wheel travel mm 2091 turn 1 action snap coast yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 22.727,
+              "message": "tip guard pitch deg -14.6 roll deg -0.2 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 43.017999999990444
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-23-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 735 turn -1 action snap coast yaw span deg 150"
+            },
+            {
+              "time": 15.409,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 232 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4463 wheel travel mm 425 turn 1 action snap coast yaw span deg 216"
+            },
+            {
+              "time": 18.989,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 108 echo age ms (-1 unknown) 3123 since white ms (-1 unknown) 8043 wheel travel mm 920 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 22.831,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 266 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 11885 wheel travel mm 1567 turn 1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 27.037,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 324 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 16091 wheel travel mm 2283 turn -1 action snap coast yaw span deg 70"
+            },
+            {
+              "time": 31.504,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 310 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 20558 wheel travel mm 3025 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 35.38,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 8 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 24434 wheel travel mm 3473 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 38.961,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3209 since white ms (-1 unknown) 28015 wheel travel mm 3894 turn 1 action snap coast yaw span deg 59"
+            },
+            {
+              "time": 42.54,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3279 since white ms (-1 unknown) 31594 wheel travel mm 4306 turn -1 action snap coast yaw span deg 62"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 42.892,
+              "message": "tip guard pitch deg -13.6 roll deg 0.3 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 34.698000000009834
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-23-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 11.915,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3106 since white ms (-1 unknown) -1 wheel travel mm 1177 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 15.704,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6895 since white ms (-1 unknown) -1 wheel travel mm 1645 turn -1 action snap coast yaw span deg 89"
+            },
+            {
+              "time": 19.267,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 29 echo age ms (-1 unknown) 3315 since white ms (-1 unknown) -1 wheel travel mm 2091 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 25.698,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4912 since white ms (-1 unknown) 4249 wheel travel mm 255 turn -1 action snap coast yaw span deg 207"
+            },
+            {
+              "time": 32.615,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 101 echo age ms (-1 unknown) 3141 since white ms (-1 unknown) 3923 wheel travel mm 335 turn 1 action snap coast yaw span deg 212"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 22.12700000000406
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 14.955,
+              "message": "suspected lockup range mm 106 nominal straight mm 1504 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2476 turn 1 action snap coast yaw span deg 364"
+            },
+            {
+              "time": 19.799,
+              "message": "suspected lockup range mm 111 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4019 turn -1 action snap coast yaw span deg 333"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap coast yaw span deg 62"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 22.049,
+              "message": "tip guard pitch deg -17.6 roll deg 1.6 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.82100000001188
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-26-duty\\seed-37-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 11.915,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3106 since white ms (-1 unknown) -1 wheel travel mm 1177 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 15.704,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6895 since white ms (-1 unknown) -1 wheel travel mm 1645 turn -1 action snap coast yaw span deg 89"
+            },
+            {
+              "time": 19.267,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 29 echo age ms (-1 unknown) 3315 since white ms (-1 unknown) -1 wheel travel mm 2091 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 25.698,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4912 since white ms (-1 unknown) 4249 wheel travel mm 255 turn -1 action snap coast yaw span deg 207"
+            },
+            {
+              "time": 32.597,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 80 echo age ms (-1 unknown) 3194 since white ms (-1 unknown) 3906 wheel travel mm 321 turn 1 action snap coast yaw span deg 211"
+            }
+          ],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-26-memory",
+      "challenger": "experiments\\strategies\\26_snap_coast.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "8c432a1debfd6a029ae481350f9a03ec7d6f88a8f5b12a571fda39748b7d4594",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 40.56099999999617
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 111 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap coast yaw span deg 341"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 20.028,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3264 since white ms (-1 unknown) -1 wheel travel mm 3209 turn 1 action snap coast yaw span deg 54"
+            },
+            {
+              "time": 23.694,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3471 since white ms (-1 unknown) -1 wheel travel mm 3611 turn -1 action snap coast yaw span deg 85"
+            },
+            {
+              "time": 27.31,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 58 echo age ms (-1 unknown) 3261 since white ms (-1 unknown) -1 wheel travel mm 4012 turn 1 action snap coast yaw span deg 56"
+            },
+            {
+              "time": 31.449,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 275 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 4558 turn -1 action snap coast yaw span deg 69"
+            },
+            {
+              "time": 35.082,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 100 echo age ms (-1 unknown) 3140 since white ms (-1 unknown) -1 wheel travel mm 4989 turn 1 action snap coast yaw span deg 69"
+            },
+            {
+              "time": 38.853,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3385 since white ms (-1 unknown) -1 wheel travel mm 5395 turn -1 action snap coast yaw span deg 59"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 16.815,
+              "message": "tip guard pitch deg -6.5 roll deg 12.7 action retreat"
+            },
+            {
+              "time": 27.957,
+              "message": "tip guard pitch deg -6.2 roll deg -12.7 action retreat"
+            },
+            {
+              "time": 40.458,
+              "message": "tip guard pitch deg -17.2 roll deg 0.4 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-11-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap coast yaw span deg 208"
+            },
+            {
+              "time": 12.94,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6771 since white ms (-1 unknown) -1 wheel travel mm 1358 turn 1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 188 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 3854 wheel travel mm 435 turn -1 action snap coast yaw span deg 206"
+            },
+            {
+              "time": 21.253,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 86 echo age ms (-1 unknown) 3176 since white ms (-1 unknown) 7453 wheel travel mm 927 turn 1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 27.349,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 5673 since white ms (-1 unknown) 13549 wheel travel mm 1515 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 30.931,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 144 echo age ms (-1 unknown) 3038 since white ms (-1 unknown) 17131 wheel travel mm 2008 turn 1 action snap coast yaw span deg 58"
+            },
+            {
+              "time": 34.545,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 93 echo age ms (-1 unknown) 3157 since white ms (-1 unknown) 20745 wheel travel mm 2494 turn -1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 40.248,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 4478 wheel travel mm 414 turn 1 action snap coast yaw span deg 192"
+            },
+            {
+              "time": 44.228,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 310 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8458 wheel travel mm 1091 turn -1 action snap coast yaw span deg 29"
+            },
+            {
+              "time": 48.051,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6824 since white ms (-1 unknown) 12281 wheel travel mm 1518 turn 1 action snap coast yaw span deg 43"
+            },
+            {
+              "time": 51.647,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3435 since white ms (-1 unknown) 15877 wheel travel mm 1920 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 55.96,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 20190 wheel travel mm 2733 turn 1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 59.539,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3243 since white ms (-1 unknown) 23769 wheel travel mm 3142 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 64.041,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3140 since white ms (-1 unknown) 3748 wheel travel mm 263 turn 1 action snap coast yaw span deg 207"
+            },
+            {
+              "time": 72.606,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 346 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4374 wheel travel mm 523 turn -1 action snap coast yaw span deg 207"
+            },
+            {
+              "time": 76.171,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 64 echo age ms (-1 unknown) 3227 since white ms (-1 unknown) 7937 wheel travel mm 1006 turn 1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 80.793,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 353 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 12561 wheel travel mm 1788 turn -1 action snap coast yaw span deg 66"
+            },
+            {
+              "time": 84.425,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3192 since white ms (-1 unknown) 16193 wheel travel mm 2208 turn 1 action snap coast yaw span deg 62"
+            },
+            {
+              "time": 88.074,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3262 since white ms (-1 unknown) 19842 wheel travel mm 2623 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 91.687,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3190 since white ms (-1 unknown) 23455 wheel travel mm 3028 turn 1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 98.88,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 159 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 4442 wheel travel mm 434 turn -1 action snap coast yaw span deg 209"
+            },
+            {
+              "time": 102.896,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 325 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8458 wheel travel mm 1145 turn 1 action snap coast yaw span deg 59"
+            },
+            {
+              "time": 106.651,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 238 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 12213 wheel travel mm 1703 turn -1 action snap coast yaw span deg 54"
+            },
+            {
+              "time": 110.247,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3435 since white ms (-1 unknown) 15809 wheel travel mm 2107 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 114.939,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 382 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 20501 wheel travel mm 2930 turn -1 action snap coast yaw span deg 67"
+            },
+            {
+              "time": 118.554,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3209 since white ms (-1 unknown) 24116 wheel travel mm 3345 turn 1 action snap coast yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 24.139,
+              "message": "tip guard pitch deg -6.2 roll deg -12.2 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 50.74399999997244
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-23-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 109 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap coast yaw span deg 341"
+            },
+            {
+              "time": 28.332,
+              "message": "suspected lockup range mm 103 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5169 turn 1 action snap coast yaw span deg 316"
+            },
+            {
+              "time": 44.84,
+              "message": "suspected lockup range mm 110 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8428 turn 1 action snap coast yaw span deg 308"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 20.028,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3264 since white ms (-1 unknown) -1 wheel travel mm 3209 turn 1 action snap coast yaw span deg 54"
+            },
+            {
+              "time": 23.694,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3471 since white ms (-1 unknown) -1 wheel travel mm 3611 turn -1 action snap coast yaw span deg 83"
+            },
+            {
+              "time": 32.068,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3645 since white ms (-1 unknown) -1 wheel travel mm 5517 turn -1 action snap coast yaw span deg 59"
+            },
+            {
+              "time": 35.682,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 57 echo age ms (-1 unknown) 3244 since white ms (-1 unknown) -1 wheel travel mm 5974 turn 1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 40.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 440 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 6815 turn -1 action snap coast yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 16.815,
+              "message": "tip guard pitch deg -6.4 roll deg 12.7 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 56.54499999995892
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-23-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap coast yaw span deg 208"
+            },
+            {
+              "time": 12.94,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6771 since white ms (-1 unknown) -1 wheel travel mm 1358 turn 1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 188 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 3854 wheel travel mm 435 turn -1 action snap coast yaw span deg 206"
+            },
+            {
+              "time": 21.253,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 86 echo age ms (-1 unknown) 3176 since white ms (-1 unknown) 7453 wheel travel mm 927 turn 1 action snap coast yaw span deg 59"
+            },
+            {
+              "time": 27.349,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 5673 since white ms (-1 unknown) 13549 wheel travel mm 1515 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 30.931,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 144 echo age ms (-1 unknown) 3038 since white ms (-1 unknown) 17131 wheel travel mm 2008 turn 1 action snap coast yaw span deg 58"
+            },
+            {
+              "time": 34.545,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 93 echo age ms (-1 unknown) 3157 since white ms (-1 unknown) 20745 wheel travel mm 2494 turn -1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 40.248,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 115 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 4478 wheel travel mm 414 turn 1 action snap coast yaw span deg 192"
+            },
+            {
+              "time": 44.228,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 310 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8458 wheel travel mm 1091 turn -1 action snap coast yaw span deg 30"
+            },
+            {
+              "time": 48.051,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6824 since white ms (-1 unknown) 12281 wheel travel mm 1518 turn 1 action snap coast yaw span deg 44"
+            },
+            {
+              "time": 51.647,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3435 since white ms (-1 unknown) 15877 wheel travel mm 1924 turn -1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 56.066,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 434 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 20296 wheel travel mm 2753 turn 1 action snap coast yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 24.139,
+              "message": "tip guard pitch deg -6.1 roll deg -12.2 action retreat"
+            },
+            {
+              "time": 56.452,
+              "message": "tip guard pitch deg -12.9 roll deg 0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 31.075000000014995
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 102 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn -1 action snap coast yaw span deg 341"
+            },
+            {
+              "time": 22.811,
+              "message": "suspected lockup range mm 101 nominal straight mm 1440 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 4495 wheel travel mm 1244 turn 1 action snap coast yaw span deg 279"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 14.051,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 181 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 2314 turn 1 action snap coast yaw span deg 62"
+            },
+            {
+              "time": 17.647,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6597 since white ms (-1 unknown) -1 wheel travel mm 2678 turn -1 action snap coast yaw span deg 58"
+            },
+            {
+              "time": 28.338,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4130 since white ms (-1 unknown) 4268 wheel travel mm 275 turn -1 action snap coast yaw span deg 135"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.1319999999692
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-26-memory\\seed-37-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap coast yaw span deg 208"
+            },
+            {
+              "time": 12.94,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6771 since white ms (-1 unknown) -1 wheel travel mm 1358 turn 1 action snap coast yaw span deg 63"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 188 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 3854 wheel travel mm 435 turn -1 action snap coast yaw span deg 206"
+            },
+            {
+              "time": 21.253,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 86 echo age ms (-1 unknown) 3176 since white ms (-1 unknown) 7453 wheel travel mm 927 turn 1 action snap coast yaw span deg 59"
+            },
+            {
+              "time": 34.04,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 137 echo age ms (-1 unknown) 3054 since white ms (-1 unknown) 3921 wheel travel mm 363 turn -1 action snap coast yaw span deg 207"
+            },
+            {
+              "time": 37.619,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3192 since white ms (-1 unknown) 7502 wheel travel mm 775 turn 1 action snap coast yaw span deg 61"
+            },
+            {
+              "time": 41.198,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3277 since white ms (-1 unknown) 11081 wheel travel mm 1185 turn -1 action snap coast yaw span deg 60"
+            },
+            {
+              "time": 48.669,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 346 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 4998 wheel travel mm 629 turn 1 action snap coast yaw span deg 61"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 25.824,
+              "message": "tip guard pitch deg -6.9 roll deg 13.6 action retreat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "directory": "loop-27-duty",
+      "challenger": "experiments\\strategies\\27_snap_steering.py",
+      "incumbent": "experiments\\strategies\\03_full_duty.py",
+      "programHashes": [
+        "391128fa8f7a7559f4d7b7ae6ccf1f670004abacec5523c12dc97631e107c341",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 55.94799999996031
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 33.053,
+              "message": "suspected lockup range mm 113 nominal straight mm 1720 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 6283 wheel travel mm 1913 turn -1 action snap reverse yaw span deg 342"
+            },
+            {
+              "time": 37.654,
+              "message": "suspected lockup range mm 111 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 10884 wheel travel mm 3488 turn -1 action snap reverse yaw span deg 333"
+            },
+            {
+              "time": 42.342,
+              "message": "suspected lockup range mm 115 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 15572 wheel travel mm 5068 turn -1 action snap reverse yaw span deg 331"
+            },
+            {
+              "time": 46.893,
+              "message": "suspected lockup range mm 106 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 20123 wheel travel mm 6657 turn -1 action snap reverse yaw span deg 332"
+            },
+            {
+              "time": 51.564,
+              "message": "suspected lockup range mm 103 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 24794 wheel travel mm 8241 turn -1 action snap reverse yaw span deg 331"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 11.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6424 since white ms (-1 unknown) -1 wheel travel mm 1178 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 15.319,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9951 since white ms (-1 unknown) -1 wheel travel mm 1570 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 25.478,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 58 echo age ms (-1 unknown) 3245 since white ms (-1 unknown) 3921 wheel travel mm 312 turn 1 action snap reverse yaw span deg 206"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 55.852,
+              "message": "tip guard pitch deg -13.9 roll deg -0.5 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.39600000001287
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-11-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.28,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8906 since white ms (-1 unknown) 3903 wheel travel mm 263 turn -1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 705 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 31.793,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 14416 wheel travel mm 1621 turn 1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-23-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 735 turn -1 action snap reverse yaw span deg 150"
+            },
+            {
+              "time": 15.266,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9896 since white ms (-1 unknown) 4024 wheel travel mm 303 turn 1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 22.459,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4809 since white ms (-1 unknown) 4285 wheel travel mm 279 turn -1 action snap reverse yaw span deg 179"
+            },
+            {
+              "time": 39.261,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 203 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 4253 wheel travel mm 448 turn 1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 44.476,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 80 echo age ms (-1 unknown) 3177 since white ms (-1 unknown) 3889 wheel travel mm 323 turn -1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 51.551,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3175 since white ms (-1 unknown) 3938 wheel travel mm 299 turn 1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 59.283,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 513 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5245 wheel travel mm 785 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 63.175,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 339 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 9137 wheel travel mm 1445 turn 1 action snap reverse yaw span deg 32"
+            },
+            {
+              "time": 67.869,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7695 since white ms (-1 unknown) 3922 wheel travel mm 232 turn -1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 71.379,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 11205 since white ms (-1 unknown) 7432 wheel travel mm 677 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 78.885,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 144 echo age ms (-1 unknown) 3039 since white ms (-1 unknown) 3906 wheel travel mm 368 turn -1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 85.504,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 5815 since white ms (-1 unknown) 3922 wheel travel mm 263 turn 1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 93.376,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 275 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) 4166 wheel travel mm 498 turn -1 action snap reverse yaw span deg 209"
+            },
+            {
+              "time": 98.609,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 4008 since white ms (-1 unknown) 4096 wheel travel mm 287 turn 1 action snap reverse yaw span deg 206"
+            },
+            {
+              "time": 102.032,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 7431 since white ms (-1 unknown) 7519 wheel travel mm 730 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 105.472,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10871 since white ms (-1 unknown) 10959 wheel travel mm 1173 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 108.912,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 14311 since white ms (-1 unknown) 14399 wheel travel mm 1616 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 112.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 17751 since white ms (-1 unknown) 17839 wheel travel mm 2059 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 115.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 21191 since white ms (-1 unknown) 21279 wheel travel mm 2501 turn -1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.40000000001286
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-23-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.297,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8923 since white ms (-1 unknown) 3920 wheel travel mm 260 turn -1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 31.549,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 19175 since white ms (-1 unknown) 14172 wheel travel mm 1593 turn 1 action snap reverse yaw span deg 61"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 16.80799999999756
+          },
+          "winningProgram": 1,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-37-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.369,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 734 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 11.792,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6424 since white ms (-1 unknown) -1 wheel travel mm 1178 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 15.319,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9951 since white ms (-1 unknown) -1 wheel travel mm 1571 turn -1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 16.713,
+              "message": "tip guard pitch deg -16.0 roll deg 0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.37500000001292
+          },
+          "winningProgram": 0,
+          "firstContact": 4.488,
+          "replay": "artifacts\\strategy-tournament\\loop-27-duty\\seed-37-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 8.352,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 447 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) -1 wheel travel mm 728 turn -1 action snap reverse yaw span deg 63"
+            },
+            {
+              "time": 11.758,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6408 since white ms (-1 unknown) -1 wheel travel mm 1172 turn 1 action snap reverse yaw span deg 76"
+            },
+            {
+              "time": 21.297,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8923 since white ms (-1 unknown) 3920 wheel travel mm 260 turn -1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 24.703,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12329 since white ms (-1 unknown) 7326 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 28.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 15735 since white ms (-1 unknown) 10732 wheel travel mm 1151 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 31.776,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 14399 wheel travel mm 1621 turn 1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "loop-27-memory",
+      "challenger": "experiments\\strategies\\27_snap_steering.py",
+      "incumbent": "experiments\\strategies\\01_close_memory.py",
+      "programHashes": [
+        "391128fa8f7a7559f4d7b7ae6ccf1f670004abacec5523c12dc97631e107c341",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-11-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 111 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn 1 action snap reverse yaw span deg 341"
+            },
+            {
+              "time": 14.393,
+              "message": "suspected lockup range mm 97 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3327 turn 1 action snap reverse yaw span deg 313"
+            },
+            {
+              "time": 19.047,
+              "message": "suspected lockup range mm 104 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4921 turn 1 action snap reverse yaw span deg 316"
+            },
+            {
+              "time": 23.718,
+              "message": "suspected lockup range mm 106 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6500 turn 1 action snap reverse yaw span deg 309"
+            },
+            {
+              "time": 28.389,
+              "message": "suspected lockup range mm 100 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8084 turn 1 action snap reverse yaw span deg 306"
+            },
+            {
+              "time": 33.058,
+              "message": "suspected lockup range mm 102 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 9633 turn 1 action snap reverse yaw span deg 306"
+            },
+            {
+              "time": 37.746,
+              "message": "suspected lockup range mm 104 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11209 turn 1 action snap reverse yaw span deg 305"
+            },
+            {
+              "time": 42.434,
+              "message": "suspected lockup range mm 96 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12786 turn 1 action snap reverse yaw span deg 310"
+            },
+            {
+              "time": 47.122,
+              "message": "suspected lockup range mm 104 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14365 turn 1 action snap reverse yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": [
+            {
+              "time": 47.42,
+              "message": "tip guard pitch deg -12.6 roll deg 0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 37.233000000003926
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-11-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 21.29,
+              "message": "suspected lockup range mm 103 nominal straight mm 1665 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3313 turn 1 action snap reverse yaw span deg 302"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1443 turn 1 action snap reverse yaw span deg 75"
+            },
+            {
+              "time": 16.557,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6475 since white ms (-1 unknown) -1 wheel travel mm 1808 turn -1 action snap reverse yaw span deg 53"
+            },
+            {
+              "time": 28.742,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3264 since white ms (-1 unknown) 3940 wheel travel mm 297 turn -1 action snap reverse yaw span deg 212"
+            },
+            {
+              "time": 33.264,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 614 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8462 wheel travel mm 1196 turn 1 action snap reverse yaw span deg 202"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.4 action retreat"
+            },
+            {
+              "time": 17.05,
+              "message": "tip guard pitch deg -6.0 roll deg 12.3 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-23-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 109 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn 1 action snap reverse yaw span deg 341"
+            },
+            {
+              "time": 14.393,
+              "message": "suspected lockup range mm 112 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3327 turn 1 action snap reverse yaw span deg 313"
+            },
+            {
+              "time": 19.047,
+              "message": "suspected lockup range mm 109 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4921 turn 1 action snap reverse yaw span deg 315"
+            },
+            {
+              "time": 23.718,
+              "message": "suspected lockup range mm 102 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6500 turn 1 action snap reverse yaw span deg 309"
+            },
+            {
+              "time": 28.389,
+              "message": "suspected lockup range mm 105 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8084 turn 1 action snap reverse yaw span deg 306"
+            },
+            {
+              "time": 33.058,
+              "message": "suspected lockup range mm 107 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 9633 turn 1 action snap reverse yaw span deg 306"
+            },
+            {
+              "time": 37.746,
+              "message": "suspected lockup range mm 108 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11209 turn 1 action snap reverse yaw span deg 305"
+            },
+            {
+              "time": 42.434,
+              "message": "suspected lockup range mm 108 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12786 turn 1 action snap reverse yaw span deg 310"
+            },
+            {
+              "time": 47.122,
+              "message": "suspected lockup range mm 106 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14365 turn 1 action snap reverse yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": [
+            {
+              "time": 47.42,
+              "message": "tip guard pitch deg -12.7 roll deg 0.2 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 31.72400000001579
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-23-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 18.239,
+              "message": "suspected lockup range mm 109 nominal straight mm 1396 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2878 turn 1 action snap reverse yaw span deg 294"
+            },
+            {
+              "time": 22.927,
+              "message": "suspected lockup range mm 108 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4456 turn 1 action snap reverse yaw span deg 313"
+            },
+            {
+              "time": 27.581,
+              "message": "suspected lockup range mm 110 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6049 turn 1 action snap reverse yaw span deg 306"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1442 turn 1 action snap reverse yaw span deg 75"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.5 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 47.522999999979945
+          },
+          "winningProgram": 1,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-37-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 9.705,
+              "message": "suspected lockup range mm 102 nominal straight mm 1518 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1748 turn 1 action snap reverse yaw span deg 341"
+            },
+            {
+              "time": 14.393,
+              "message": "suspected lockup range mm 112 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3327 turn 1 action snap reverse yaw span deg 313"
+            },
+            {
+              "time": 19.047,
+              "message": "suspected lockup range mm 116 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4921 turn 1 action snap reverse yaw span deg 316"
+            },
+            {
+              "time": 23.718,
+              "message": "suspected lockup range mm 105 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6500 turn 1 action snap reverse yaw span deg 309"
+            },
+            {
+              "time": 28.389,
+              "message": "suspected lockup range mm 110 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8084 turn 1 action snap reverse yaw span deg 306"
+            },
+            {
+              "time": 33.058,
+              "message": "suspected lockup range mm 110 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 9633 turn 1 action snap reverse yaw span deg 305"
+            },
+            {
+              "time": 37.746,
+              "message": "suspected lockup range mm 108 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11209 turn 1 action snap reverse yaw span deg 305"
+            },
+            {
+              "time": 42.434,
+              "message": "suspected lockup range mm 99 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12786 turn 1 action snap reverse yaw span deg 309"
+            },
+            {
+              "time": 47.122,
+              "message": "suspected lockup range mm 107 nominal straight mm 1661 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14365 turn 1 action snap reverse yaw span deg 311"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [],
+          "tipGuards": [
+            {
+              "time": 47.42,
+              "message": "tip guard pitch deg -12.6 roll deg 0.1 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 31.72400000001579
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\loop-27-memory\\seed-37-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 18.239,
+              "message": "suspected lockup range mm 112 nominal straight mm 1396 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2878 turn 1 action snap reverse yaw span deg 294"
+            },
+            {
+              "time": 22.927,
+              "message": "suspected lockup range mm 102 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 4456 turn 1 action snap reverse yaw span deg 313"
+            },
+            {
+              "time": 27.581,
+              "message": "suspected lockup range mm 99 nominal straight mm 1662 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6049 turn 1 action snap reverse yaw span deg 306"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 9.17,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 419 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 940 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 13.1,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 246 echo age ms (-1 unknown) 3018 since white ms (-1 unknown) -1 wheel travel mm 1442 turn 1 action snap reverse yaw span deg 75"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 9.678,
+              "message": "tip guard pitch deg -6.2 roll deg 12.4 action retreat"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "directory": "round-two-duel-23-vs-21",
       "challenger": "experiments\\strategies\\23_rotation_steering.py",
       "incumbent": "experiments\\strategies\\21_border_bias.py",
@@ -13387,6 +16139,576 @@
             }
           ],
           "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "snap-validation-25-vs-21",
+      "challenger": "experiments\\strategies\\25_snap_reverse.py",
+      "incumbent": "experiments\\strategies\\21b_clockwise_compatible.py",
+      "programHashes": [
+        "6398fffda16f538de892ee1a110c9170e8bdbd16396123b71635e0d42132744a",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "score": {
+        "wins": 3,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.375,
+        "faults": 0,
+        "promote": false
+      },
+      "bouts": [
+        {
+          "seed": 881,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 119.7640000002078
+          },
+          "winningProgram": 1,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-881-swap-0.json",
+          "suspectedLockups": [
+            {
+              "time": 32.659,
+              "message": "suspected lockup range mm 108 nominal straight mm 1741 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 13389 wheel travel mm 2903 turn -1 action snap reverse yaw span deg 301"
+            },
+            {
+              "time": 82.163,
+              "message": "suspected lockup range mm 101 nominal straight mm 1396 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 8924 wheel travel mm 1674 turn 1 action snap reverse yaw span deg 258"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.923,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6441 since white ms (-1 unknown) -1 wheel travel mm 944 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.346,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9864 since white ms (-1 unknown) -1 wheel travel mm 1389 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 17.786,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13304 since white ms (-1 unknown) -1 wheel travel mm 1832 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 23.036,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 22 echo age ms (-1 unknown) 3332 since white ms (-1 unknown) 3766 wheel travel mm 307 turn -1 action snap reverse yaw span deg 213"
+            },
+            {
+              "time": 27.901,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 267 echo age ms (-1 unknown) 3017 since white ms (-1 unknown) 8631 wheel travel mm 1185 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 40.045,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 73 echo age ms (-1 unknown) 3211 since white ms (-1 unknown) 3836 wheel travel mm 319 turn 1 action snap reverse yaw span deg 209"
+            },
+            {
+              "time": 47.465,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 173 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5937 wheel travel mm 763 turn -1 action snap reverse yaw span deg 74"
+            },
+            {
+              "time": 50.888,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6424 since white ms (-1 unknown) 9360 wheel travel mm 1204 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 55.181,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 483 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 13653 wheel travel mm 2020 turn -1 action snap reverse yaw span deg 87"
+            },
+            {
+              "time": 61.731,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 80 echo age ms (-1 unknown) 3194 since white ms (-1 unknown) 3974 wheel travel mm 313 turn 1 action snap reverse yaw span deg 213"
+            },
+            {
+              "time": 65.188,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6651 since white ms (-1 unknown) 7431 wheel travel mm 752 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 69.914,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 303 echo age ms (-1 unknown) 3017 since white ms (-1 unknown) 12157 wheel travel mm 1557 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 77.162,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 102 echo age ms (-1 unknown) 3141 since white ms (-1 unknown) 3923 wheel travel mm 272 turn -1 action snap reverse yaw span deg 207"
+            },
+            {
+              "time": 88.194,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 173 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 14955 wheel travel mm 2722 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 94.73,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 403 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 5139 wheel travel mm 693 turn 1 action snap reverse yaw span deg 68"
+            },
+            {
+              "time": 98.815,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 411 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 9224 wheel travel mm 1511 turn -1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 102.272,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6458 since white ms (-1 unknown) 12681 wheel travel mm 1963 turn 1 action snap reverse yaw span deg 80"
+            },
+            {
+              "time": 109.288,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13474 since white ms (-1 unknown) 4285 wheel travel mm 276 turn -1 action snap reverse yaw span deg 167"
+            },
+            {
+              "time": 114.597,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 195 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4222 wheel travel mm 493 turn 1 action snap reverse yaw span deg 58"
+            },
+            {
+              "time": 118.124,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6528 since white ms (-1 unknown) 7749 wheel travel mm 857 turn -1 action snap reverse yaw span deg 70"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 111.261,
+              "message": "tip guard pitch deg -6.4 roll deg 12.7 action retreat"
+            },
+            {
+              "time": 119.662,
+              "message": "tip guard pitch deg -13.1 roll deg 0.2 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 881,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 49.76599999997472
+          },
+          "winningProgram": 1,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-881-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 40"
+            },
+            {
+              "time": 10.924,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 14 echo age ms (-1 unknown) 3350 since white ms (-1 unknown) -1 wheel travel mm 959 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.347,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6773 since white ms (-1 unknown) -1 wheel travel mm 1405 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 17.787,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10213 since white ms (-1 unknown) -1 wheel travel mm 1847 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 22.01,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 490 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 2643 turn -1 action snap reverse yaw span deg 68"
+            },
+            {
+              "time": 25.676,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3367 since white ms (-1 unknown) -1 wheel travel mm 2995 turn 1 action snap reverse yaw span deg 45"
+            },
+            {
+              "time": 31.185,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 8876 since white ms (-1 unknown) 3903 wheel travel mm 262 turn -1 action snap reverse yaw span deg 210"
+            },
+            {
+              "time": 34.642,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 12333 since white ms (-1 unknown) 7360 wheel travel mm 702 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 38.12,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 166 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 10838 wheel travel mm 1202 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 41.594,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6475 since white ms (-1 unknown) 14312 wheel travel mm 1579 turn 1 action snap reverse yaw span deg 79"
+            },
+            {
+              "time": 46.374,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 58 echo age ms (-1 unknown) 3245 since white ms (-1 unknown) 4131 wheel travel mm 328 turn -1 action snap reverse yaw span deg 195"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 991,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 38.72000000000046
+          },
+          "winningProgram": 1,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-991-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.923,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6441 since white ms (-1 unknown) -1 wheel travel mm 944 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.346,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9864 since white ms (-1 unknown) -1 wheel travel mm 1389 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 17.75,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13268 since white ms (-1 unknown) -1 wheel travel mm 1824 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 21.748,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3142 since white ms (-1 unknown) 3905 wheel travel mm 261 turn -1 action snap reverse yaw span deg 224"
+            },
+            {
+              "time": 25.188,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3192 since white ms (-1 unknown) 7345 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 34.301,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3262 since white ms (-1 unknown) 3887 wheel travel mm 298 turn -1 action snap reverse yaw span deg 209"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 30.165,
+              "message": "tip guard pitch deg -6.4 roll deg 13.8 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 991,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 55.837999999960566
+          },
+          "winningProgram": 0,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-991-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.924,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 14 echo age ms (-1 unknown) 3350 since white ms (-1 unknown) -1 wheel travel mm 960 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 14.347,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6773 since white ms (-1 unknown) -1 wheel travel mm 1405 turn -1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 17.787,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10213 since white ms (-1 unknown) -1 wheel travel mm 1847 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 21.575,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 317 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 2481 turn -1 action snap reverse yaw span deg 26"
+            },
+            {
+              "time": 26.469,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 349 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) 4329 wheel travel mm 531 turn 1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 32.744,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 166 echo age ms (-1 unknown) 3002 since white ms (-1 unknown) 3941 wheel travel mm 384 turn -1 action snap reverse yaw span deg 211"
+            },
+            {
+              "time": 42.49,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 173 echo age ms (-1 unknown) 3000 since white ms (-1 unknown) 6769 wheel travel mm 832 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 45.911,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6423 since white ms (-1 unknown) 10192 wheel travel mm 1264 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 49.334,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9846 since white ms (-1 unknown) 13615 wheel travel mm 1706 turn 1 action snap reverse yaw span deg 60"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 1103,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 67.29399999995726
+          },
+          "winningProgram": 0,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1103-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.923,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6441 since white ms (-1 unknown) -1 wheel travel mm 944 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.346,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9864 since white ms (-1 unknown) -1 wheel travel mm 1389 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 17.75,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13268 since white ms (-1 unknown) -1 wheel travel mm 1823 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 21.748,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3193 since white ms (-1 unknown) 3922 wheel travel mm 261 turn -1 action snap reverse yaw span deg 224"
+            },
+            {
+              "time": 25.188,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3209 since white ms (-1 unknown) 7362 wheel travel mm 704 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 34.453,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 44 echo age ms (-1 unknown) 3279 since white ms (-1 unknown) 3957 wheel travel mm 325 turn -1 action snap reverse yaw span deg 212"
+            },
+            {
+              "time": 37.874,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3190 since white ms (-1 unknown) 7380 wheel travel mm 756 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 51.918,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 457 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 10734 wheel travel mm 1682 turn -1 action snap reverse yaw span deg 54"
+            },
+            {
+              "time": 59.999,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 37 echo age ms (-1 unknown) 3296 since white ms (-1 unknown) 3817 wheel travel mm 285 turn 1 action snap reverse yaw span deg 210"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 1103,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 99.40400000011059
+          },
+          "winningProgram": 1,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1103-swap-1.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.924,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 14 echo age ms (-1 unknown) 3350 since white ms (-1 unknown) -1 wheel travel mm 959 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.347,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6773 since white ms (-1 unknown) -1 wheel travel mm 1405 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 17.787,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10213 since white ms (-1 unknown) -1 wheel travel mm 1848 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 26.39,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 483 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4863 wheel travel mm 719 turn -1 action snap reverse yaw span deg 86"
+            },
+            {
+              "time": 29.832,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 166 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 8305 wheel travel mm 1290 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 41.41,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6369 since white ms (-1 unknown) 3939 wheel travel mm 239 turn -1 action snap reverse yaw span deg 214"
+            },
+            {
+              "time": 44.903,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9862 since white ms (-1 unknown) 7432 wheel travel mm 724 turn 1 action snap reverse yaw span deg 109"
+            },
+            {
+              "time": 48.36,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13319 since white ms (-1 unknown) 10889 wheel travel mm 1147 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 65.164,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 391 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 6190 wheel travel mm 981 turn 1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 68.621,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6458 since white ms (-1 unknown) 9647 wheel travel mm 1420 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 76.195,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 404 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) 4495 wheel travel mm 627 turn 1 action snap reverse yaw span deg 186"
+            },
+            {
+              "time": 79.652,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6458 since white ms (-1 unknown) 7952 wheel travel mm 1066 turn -1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 83.109,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9915 since white ms (-1 unknown) 11409 wheel travel mm 1505 turn 1 action snap reverse yaw span deg 59"
+            },
+            {
+              "time": 89.385,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 7 echo age ms (-1 unknown) 3366 since white ms (-1 unknown) 3712 wheel travel mm 295 turn -1 action snap reverse yaw span deg 208"
+            },
+            {
+              "time": 97.637,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3227 since white ms (-1 unknown) 3903 wheel travel mm 250 turn 1 action snap reverse yaw span deg 212"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 60.838,
+              "message": "tip guard pitch deg -6.3 roll deg -13.1 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 1217,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 53.36099999996634
+          },
+          "winningProgram": 0,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1217-swap-0.json",
+          "suspectedLockups": [],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.923,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6441 since white ms (-1 unknown) -1 wheel travel mm 944 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 14.346,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 9864 since white ms (-1 unknown) -1 wheel travel mm 1389 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 17.75,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 13268 since white ms (-1 unknown) -1 wheel travel mm 1823 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 21.886,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 454 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 2613 turn -1 action snap reverse yaw span deg 65"
+            },
+            {
+              "time": 25.361,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 3401 since white ms (-1 unknown) -1 wheel travel mm 3034 turn 1 action snap reverse yaw span deg 86"
+            },
+            {
+              "time": 30.09,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 383 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 3897 turn -1 action snap reverse yaw span deg 105"
+            },
+            {
+              "time": 33.53,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6441 since white ms (-1 unknown) -1 wheel travel mm 4340 turn 1 action snap reverse yaw span deg 60"
+            },
+            {
+              "time": 46.476,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 51 echo age ms (-1 unknown) 3266 since white ms (-1 unknown) 9260 wheel travel mm 1568 turn -1 action snap reverse yaw span deg 56"
+            },
+            {
+              "time": 49.933,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6723 since white ms (-1 unknown) 12717 wheel travel mm 2025 turn 1 action snap reverse yaw span deg 56"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 43.263,
+              "message": "tip guard pitch deg -6.0 roll deg 12.4 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 1217,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 31.687000000015743
+          },
+          "winningProgram": 1,
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\snap-validation-25-vs-21\\seed-1217-swap-1.json",
+          "suspectedLockups": [
+            {
+              "time": 31.459,
+              "message": "suspected lockup range mm 98 nominal straight mm 1555 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 8113 wheel travel mm 2281 turn -1 action snap reverse yaw span deg 306"
+            }
+          ],
+          "runtime": "sync-subset-v3",
+          "compatibilityRepeat": false,
+          "watchdogAlerts": [
+            {
+              "time": 7.483,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 318 echo age ms (-1 unknown) 3001 since white ms (-1 unknown) -1 wheel travel mm 505 turn -1 action snap reverse yaw span deg 39"
+            },
+            {
+              "time": 10.924,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 14 echo age ms (-1 unknown) 3350 since white ms (-1 unknown) -1 wheel travel mm 960 turn 1 action snap reverse yaw span deg 62"
+            },
+            {
+              "time": 14.347,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 6773 since white ms (-1 unknown) -1 wheel travel mm 1405 turn -1 action snap reverse yaw span deg 61"
+            },
+            {
+              "time": 17.787,
+              "message": "watchdog blind drive range mm 2000 nominal straight mm 0 echo age ms (-1 unknown) 10213 since white ms (-1 unknown) -1 wheel travel mm 1847 turn 1 action snap reverse yaw span deg 61"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 31.566,
+              "message": "tip guard pitch deg -14.7 roll deg -0.1 action retreat"
+            }
+          ]
         }
       ]
     },
