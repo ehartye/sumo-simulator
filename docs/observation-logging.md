@@ -12,7 +12,7 @@ Prints count toward the 100,000-operation program budget. A burst of more than 1
 
 ## Historical results
 
-Earlier strategy scores and archived replays were measured under `sync-subset-v3`, where each print used an extra 1 ms scheduler slot. The selected `weave_hook` has now been [revalidated in 16 v4 bouts](logging-v4-validation.md), with a current winning replay in the UI. Its historical v3 validation is preserved separately; other candidates have not all been reranked. Rankings can change with scheduling, even when physics is identical. Archived programs and evidence remain unchanged.
+Earlier strategy scores and archived replays were measured under `sync-subset-v3`, where each print used an extra 1 ms scheduler slot. The original `weave_hook` has now been [revalidated in 16 v4 bouts](logging-v4-validation.md). Subsequent [numeric self-play tuning](weave-tuning.md) selects a 20 ms variant against that frozen original, with its current winning replay in the UI. Previous selections and historical v3 validation remain separately preserved; other candidates have not all been reranked. Rankings can change with scheduling, even when physics is identical. Archived programs and evidence remain unchanged.
 
 Select the legacy profile explicitly to reproduce those trials:
 

@@ -1,0 +1,1600 @@
+{
+  "runtime": "sync-subset-v4",
+  "codeBaseline": "6a0c3cf",
+  "baselineHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+  "fidelity": "uncalibrated",
+  "newBouts": 68,
+  "selfPlayControlRepeats": 2,
+  "screeningBouts": 32,
+  "validationBouts": 16,
+  "poolBouts": 16,
+  "selected": "weave_slow_loop",
+  "selectionBasis": "Higher new-seed score and faster wins than the other frozen finalist; no faults",
+  "selectedRawWinPercent": 50.0,
+  "selectedScore": 0.75,
+  "selectedPooled": {
+    "wins": 4,
+    "draws": 4,
+    "losses": 8,
+    "score": 0.375
+  },
+  "originalPooled": {
+    "wins": 8,
+    "draws": 5,
+    "losses": 3,
+    "score": 0.65625
+  },
+  "reports": [
+    {
+      "stage": "control",
+      "directory": "tuning-v4-self-control",
+      "variant": "identical original",
+      "loop": null,
+      "programHashes": [
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {},
+      "score": {
+        "wins": 1,
+        "draws": 2,
+        "losses": 1,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 25.0,
+      "medianWinningSeconds": 42.965999999990565,
+      "uniquePhysicalTrajectories": 2,
+      "winsBySide": {
+        "0": 1,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 67,
+        "closeDuelAlerts": 17,
+        "notCloseDuelAlerts": 50,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 35,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 12,
+        "jitterOnlyAlerts": 6,
+        "incompletePostWindows": 1
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 42.965999999990565
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-self-control\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "59a10293e005f965d998acb2e3c564c8dac4a3793704fe63148da8742a95a7b7",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 42.965999999990565
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-self-control\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "59a10293e005f965d998acb2e3c564c8dac4a3793704fe63148da8742a95a7b7",
+          "selfPlayControlRepeat": true,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-self-control\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "5121449c9e4edc7b45d013f9186f621b806d3c9323c4268c8095e918d2193a49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-self-control\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "5121449c9e4edc7b45d013f9186f621b806d3c9323c4268c8095e918d2193a49",
+          "selfPlayControlRepeat": true,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-35",
+      "variant": "weave_fast_loop",
+      "loop": 35,
+      "programHashes": [
+        "5e1ebaa4728f4af5d61461103f1b6447f07e6aa94d831f25c2c1167c0e55052d",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(5)"
+      },
+      "score": {
+        "wins": 2,
+        "draws": 2,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 39.16949999998719,
+      "uniquePhysicalTrajectories": 4,
+      "winsBySide": {
+        "0": 2,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 72,
+        "closeDuelAlerts": 24,
+        "notCloseDuelAlerts": 48,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 47,
+        "newSustainedSeparations": 1,
+        "newSustainedContactFreeIntervals": 10,
+        "jitterOnlyAlerts": 5,
+        "incompletePostWindows": 2
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 25.117000000007714
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-35\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "a0b5213a5e2e5bc2d37bd73bb5a99079608926e644740cdb6888e87d40ffd381",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-35\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "521f83054c592772614cd0b0719412b72b2a9f99abe46cfdf1c58733f66767ac",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 53.22199999996666
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-35\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "cfcd8dd31c55e234a26f72236d0f70fc11d89205049d25e8da587736e3f631b5",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-35\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "7d11124a576d5a911245d4666cdc8a8d2162b4b1ba6b510673149afb68f03c13",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-36",
+      "variant": "weave_slow_loop",
+      "loop": 36,
+      "programHashes": [
+        "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(20)"
+      },
+      "score": {
+        "wins": 2,
+        "draws": 2,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 14.191999999997574,
+      "uniquePhysicalTrajectories": 2,
+      "winsBySide": {
+        "0": 2,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 52,
+        "closeDuelAlerts": 48,
+        "notCloseDuelAlerts": 4,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 4,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 48,
+        "incompletePostWindows": 0
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-36\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-36\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-36\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-36\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-37",
+      "variant": "weave_soft_charge",
+      "loop": 37,
+      "programHashes": [
+        "9818f3135a014bcce65a9041f85346f3a7c47d4a576dd317b08ba7ce4c3211ab",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "CHARGE_SPEED = 850": "CHARGE_SPEED = 700"
+      },
+      "score": {
+        "wins": 2,
+        "draws": 2,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 52.092999999969294,
+      "uniquePhysicalTrajectories": 2,
+      "winsBySide": {
+        "0": 2,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 68,
+        "closeDuelAlerts": 64,
+        "notCloseDuelAlerts": 4,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 4,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 56,
+        "incompletePostWindows": 2
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 52.092999999969294
+          },
+          "firstContact": 4.562,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-37\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "26fa14cf2f29233ee74bed2417dcb69971dd7db6497e013cc1e52f02ba14e7b7",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.562,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-37\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "715925e8c3376ad4d0b597f7ef3530b9a91ecd95b192bcf4c97fc074f7c864e4",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 52.092999999969294
+          },
+          "firstContact": 4.562,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-37\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "26fa14cf2f29233ee74bed2417dcb69971dd7db6497e013cc1e52f02ba14e7b7",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.562,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-37\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "715925e8c3376ad4d0b597f7ef3530b9a91ecd95b192bcf4c97fc074f7c864e4",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-38",
+      "variant": "weave_fast_charge",
+      "loop": 38,
+      "programHashes": [
+        "9dcd8d16df012b15ef62e40b79eee22af424bad8a03e5b685f4992aeacfbef42",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "CHARGE_SPEED = 850": "CHARGE_SPEED = 1000"
+      },
+      "score": {
+        "wins": 1,
+        "draws": 3,
+        "losses": 0,
+        "score": 0.625,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 25.0,
+      "medianWinningSeconds": 61.5739999999472,
+      "uniquePhysicalTrajectories": 4,
+      "winsBySide": {
+        "0": 1,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 102,
+        "closeDuelAlerts": 29,
+        "notCloseDuelAlerts": 73,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 53,
+        "newSustainedSeparations": 2,
+        "newSustainedContactFreeIntervals": 11,
+        "jitterOnlyAlerts": 11,
+        "incompletePostWindows": 2
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 61.5739999999472
+          },
+          "firstContact": 4.508,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-38\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "bf9972bc469525921bc628e0dbb0c5164dc6e20fcf4cd43ab41297ccc9be3d67",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.508,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-38\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "b08a978a4c7a3414b6d4452471cfe87a9020f08a8e6c615aee7a6baf9758fc82",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.508,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-38\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "2833fc7284917ba10232c6101ffbe9aa100dcc306500ffc8422315a2212d56d5",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.508,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-38\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "cdd481211a3cf899ca96adbeb012b21d116532e2143ebb8ff0cdc7d726e05a13",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-39",
+      "variant": "weave_short_hook",
+      "loop": 39,
+      "programHashes": [
+        "74bfdcbd3cd923554779b06de81b5498fa9ade0b8aa1bb4bf96e9f54e18d007f",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "RELEASE_MS = 450": "RELEASE_MS = 250",
+        "TURN_ANGLE = 35": "TURN_ANGLE = 20"
+      },
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 65.89199999995057,
+      "uniquePhysicalTrajectories": 3,
+      "winsBySide": {
+        "0": 2,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 28,
+        "closeDuelAlerts": 24,
+        "notCloseDuelAlerts": 4,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 4,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 24,
+        "incompletePostWindows": 0
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 65.89199999995057
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-39\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "14a264063a69aafdb9ee85d530d847fc3cff11ef4966da4b637387df18ce9390",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 13.272999999998083
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-39\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "a62245720c2bd2787b54e40f885feb7fd6f5a81acb690e8fe4714a2536ab4a0d",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 65.89199999995057
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-39\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "14a264063a69aafdb9ee85d530d847fc3cff11ef4966da4b637387df18ce9390",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 13.272999999998083
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-39\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "42f5b7ee88cfb455924469ccbb8f2a60ef3513d7b67d71b1ee6f66c04cd46309",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-40",
+      "variant": "weave_wide_hook",
+      "loop": 40,
+      "programHashes": [
+        "b492b15e80a492ea54c6db1f481a898b6a43437caaa66b3269370b30c08f463b",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "RELEASE_MS = 450": "RELEASE_MS = 650",
+        "TURN_ANGLE = 35": "TURN_ANGLE = 55"
+      },
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 54.863999999967035,
+      "uniquePhysicalTrajectories": 4,
+      "winsBySide": {
+        "0": 1,
+        "1": 1
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 61,
+        "closeDuelAlerts": 16,
+        "notCloseDuelAlerts": 45,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 41,
+        "newSustainedSeparations": 3,
+        "newSustainedContactFreeIntervals": 10,
+        "jitterOnlyAlerts": 3,
+        "incompletePostWindows": 0
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 84.32600000003859
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-40\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "0eef0e88d044dc76fdb92a8812ea7356cec02453cb78fd9b874987fb1976eb81",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 44.54399999998689
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-40\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "77a4a6f241d1749482294d2b171b86bca6d7c462145b56f5575adeafe3473fbf",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 65.18399999994719
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-40\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "d8d72619361f0864b5cd4e76081e06d2edcb17001bb2cdd3493b8539be71c408",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 102.40000000012489
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-40\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "b1fb72dc0ccf5135ade5c540b12944c542f32756b0f088806832266df7d79be6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-41",
+      "variant": "weave_early_hook",
+      "loop": 41,
+      "programHashes": [
+        "44ebf57dd4d61057cfacea6e4c004f95522fff0ec70f5ea05dc96301235e81d0",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "< 4000:": "< 2400:",
+        "> 4200:": "> 2600:",
+        "now+2500": "now+1500"
+      },
+      "score": {
+        "wins": 1,
+        "draws": 2,
+        "losses": 1,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 25.0,
+      "medianWinningSeconds": 42.965999999990565,
+      "uniquePhysicalTrajectories": 2,
+      "winsBySide": {
+        "0": 1,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 67,
+        "closeDuelAlerts": 17,
+        "notCloseDuelAlerts": 50,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 35,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 12,
+        "jitterOnlyAlerts": 6,
+        "incompletePostWindows": 1
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 42.965999999990565
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-41\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "59a10293e005f965d998acb2e3c564c8dac4a3793704fe63148da8742a95a7b7",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 42.965999999990565
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-41\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "59a10293e005f965d998acb2e3c564c8dac4a3793704fe63148da8742a95a7b7",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-41\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "5121449c9e4edc7b45d013f9186f621b806d3c9323c4268c8095e918d2193a49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-41\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "5121449c9e4edc7b45d013f9186f621b806d3c9323c4268c8095e918d2193a49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "screen",
+      "directory": "tuning-v4-screen-42",
+      "variant": "weave_patient_hook",
+      "loop": 42,
+      "programHashes": [
+        "e33ecf6c1ebaf630ff17ac859ea77dc61eedffc828e06416adff12e7d0fbe6a9",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "< 4000:": "< 6000:",
+        "> 4200:": "> 6200:",
+        "now+2500": "now+3500"
+      },
+      "score": {
+        "wins": 0,
+        "draws": 2,
+        "losses": 2,
+        "score": 0.25,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 0.0,
+      "medianWinningSeconds": null,
+      "uniquePhysicalTrajectories": 4,
+      "winsBySide": {
+        "0": 0,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 4,
+        "alerts": 57,
+        "closeDuelAlerts": 33,
+        "notCloseDuelAlerts": 24,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 21,
+        "newSustainedSeparations": 1,
+        "newSustainedContactFreeIntervals": 7,
+        "jitterOnlyAlerts": 25,
+        "incompletePostWindows": 1
+      },
+      "bouts": [
+        {
+          "seed": 1901,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 62.4319999999452
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-42\\seed-1901-swap-0.json",
+          "physicalTrajectoryHash": "d9267af52c1f7860998c3725ae09cea11aca2640efdb16c48ec25df00316499d",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 1901,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-42\\seed-1901-swap-1.json",
+          "physicalTrajectoryHash": "d92fcf880809e2ffcb67c4e084d30df24967eb9eda48627a10e4c24174adb65d",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-42\\seed-2017-swap-0.json",
+          "physicalTrajectoryHash": "191a483a35d34c442cfcc71b993a1d11382a28b359230c26f3b4f8e394bd900e",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2017,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 69.43399999996748
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-screen-42\\seed-2017-swap-1.json",
+          "physicalTrajectoryHash": "225a1624b4702b9ad61087ea10258b7b4b5964114219424585dd84b9ec28fa0f",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "directory": "tuning-v4-validate-36",
+      "variant": "weave_slow_loop",
+      "loop": 36,
+      "programHashes": [
+        "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(20)"
+      },
+      "score": {
+        "wins": 4,
+        "draws": 4,
+        "losses": 0,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "winPercent": 50.0,
+      "medianWinningSeconds": 14.191999999997574,
+      "uniquePhysicalTrajectories": 2,
+      "winsBySide": {
+        "0": 4,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 104,
+        "closeDuelAlerts": 96,
+        "notCloseDuelAlerts": 8,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 8,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 96,
+        "incompletePostWindows": 0
+      },
+      "bouts": [
+        {
+          "seed": 2203,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2203-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2203,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2203-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2309,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2309-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2309,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2309-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2411,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2411-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2411,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2411-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2531,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 14.191999999997574
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2531-swap-0.json",
+          "physicalTrajectoryHash": "c30231fbfe323c0122afaef998e3dd375de635f1f5994d807feccd12f6ff5f49",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2531,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-36\\seed-2531-swap-1.json",
+          "physicalTrajectoryHash": "ab0f268e56c65f474715e9c79802c7bbff32c8a6b480fedd998cf2541ce2b6e6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "directory": "tuning-v4-validate-35",
+      "variant": "weave_fast_loop",
+      "loop": 35,
+      "programHashes": [
+        "5e1ebaa4728f4af5d61461103f1b6447f07e6aa94d831f25c2c1167c0e55052d",
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(5)"
+      },
+      "score": {
+        "wins": 3,
+        "draws": 5,
+        "losses": 0,
+        "score": 0.6875,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 37.5,
+      "medianWinningSeconds": 81.06800000002303,
+      "uniquePhysicalTrajectories": 8,
+      "winsBySide": {
+        "0": 3,
+        "1": 0
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 191,
+        "closeDuelAlerts": 44,
+        "notCloseDuelAlerts": 147,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 128,
+        "newSustainedSeparations": 5,
+        "newSustainedContactFreeIntervals": 26,
+        "jitterOnlyAlerts": 8,
+        "incompletePostWindows": 2
+      },
+      "bouts": [
+        {
+          "seed": 2203,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 110.20000000016213
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2203-swap-0.json",
+          "physicalTrajectoryHash": "40d39e1fac8958e9dcff7998e84da15a6a6bfb5bfe6eacefdd84140e619e3e7b",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2203,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2203-swap-1.json",
+          "physicalTrajectoryHash": "7499a516adcf8f0027c535f0803c248fc065b5960e024066572d85460f3efd14",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2309,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 81.06800000002303
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2309-swap-0.json",
+          "physicalTrajectoryHash": "b8ebd0fae23c83c874d5c66d330cc45d06d6b7f3a302a529966fae1a2aeeda2a",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2309,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2309-swap-1.json",
+          "physicalTrajectoryHash": "038fba875d013d36e51ea651d747c46039a9f2d8b76631752773fa1ea431e0d1",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2411,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2411-swap-0.json",
+          "physicalTrajectoryHash": "e75c3d25c9fc750365848386ebedc1c621a161b8d56c26f9d1a9f28d23521037",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2411,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2411-swap-1.json",
+          "physicalTrajectoryHash": "4b438972c6e253bcb0f886bab8f100a7a6f36f36664707fd50ac1ea42ee416b8",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2531,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 76.13599999999948
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2531-swap-0.json",
+          "physicalTrajectoryHash": "aebb86e6006a5213809224bae1f8762fcdaa29212b02519d1f84ce411502d899",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 2531,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.533,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-validate-35\\seed-2531-swap-1.json",
+          "physicalTrajectoryHash": "c6c5f0d516592d127938117ad1fd14555e703e1104e1f79a07e49d8bee8dd57a",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "pool",
+      "directory": "tuning-v4-pool-36-memory",
+      "variant": "weave_slow_loop",
+      "loop": 36,
+      "programHashes": [
+        "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(20)"
+      },
+      "score": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 2,
+        "score": 0.5625,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 37.5,
+      "medianWinningSeconds": 43.83499999998854,
+      "uniquePhysicalTrajectories": 6,
+      "winsBySide": {
+        "0": 0,
+        "1": 3
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 106,
+        "closeDuelAlerts": 96,
+        "notCloseDuelAlerts": 10,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 8,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 1,
+        "jitterOnlyAlerts": 95,
+        "incompletePostWindows": 4
+      },
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 80.18300000001881
+          },
+          "firstContact": 4.524,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-503-swap-0.json",
+          "physicalTrajectoryHash": "931783beb01173af6ece273cf4d11d37fee6af19d138d79f3db39e8e13fd0e1d",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 39.21399999999931
+          },
+          "firstContact": 4.523,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-503-swap-1.json",
+          "physicalTrajectoryHash": "81d1fe439137fcca5dabb62866746544ec984d314921d0b5febebe2a22d3c528",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-607-swap-0.json",
+          "physicalTrajectoryHash": "9803ace42e084ac744d935e91852beef33dab998f7a9e8d11a83d7dbbfe48a1f",
+          "selfPlayControlRepeat": false,
+          "ownInverted": true
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 43.83499999998854
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-607-swap-1.json",
+          "physicalTrajectoryHash": "6bf01a980eb81ed7e30e5fc3c571cda1b062b76302495c0ab172dd97c6994603",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-709-swap-0.json",
+          "physicalTrajectoryHash": "2d491a75de24c371348e96f95f382a2c4d63d0d8973a0c82e2b7801d3c4954b6",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 43.83499999998854
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-709-swap-1.json",
+          "physicalTrajectoryHash": "6bf01a980eb81ed7e30e5fc3c571cda1b062b76302495c0ab172dd97c6994603",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-811-swap-0.json",
+          "physicalTrajectoryHash": "f00825f54e85dd39dc8117249abd5afe9bee8c46202c27250655782d9b90168a",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 43.83499999998854
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-memory\\seed-811-swap-1.json",
+          "physicalTrajectoryHash": "6bf01a980eb81ed7e30e5fc3c571cda1b062b76302495c0ab172dd97c6994603",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "stage": "pool",
+      "directory": "tuning-v4-pool-36-full_duty",
+      "variant": "weave_slow_loop",
+      "loop": 36,
+      "programHashes": [
+        "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "changes": {
+        "    wait(10)": "    wait(20)"
+      },
+      "score": {
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "score": 0.1875,
+        "faults": 0,
+        "promote": false
+      },
+      "winPercent": 12.5,
+      "medianWinningSeconds": 28.91100000001235,
+      "uniquePhysicalTrajectories": 4,
+      "winsBySide": {
+        "0": 0,
+        "1": 1
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 139,
+        "closeDuelAlerts": 134,
+        "notCloseDuelAlerts": 5,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 5,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 134,
+        "incompletePostWindows": 4
+      },
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-503-swap-0.json",
+          "physicalTrajectoryHash": "86f0866fed80010f7317d60360453a2218ed4ebbe88618680c2ca0a67c95a63c",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 28.91100000001235
+          },
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-503-swap-1.json",
+          "physicalTrajectoryHash": "f19b9d4949e7cfbd0c7986e7b2039ad07c81be17378b624777ceafcb92e10b2a",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 87.50200000005376
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-607-swap-0.json",
+          "physicalTrajectoryHash": "56114a0f3ab24b77ac7c379d91b24630b9f10a2c988baf7b0fdc4f28e5445131",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 104.77400000013623
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-607-swap-1.json",
+          "physicalTrajectoryHash": "bbb8896873a1d87f8e985d578447c95b41ab8c3a28f289745ad14b53a4ae6d92",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 87.50200000005376
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-709-swap-0.json",
+          "physicalTrajectoryHash": "56114a0f3ab24b77ac7c379d91b24630b9f10a2c988baf7b0fdc4f28e5445131",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 104.77400000013623
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-709-swap-1.json",
+          "physicalTrajectoryHash": "bbb8896873a1d87f8e985d578447c95b41ab8c3a28f289745ad14b53a4ae6d92",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 87.50200000005376
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-811-swap-0.json",
+          "physicalTrajectoryHash": "56114a0f3ab24b77ac7c379d91b24630b9f10a2c988baf7b0fdc4f28e5445131",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 104.77400000013623
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\tuning-v4-pool-36-full_duty\\seed-811-swap-1.json",
+          "physicalTrajectoryHash": "bbb8896873a1d87f8e985d578447c95b41ab8c3a28f289745ad14b53a4ae6d92",
+          "selfPlayControlRepeat": false,
+          "ownInverted": false
+        }
+      ]
+    }
+  ],
+  "limits": "Same physical build and Pybricks subset; numeric literals only. Four-seed validation has starting-side bias and repeated physical trajectories. Win percentage counts all bouts; score counts a draw as half. No claim of hardware or universal superiority. Two same-source swapped controls exactly repeat physical configurations and are separately labeled."
+}

@@ -1,40 +1,41 @@
 {
-  "loop": 21,
-  "variantRevision": "b",
+  "loop": 36,
+  "variantRevision": "numeric-v1",
   "testedRuntime": "sync-subset-v4",
-  "champion": "weave_hook",
-  "opponent": "pressure_memory",
+  "champion": "weave_slow_loop",
+  "opponent": "weave_hook",
   "score": {
-    "wins": 6,
-    "draws": 0,
-    "losses": 2
+    "wins": 4,
+    "draws": 4,
+    "losses": 0
   },
-  "replayUrl": "/trials/logging-v4-memory/seed-607-swap-1.json",
-  "pooledScore": 0.65625,
-  "pooledOutcomes": {
-    "wins": 8,
-    "draws": 5,
-    "losses": 3
-  },
-  "trainingPooledScore": 0.8333333333333334,
-  "trainingOutcomes": {
-    "wins": 9,
-    "draws": 2,
-    "losses": 1
-  },
-  "comparison": "Same-seed v4 revalidation against memory and full-duty; historical training remains v3. This does not rerank all strategies.",
-  "historicalValidation": {
-    "testedRuntime": "sync-subset-v3",
+  "winPercent": 50.0,
+  "validationScore": 0.75,
+  "validationSeeds": [
+    2203,
+    2309,
+    2411,
+    2531
+  ],
+  "replayUrl": "/trials/tuning-v4-validate-36/seed-2203-swap-0.json",
+  "comparison": "Numeric self-play specialist:20ms loop wait;4W4D0L (50% wins,75% score) vs frozen weave_hook on new seeds. Only two physical trajectories; all wins original side. Memory/full-duty pool37.5% vs original65.625%; no general superiority.",
+  "previousSelection": {
+    "loop": 21,
+    "variantRevision": "b",
+    "testedRuntime": "sync-subset-v4",
+    "champion": "weave_hook",
+    "opponent": "pressure_memory",
     "score": {
       "wins": 6,
       "draws": 0,
       "losses": 2
     },
+    "replayUrl": "/trials/logging-v4-memory/seed-607-swap-1.json",
     "pooledScore": 0.65625,
     "pooledOutcomes": {
-      "wins": 9,
-      "draws": 3,
-      "losses": 4
+      "wins": 8,
+      "draws": 5,
+      "losses": 3
     },
     "trainingPooledScore": 0.8333333333333334,
     "trainingOutcomes": {
@@ -42,8 +43,41 @@
       "draws": 2,
       "losses": 1
     },
-    "replayUrl": "/trials/round-two-v3-memory/seed-607-swap-0.json",
-    "comparison": "Retained training-best; fresh-seed results weaker; 24 exact v2/v3 compatibility pairs"
+    "comparison": "Same-seed v4 revalidation against memory and full-duty; historical training remains v3. This does not rerank all strategies.",
+    "historicalValidation": {
+      "testedRuntime": "sync-subset-v3",
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 2
+      },
+      "pooledScore": 0.65625,
+      "pooledOutcomes": {
+        "wins": 9,
+        "draws": 3,
+        "losses": 4
+      },
+      "trainingPooledScore": 0.8333333333333334,
+      "trainingOutcomes": {
+        "wins": 9,
+        "draws": 2,
+        "losses": 1
+      },
+      "replayUrl": "/trials/round-two-v3-memory/seed-607-swap-0.json",
+      "comparison": "Retained training-best; fresh-seed results weaker; 24 exact v2/v3 compatibility pairs"
+    },
+    "trainingRuntime": "sync-subset-v3"
   },
-  "trainingRuntime": "sync-subset-v3"
+  "pooledScore": 0.375,
+  "pooledOutcomes": {
+    "wins": 4,
+    "draws": 4,
+    "losses": 8
+  },
+  "screeningScore": {
+    "wins": 2,
+    "draws": 2,
+    "losses": 0,
+    "score": 0.75
+  }
 }

@@ -1,0 +1,49 @@
+{
+  "loop": 21,
+  "variantRevision": "b",
+  "testedRuntime": "sync-subset-v4",
+  "champion": "weave_hook",
+  "opponent": "pressure_memory",
+  "score": {
+    "wins": 6,
+    "draws": 0,
+    "losses": 2
+  },
+  "replayUrl": "/trials/logging-v4-memory/seed-607-swap-1.json",
+  "pooledScore": 0.65625,
+  "pooledOutcomes": {
+    "wins": 8,
+    "draws": 5,
+    "losses": 3
+  },
+  "trainingPooledScore": 0.8333333333333334,
+  "trainingOutcomes": {
+    "wins": 9,
+    "draws": 2,
+    "losses": 1
+  },
+  "comparison": "Same-seed v4 revalidation against memory and full-duty; historical training remains v3. This does not rerank all strategies.",
+  "historicalValidation": {
+    "testedRuntime": "sync-subset-v3",
+    "score": {
+      "wins": 6,
+      "draws": 0,
+      "losses": 2
+    },
+    "pooledScore": 0.65625,
+    "pooledOutcomes": {
+      "wins": 9,
+      "draws": 3,
+      "losses": 4
+    },
+    "trainingPooledScore": 0.8333333333333334,
+    "trainingOutcomes": {
+      "wins": 9,
+      "draws": 2,
+      "losses": 1
+    },
+    "replayUrl": "/trials/round-two-v3-memory/seed-607-swap-0.json",
+    "comparison": "Retained training-best; fresh-seed results weaker; 24 exact v2/v3 compatibility pairs"
+  },
+  "trainingRuntime": "sync-subset-v3"
+}

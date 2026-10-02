@@ -1,0 +1,18 @@
+# Weave hook parameter tuning plan
+
+**Goal:** Improve the unchanged incumbent's head-to-head win percentage by changing only numeric controller values, with both robots using the same fixed stock build and hardware APIs.
+
+**Approach:** Freeze `examples/weave_hook.py` as the opponent and preserve its archived 21b source. Use runtime v4, 1 ms physics, existing sensor models, nominal friction 0.8, 120-second bouts and two match workers. The legal three-second wait and opening remain unchanged. Each candidate is a standalone Pybricks-style source; only selected numeric literals change.
+
+- [x] Establish identical-program control: seeds 1901/2017 on both sides (four bouts). Side swaps must balance its score to 50%, with no program or rule faults.
+- [x] Screen eight parameter sets against the frozen original on the same four bouts: loop wait5/20ms, charge target700/1000deg/s, hook20deg/250ms and55deg/650ms, close-engagement window2400ms/cooldown1500ms and6000ms/cooldown3500ms. History retention stays 200ms longer than the changed engagement window.
+- [x] Verify each source's AST structure and nonnumeric literals remain identical to the baseline, with exact source/hash archives and complete match/event/replay records. Actual bouts verify legal opening, real contact and runtime limits.
+- [x] Freeze the two strongest screen candidates before testing eight new bouts each (seeds2203/2309/2411/2531, side swaps). Require at least75% score (wins1,draws0.5) and no faults; report raw win percentage separately. No retuning on these validation seeds.
+- [x] If a candidate qualifies, compare it on the established memory/full-duty pool (seeds503/607/709/811, side swaps) before making a broader superiority claim. Keep exact frozen-original head-to-head as its UI opponent. If both qualify, favor direct validated wins and disclose pool limitations. If neither qualifies, retain current selected pair.
+- [x] Add experimental presets to the UI, update the default only after validation, inspect a real winning/recovery sequence, preserve all earlier reports and label training/validation separately. Update wiki architecture/roadmap and verify relevant tests, metadata, UI guards and records before committing.
+
+This is parameter search, not a physics calibration or a new hardware capability. Search/charge targets remain requests to the existing voltage/torque-limited motor model, not imposed chassis speeds. Same-seed screening can overfit; a specialist beating the incumbent may regress against other opponents. Program faults and timeout draws are failures to resolve, not successes hidden in win-rate reporting.
+
+Verified outcome: 20 ms wait scores 4W/4D/0L against the original (50% raw wins, 75% score), but all wins are blue and eight validation bouts contain only two exact physical trajectories. Its memory/full-duty pooled score regresses to 37.5%, versus the original 65.625%; UI selection is explicitly a self-play specialist. All 68 new bouts are fault-free. Independent evidence review confirms source/hash/settings/side mappings, frozen finalist ordering, fresh validation seeds, metrics and preserved history: 520 bouts = 494 configurations + 24 compatibility repeats + two control repeats.
+
+Verification: full Python suite 155 passed; final server checks 2 passed; browser selection guards and observation-status checks passed. Actual selected-pair UI verification confirms eight presets, exact sources, v4 replay at 14.192 seconds and event seeking to contact at 14.007 seconds, with no page errors. The winning sequence was visually inspected. Wiki metadata/links and catalogs were validated; overview, architecture and roadmap are committed and synced on main (`b8f893f`).

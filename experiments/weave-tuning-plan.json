@@ -1,0 +1,109 @@
+{
+  "baseline": "examples/weave_hook.py",
+  "baselineHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+  "runtime": "sync-subset-v4",
+  "screenSeeds": [
+    1901,
+    2017
+  ],
+  "validationSeeds": [
+    2203,
+    2309,
+    2411,
+    2531
+  ],
+  "variants": [
+    {
+      "loop": 35,
+      "name": "weave_fast_loop",
+      "source": "experiments\\strategies\\35_weave_fast_loop.py",
+      "hash": "5e1ebaa4728f4af5d61461103f1b6447f07e6aa94d831f25c2c1167c0e55052d",
+      "changes": {
+        "    wait(10)": "    wait(5)"
+      }
+    },
+    {
+      "loop": 36,
+      "name": "weave_slow_loop",
+      "source": "experiments\\strategies\\36_weave_slow_loop.py",
+      "hash": "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f",
+      "changes": {
+        "    wait(10)": "    wait(20)"
+      }
+    },
+    {
+      "loop": 37,
+      "name": "weave_soft_charge",
+      "source": "experiments\\strategies\\37_weave_soft_charge.py",
+      "hash": "9818f3135a014bcce65a9041f85346f3a7c47d4a576dd317b08ba7ce4c3211ab",
+      "changes": {
+        "CHARGE_SPEED = 850": "CHARGE_SPEED = 700"
+      }
+    },
+    {
+      "loop": 38,
+      "name": "weave_fast_charge",
+      "source": "experiments\\strategies\\38_weave_fast_charge.py",
+      "hash": "9dcd8d16df012b15ef62e40b79eee22af424bad8a03e5b685f4992aeacfbef42",
+      "changes": {
+        "CHARGE_SPEED = 850": "CHARGE_SPEED = 1000"
+      }
+    },
+    {
+      "loop": 39,
+      "name": "weave_short_hook",
+      "source": "experiments\\strategies\\39_weave_short_hook.py",
+      "hash": "74bfdcbd3cd923554779b06de81b5498fa9ade0b8aa1bb4bf96e9f54e18d007f",
+      "changes": {
+        "RELEASE_MS = 450": "RELEASE_MS = 250",
+        "TURN_ANGLE = 35": "TURN_ANGLE = 20"
+      }
+    },
+    {
+      "loop": 40,
+      "name": "weave_wide_hook",
+      "source": "experiments\\strategies\\40_weave_wide_hook.py",
+      "hash": "b492b15e80a492ea54c6db1f481a898b6a43437caaa66b3269370b30c08f463b",
+      "changes": {
+        "RELEASE_MS = 450": "RELEASE_MS = 650",
+        "TURN_ANGLE = 35": "TURN_ANGLE = 55"
+      }
+    },
+    {
+      "loop": 41,
+      "name": "weave_early_hook",
+      "source": "experiments\\strategies\\41_weave_early_hook.py",
+      "hash": "44ebf57dd4d61057cfacea6e4c004f95522fff0ec70f5ea05dc96301235e81d0",
+      "changes": {
+        "< 4000:": "< 2400:",
+        "> 4200:": "> 2600:",
+        "now+2500": "now+1500"
+      }
+    },
+    {
+      "loop": 42,
+      "name": "weave_patient_hook",
+      "source": "experiments\\strategies\\42_weave_patient_hook.py",
+      "hash": "e33ecf6c1ebaf630ff17ac859ea77dc61eedffc828e06416adff12e7d0fbe6a9",
+      "changes": {
+        "< 4000:": "< 6000:",
+        "> 4200:": "> 6200:",
+        "now+2500": "now+3500"
+      }
+    }
+  ],
+  "frozenFinalists": [
+    {
+      "loop": 36,
+      "name": "weave_slow_loop",
+      "hash": "77f18e8dd61c3099f9f70ba40252a5694bb1c92761002593844a34a5a8ad396f"
+    },
+    {
+      "loop": 35,
+      "name": "weave_fast_loop",
+      "hash": "5e1ebaa4728f4af5d61461103f1b6447f07e6aa94d831f25c2c1167c0e55052d"
+    }
+  ],
+  "finalistsFrozenAt": "2026-10-02T15:41:47.311887+00:00",
+  "finalistSelection": "Four-bout score, then raw wins, then median winning resolution; selected before validation"
+}
