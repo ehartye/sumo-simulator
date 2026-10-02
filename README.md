@@ -82,6 +82,8 @@ The additional search uses shallow forward arcs with one driven wheel at a time,
 
 The [mat-crossing and snap-reversal experiments](docs/snap-reversal.md) add `crossing_hook`, `snap_reverse`, `snap_coast` and `snap_steering`. Their 48 training bouts and eight fresh direct bouts distinguish executed reversal/contact release from improved results. `weave_hook` remains selected.
 
+The [damping and targeted counter experiments](docs/damping-counters.md) add seven presets and 66 paired bouts. Passive braking beats active damping in training but loses the fresh direct challenge 3–5. Mirrored opening and patient full-duty pressure each recorded six training draws; patient pressure's logged gaps gain only about 2 mm, not a useful flank. No candidate replaces `weave_hook`. Exact sources, hashes, scores and limitations are retained in the [counter results](experiments/damping-counters.json).
+
 Runtime v3 corrects the hardware heading API to Pybricks' clockwise-positive convention. Live feedback presets explicitly convert to their existing internal CCW yaw. Archived v1/v2 programs and replay fields retain their historical convention: use them for inspection with the recorded profile, or adapt signed heading reads before a new v3 run. [IMU conventions and assumptions](docs/imu.md) distinguish the hardware API from the legacy absolute observer yaw field. No mechanics or random streams changed.
 
 ## Match rules and physics

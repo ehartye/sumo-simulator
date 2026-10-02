@@ -1,0 +1,1235 @@
+{
+  "trainingBouts": 42,
+  "validationBouts": 24,
+  "runtime": "sync-subset-v3",
+  "fidelity": "uncalibrated",
+  "selected": "weave_hook / archived21b retained",
+  "validationSeeds": [
+    1301,
+    1423,
+    1553,
+    1667
+  ],
+  "qualification": ">=75% paired training, then frozen direct/pool evidence; no faults",
+  "conclusion": "No reliable winning counter. Draw-only targeted counters are training observations, not validated champion replacements.",
+  "validation30Pooled": {
+    "wins": 13,
+    "draws": 0,
+    "losses": 11,
+    "score": 0.5416666666666666
+  },
+  "reports": [
+    {
+      "directory": "loop-28-winner",
+      "programHash": "0a5ed75a3a6c092a68b0e740d52446f1e1ff600f9959c70b89aadd572be0a502",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.3333333333333333,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 42,
+        "closeDuelAlerts": 8,
+        "notCloseDuelAlerts": 34,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 30,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 2,
+        "jitterOnlyAlerts": 6,
+        "incompletePostWindows": 1
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 25.120000000007717
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 100.89900000011772
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.71300000001213
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 27.287000000010366
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 26.443000000009334
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 29.553000000013135
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-28-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 41,
+        "medianLoggedEndRateDegS": 34.8,
+        "medianLoggedAddedYawDeg": 19.9,
+        "medianDurationMs": 261
+      }
+    },
+    {
+      "directory": "loop-29-winner",
+      "programHash": "9a1929038df28d32f9941e0fec26824f9838f01b41bcef66a942ff8af51c56e1",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "score": 0.5833333333333334,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 93,
+        "closeDuelAlerts": 23,
+        "notCloseDuelAlerts": 70,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 60,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 8,
+        "jitterOnlyAlerts": 13,
+        "incompletePostWindows": 1
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 100.34500000011508
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 37.538000000003215
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 53.20099999996671
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 79.56100000001584
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 91.52500000007296
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-29-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 92,
+        "medianLoggedEndRateDegS": 13.8,
+        "medianLoggedAddedYawDeg": 17.450000000000003,
+        "medianDurationMs": 261.0
+      }
+    },
+    {
+      "directory": "loop-30-winner",
+      "programHash": "d93623e733d759efece7868849d398dbee4b4c03e4737d09b89f58b3068c1a42",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 4,
+        "draws": 1,
+        "losses": 1,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 48,
+        "closeDuelAlerts": 8,
+        "notCloseDuelAlerts": 40,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 38,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 7,
+        "jitterOnlyAlerts": 0,
+        "incompletePostWindows": 0
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.527000000002104
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 65.06699999994663
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.527000000002104
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 23.390000000005603
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.59000000000218
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-30-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 47,
+        "medianLoggedEndRateDegS": 1.3,
+        "medianLoggedAddedYawDeg": 32.300000000000004,
+        "medianDurationMs": 263
+      }
+    },
+    {
+      "directory": "loop-31-winner",
+      "programHash": "ec1064defff976607e1e63ca050099488950091594e6cc8facabd3f8e4421a8c",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 0,
+        "draws": 6,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 183,
+        "closeDuelAlerts": 0,
+        "notCloseDuelAlerts": 183,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 183,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 0,
+        "incompletePostWindows": 3
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-31-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "directory": "loop-32-winner",
+      "programHash": "53d7910b43e1ce8c7d284eaa3078a2be673000ba4a4febb5e5f9e1862d66d3f6",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 0,
+        "draws": 5,
+        "losses": 1,
+        "score": 0.4166666666666667,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 140,
+        "closeDuelAlerts": 139,
+        "notCloseDuelAlerts": 1,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 0,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 5,
+        "jitterOnlyAlerts": 129,
+        "incompletePostWindows": 0
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 100.94400000011794
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-32-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "directory": "loop-33-winner",
+      "programHash": "19d52d1907803c1a2bad7eed7c9ed1404014bf229430e6f91dd60b9fd0b6c363",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 2,
+        "draws": 1,
+        "losses": 3,
+        "score": 0.4166666666666667,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 55,
+        "closeDuelAlerts": 29,
+        "notCloseDuelAlerts": 26,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 17,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 9,
+        "jitterOnlyAlerts": 17,
+        "incompletePostWindows": 1
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 12.283999999998631
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-11-swap-0.json",
+          "feints": 1,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-11-swap-1.json",
+          "feints": 4,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 12.283999999998631
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-23-swap-0.json",
+          "feints": 1,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 22.221000000004175
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-23-swap-1.json",
+          "feints": 2,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 12.283999999998631
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-37-swap-0.json",
+          "feints": 1,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 95.722000000093
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\loop-33-winner\\seed-37-swap-1.json",
+          "feints": 2,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "directory": "loop-34-winner",
+      "programHash": "d32672147f2c86fa8627b7b583185929b3f7edd7aff9c5e2d763d8bb054d7f5f",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 0,
+        "draws": 6,
+        "losses": 0,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 6,
+        "alerts": 180,
+        "closeDuelAlerts": 59,
+        "notCloseDuelAlerts": 121,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 91,
+        "newSustainedSeparations": 4,
+        "newSustainedContactFreeIntervals": 18,
+        "jitterOnlyAlerts": 16,
+        "incompletePostWindows": 4
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 11,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-11-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 11,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-11-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-23-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 23,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-23-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": false,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-37-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 37,
+          "swapped": true,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-37-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "directory": "damping-validation-30-winner",
+      "programHash": "d93623e733d759efece7868849d398dbee4b4c03e4737d09b89f58b3068c1a42",
+      "opponentHash": "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+      "score": {
+        "wins": 3,
+        "draws": 0,
+        "losses": 5,
+        "score": 0.375,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 58,
+        "closeDuelAlerts": 7,
+        "notCloseDuelAlerts": 51,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 50,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 5,
+        "jitterOnlyAlerts": 2,
+        "incompletePostWindows": 2
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 1301,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 19.88600000000132
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1301-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1301,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 75.74599999999762
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1301-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": false,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 61.359999999947696
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1423-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 18.983000000000217
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1423-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1553,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 73.57199999998724
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1553-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1553,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.518000000002093
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1553-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.527000000002104
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1667-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 42.16899999999242
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-winner\\seed-1667-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 57,
+        "medianLoggedEndRateDegS": 1.2,
+        "medianLoggedAddedYawDeg": 32.0,
+        "medianDurationMs": 261
+      }
+    },
+    {
+      "directory": "damping-validation-30-duty",
+      "programHash": "d93623e733d759efece7868849d398dbee4b4c03e4737d09b89f58b3068c1a42",
+      "opponentHash": "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7",
+      "score": {
+        "wins": 4,
+        "draws": 0,
+        "losses": 4,
+        "score": 0.5,
+        "faults": 0,
+        "promote": false
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 14,
+        "closeDuelAlerts": 4,
+        "notCloseDuelAlerts": 10,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 9,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 4,
+        "incompletePostWindows": 3
+      },
+      "ownInversions": 0,
+      "bouts": [
+        {
+          "seed": 1301,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 15.379999999996915
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1301-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1301,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 12.368999999998584
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1301-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 20.428000000001983
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1423-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 22.825000000004913
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1423-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1553,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 15.470999999996865
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1553-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1553,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 12.368999999998584
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1553-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 15.453999999996874
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1667-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 13.181999999998133
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-duty\\seed-1667-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 11,
+        "medianLoggedEndRateDegS": 0.7,
+        "medianLoggedAddedYawDeg": 31.5,
+        "medianDurationMs": 261
+      }
+    },
+    {
+      "directory": "damping-validation-30-memory",
+      "programHash": "d93623e733d759efece7868849d398dbee4b4c03e4737d09b89f58b3068c1a42",
+      "opponentHash": "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523",
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "recovery": {
+        "bouts": 8,
+        "alerts": 73,
+        "closeDuelAlerts": 50,
+        "notCloseDuelAlerts": 23,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 21,
+        "newSustainedSeparations": 1,
+        "newSustainedContactFreeIntervals": 16,
+        "jitterOnlyAlerts": 33,
+        "incompletePostWindows": 1
+      },
+      "ownInversions": 1,
+      "bouts": [
+        {
+          "seed": 1301,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 113.02300000017561
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1301-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1301,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 50.50599999997299
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1301-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 61.88899999994646
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1423-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1423,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 58.03799999995544
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1423-swap-1.json",
+          "feints": 0,
+          "ownInverted": true
+        },
+        {
+          "seed": 1553,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 32.30100000001542
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1553-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1553,
+          "swapped": true,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 40.065999999997324
+          },
+          "winningProgram": 1,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1553-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": false,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 32.30100000001542
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1667-swap-0.json",
+          "feints": 0,
+          "ownInverted": false
+        },
+        {
+          "seed": 1667,
+          "swapped": true,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 48.97999999997655
+          },
+          "winningProgram": 0,
+          "replay": "artifacts\\strategy-tournament\\damping-validation-30-memory\\seed-1667-swap-1.json",
+          "feints": 0,
+          "ownInverted": false
+        }
+      ],
+      "completedDamping": {
+        "stages": 73,
+        "medianLoggedEndRateDegS": 19.3,
+        "medianLoggedAddedYawDeg": 19.4,
+        "medianDurationMs": 261
+      }
+    }
+  ],
+  "limits": "Uncalibrated mechanics/sensors/RPC timing; observer separation/posture is never controller input. Pooled stage statistics do not isolate causes. 24 older compatibility repeats remain separately labeled.",
+  "separationCaveat": {
+    "message": "Four patient-pressure flags meet the existing180mm/0.5s criterion, but gain only about2.0\u20132.5mm and do not demonstrate a useful flank or substantial escape.",
+    "observations": [
+      {
+        "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-23-swap-0.json",
+        "bot": 0,
+        "time": 90.46,
+        "centerDistanceAtAlertM": 0.18299598295372976,
+        "centerDistanceAfterM": 0.18530558252537443,
+        "centerSpacingGainM": 0.0023095995716446716
+      },
+      {
+        "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-23-swap-1.json",
+        "bot": 1,
+        "time": 18.773,
+        "centerDistanceAtAlertM": 0.18287637431737394,
+        "centerDistanceAfterM": 0.1853366012799796,
+        "centerSpacingGainM": 0.0024602269626056716
+      },
+      {
+        "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-37-swap-0.json",
+        "bot": 0,
+        "time": 30.099,
+        "centerDistanceAtAlertM": 0.1827925655917666,
+        "centerDistanceAfterM": 0.18514208476522506,
+        "centerSpacingGainM": 0.002349519173458464
+      },
+      {
+        "replay": "artifacts\\strategy-tournament\\loop-34-winner\\seed-37-swap-0.json",
+        "bot": 0,
+        "time": 41.406,
+        "centerDistanceAtAlertM": 0.18325434543237512,
+        "centerDistanceAfterM": 0.18524655422777656,
+        "centerSpacingGainM": 0.0019922087954014345
+      }
+    ]
+  }
+}
