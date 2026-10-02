@@ -5,6 +5,14 @@ import assert from 'node:assert/strict';
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 try {
+  // Historical-label coverage must survive later revalidation of the live selection.
+  await page.route('**/api/strategy-selection', async route => {
+    const response = await route.fetch();
+    const data = await response.json();
+    data.testedRuntime = 'sync-subset-v3';
+    data.currentRuntime = 'sync-subset-v4';
+    await route.fulfill({ response, json: data });
+  });
   await page.goto('http://127.0.0.1:8765');
   await page.waitForFunction(() => !document.querySelector('#loading'));
   assert.match(await page.locator('#best-label').textContent(), /older logging timing; current timing unvalidated/);

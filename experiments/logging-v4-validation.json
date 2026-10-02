@@ -1,0 +1,501 @@
+{
+  "runtime": "sync-subset-v4",
+  "previousRuntime": "sync-subset-v3",
+  "codeBaseline": "b14e8e0",
+  "fidelity": "uncalibrated",
+  "bouts": 16,
+  "seeds": [
+    503,
+    607,
+    709,
+    811
+  ],
+  "jobs": 2,
+  "timeoutSeconds": 120,
+  "friction": 0.8,
+  "pooled": {
+    "wins": 8,
+    "draws": 5,
+    "losses": 3,
+    "score": 0.65625
+  },
+  "previousPooled": {
+    "wins": 9,
+    "draws": 3,
+    "losses": 4,
+    "score": 0.65625
+  },
+  "reports": [
+    {
+      "directory": "logging-v4-memory",
+      "opponent": "memory",
+      "programHashes": [
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "previousRuntime": "sync-subset-v3",
+      "previousScore": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "medianWinningResolutionSeconds": 63.999500000041934,
+      "previousMedianWinningResolutionSeconds": 37.920000000002325,
+      "changedOutcomes": 0,
+      "uniquePhysicalTrajectories": 4,
+      "recovery": {
+        "bouts": 8,
+        "alerts": 80,
+        "closeDuelAlerts": 76,
+        "notCloseDuelAlerts": 4,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 4,
+        "newSustainedSeparations": 0,
+        "newSustainedContactFreeIntervals": 0,
+        "jitterOnlyAlerts": 76,
+        "incompletePostWindows": 1
+      },
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "winningProgram": 1,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.91099999996739
+          },
+          "firstContact": 4.524,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-503-swap-0.json",
+          "previousWinningProgram": 1,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 68.03799999996082
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.015,
+          "totalContactSeconds": 2.003,
+          "physicalTrajectoryHash": "c22c786afb2db0dda8d1daec77ca4846a09f2296f8dd6a33fd60163a8a268f52",
+          "suspectedLockupAlerts": 7,
+          "ownInverted": false
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 40.876999999995434
+          },
+          "firstContact": 4.523,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-503-swap-1.json",
+          "previousWinningProgram": 1,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 78.52400000001089
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.012,
+          "totalContactSeconds": 3.439,
+          "physicalTrajectoryHash": "2548a1826e86fb5dc23b31ee4b056d59ee22c9ebba98e70637e78c45e2872239",
+          "suspectedLockupAlerts": 7,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-607-swap-0.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 7.38,
+          "physicalTrajectoryHash": "61807f7d16f5f5564025e449d11ba0bba8b28b488d31ae1f6e20769bd9d96d79",
+          "suspectedLockupAlerts": 17,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-607-swap-1.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 2.644,
+          "physicalTrajectoryHash": "acb9adcb240ebd809d36b7388e0ff3f73fba0469da7a3ed7c271ccf12d93a68a",
+          "suspectedLockupAlerts": 5,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-709-swap-0.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 7.38,
+          "physicalTrajectoryHash": "61807f7d16f5f5564025e449d11ba0bba8b28b488d31ae1f6e20769bd9d96d79",
+          "suspectedLockupAlerts": 17,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-709-swap-1.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 2.644,
+          "physicalTrajectoryHash": "acb9adcb240ebd809d36b7388e0ff3f73fba0469da7a3ed7c271ccf12d93a68a",
+          "suspectedLockupAlerts": 5,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "winningProgram": 0,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-811-swap-0.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 43.40499999998954
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 7.38,
+          "physicalTrajectoryHash": "61807f7d16f5f5564025e449d11ba0bba8b28b488d31ae1f6e20769bd9d96d79",
+          "suspectedLockupAlerts": 17,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-811-swap-1.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 32.43500000001511
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.017,
+          "totalContactSeconds": 2.644,
+          "physicalTrajectoryHash": "acb9adcb240ebd809d36b7388e0ff3f73fba0469da7a3ed7c271ccf12d93a68a",
+          "suspectedLockupAlerts": 5,
+          "ownInverted": false
+        }
+      ]
+    },
+    {
+      "directory": "logging-v4-duty",
+      "opponent": "duty",
+      "programHashes": [
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 5,
+        "losses": 1,
+        "score": 0.5625,
+        "faults": 0,
+        "promote": false
+      },
+      "previousRuntime": "sync-subset-v3",
+      "previousScore": {
+        "wins": 3,
+        "draws": 3,
+        "losses": 2,
+        "score": 0.5625,
+        "faults": 0,
+        "promote": false
+      },
+      "medianWinningResolutionSeconds": 42.019499999992775,
+      "previousMedianWinningResolutionSeconds": 62.222999999945685,
+      "changedOutcomes": 6,
+      "uniquePhysicalTrajectories": 7,
+      "recovery": {
+        "bouts": 8,
+        "alerts": 134,
+        "closeDuelAlerts": 106,
+        "notCloseDuelAlerts": 28,
+        "unknownCloseDuelAlerts": 0,
+        "priorSeparationAlerts": 22,
+        "newSustainedSeparations": 3,
+        "newSustainedContactFreeIntervals": 4,
+        "jitterOnlyAlerts": 102,
+        "incompletePostWindows": 5
+      },
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-503-swap-0.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 81.688000000026
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.013,
+          "totalContactSeconds": 12.367,
+          "physicalTrajectoryHash": "51da78f0e2422c54b138e187d999a54c4a2b6d514fded0e370e3486655c7ec2d",
+          "suspectedLockupAlerts": 24,
+          "ownInverted": false
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 51.02099999997179
+          },
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-503-swap-1.json",
+          "previousWinningProgram": null,
+          "previousResult": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.015,
+          "totalContactSeconds": 0.679,
+          "physicalTrajectoryHash": "5a046fd8e63a0fa8a30c529368f2564460db730beac533b2f14a1fac19f01b46",
+          "suspectedLockupAlerts": 7,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-607-swap-0.json",
+          "previousWinningProgram": 1,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 13.300999999998067
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.014,
+          "totalContactSeconds": 12.238,
+          "physicalTrajectoryHash": "d32813da2f822eae1c658853399e419c52e681181b46743b5ff9781041d8b886",
+          "suspectedLockupAlerts": 24,
+          "ownInverted": false
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "winningProgram": 1,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 57.40699999995691
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-607-swap-1.json",
+          "previousWinningProgram": null,
+          "previousResult": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.013,
+          "totalContactSeconds": 3.316,
+          "physicalTrajectoryHash": "1b71bfdd076bca7317bffb879a35cedc40062ac4092c082d1ba2ab87c11aab07",
+          "suspectedLockupAlerts": 10,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-709-swap-0.json",
+          "previousWinningProgram": 1,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 13.282999999998077
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.014,
+          "totalContactSeconds": 12.172,
+          "physicalTrajectoryHash": "7e1de1350db4ca9cf1632f39a27efb6115e7cbe1855cd9b91e761c04ca42adbc",
+          "suspectedLockupAlerts": 24,
+          "ownInverted": false
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "winningProgram": 0,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.01800000001375
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-709-swap-1.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 50.564999999972855
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.018,
+          "totalContactSeconds": 0.51,
+          "physicalTrajectoryHash": "982f6f2308c986901f64ea434cdcab92366b78897b18d91963b48ca056d0064b",
+          "suspectedLockupAlerts": 4,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-811-swap-0.json",
+          "previousWinningProgram": 0,
+          "previousResult": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 62.222999999945685
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.014,
+          "totalContactSeconds": 12.172,
+          "physicalTrajectoryHash": "7e1de1350db4ca9cf1632f39a27efb6115e7cbe1855cd9b91e761c04ca42adbc",
+          "suspectedLockupAlerts": 24,
+          "ownInverted": false
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "winningProgram": null,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-811-swap-1.json",
+          "previousWinningProgram": null,
+          "previousResult": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "firstOpponentSpotted": 4.0,
+          "longestContinuousContactSeconds": 0.019,
+          "totalContactSeconds": 0.981,
+          "physicalTrajectoryHash": "de70016a35f5e0dea6c4fa2d87fc7aa70c0814e237771a2e5ece5e2dff868e94",
+          "suspectedLockupAlerts": 17,
+          "ownInverted": false
+        }
+      ]
+    }
+  ],
+  "limits": "Same fixed programs and previously used seeds, not a fresh holdout or independent attribution of hook benefit. Only runtime scheduling changes. No increase in batch concurrency or change to physics/sensor settings. Repeated physical trajectories across seeds reduce diversity. Uncalibrated simulator observations are not hardware evidence."
+}

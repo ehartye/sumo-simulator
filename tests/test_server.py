@@ -10,7 +10,10 @@ def test_promoted_strategy_selection_and_scoped_replay_access():
         data = selection.json()
         assert len(data['revision']) == 64
         assert data['loop'] >= 1
-        assert data['testedRuntime']=='sync-subset-v3'
+        from sumo.robot import ROOT
+        import json
+        recorded = json.loads((ROOT/'experiments/champion.json').read_text())
+        assert data['testedRuntime']==recorded['testedRuntime']
         assert data['currentRuntime']=='sync-subset-v4'
         examples = client.get('/api/info').json()['examples']
         for role in ('champion', 'opponent'):

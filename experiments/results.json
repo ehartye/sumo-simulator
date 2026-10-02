@@ -1,13 +1,14 @@
 {
-  "bouts": 436,
+  "bouts": 452,
   "fidelity": "uncalibrated",
   "replayAvailability": "Local artifacts, not tracked in Git",
   "physicsBaseline": "93aab99",
-  "distinctBouts": 412,
+  "distinctBouts": 428,
   "compatibilityRepeats": 24,
   "runtimeExtensions": [
     "sync-subset-v2 tilt",
-    "sync-subset-v3 clockwise heading API"
+    "sync-subset-v3 clockwise heading API",
+    "sync-subset-v4 diagnostic prints consume no simulated ticks"
   ],
   "reports": [
     {
@@ -22075,6 +22076,1316 @@
             }
           ],
           "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "logging-v4-memory",
+      "challenger": "examples\\weave_hook.py",
+      "incumbent": "examples\\pressure_memory.py",
+      "programHashes": [
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+        "5992abec5fabe61a8757204e24d68480bc8971ea6f10689acd835ffa14e2d523"
+      ],
+      "score": {
+        "wins": 6,
+        "draws": 0,
+        "losses": 2,
+        "score": 0.75,
+        "faults": 0,
+        "promote": true
+      },
+      "comparisonKind": "same-seed runtime revalidation",
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 52.91099999996739
+          },
+          "winningProgram": 1,
+          "firstContact": 4.524,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-503-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 12.662,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2075 turn -1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 17.446,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3730 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 22.23,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5396 turn -1 action forward hook yaw span deg 309"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 30.238,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3901 since white ms (-1 unknown) 4126 wheel travel mm 243 turn 1 action forward hook yaw span deg 213"
+            },
+            {
+              "time": 35.247,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4438 wheel travel mm 434 turn -1 action forward hook yaw span deg 192"
+            },
+            {
+              "time": 41.729,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 5079 wheel travel mm 500 turn 1 action forward hook yaw span deg 66"
+            },
+            {
+              "time": 45.231,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6518 since white ms (-1 unknown) 8581 wheel travel mm 977 turn -1 action forward hook yaw span deg 61"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 6.335,
+              "message": "tip guard pitch deg -6.4 roll deg 12.0 action retreat"
+            },
+            {
+              "time": 52.753,
+              "message": "tip guard pitch deg -16.0 roll deg 0.1 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 40.876999999995434
+          },
+          "winningProgram": 1,
+          "firstContact": 4.523,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-503-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 11.579,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2190 turn -1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 16.363,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3841 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 21.147,
+              "message": "suspected lockup range mm 115 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5506 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 25.931,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7161 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 30.715,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8820 turn -1 action forward hook yaw span deg 307"
+            },
+            {
+              "time": 35.499,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10478 turn 1 action forward hook yaw span deg 315"
+            },
+            {
+              "time": 40.283,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12139 turn -1 action forward hook yaw span deg 312"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": [
+            {
+              "time": 40.752,
+              "message": "tip guard pitch deg -15.5 roll deg -0.2 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-607-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 22.438,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3854 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 27.222,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5519 turn -1 action forward hook yaw span deg 320"
+            },
+            {
+              "time": 32.006,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7172 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 36.79,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8836 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 41.574,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10486 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 46.358,
+              "message": "suspected lockup range mm 114 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12148 turn -1 action forward hook yaw span deg 307"
+            },
+            {
+              "time": 51.142,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13805 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 55.926,
+              "message": "suspected lockup range mm 98 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 15466 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 60.71,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 17123 turn 1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 65.494,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18785 turn -1 action forward hook yaw span deg 311"
+            },
+            {
+              "time": 70.278,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 20441 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 75.062,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 22104 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 79.846,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23759 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 84.63,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 25423 turn -1 action forward hook yaw span deg 309"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 9.264,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1001 turn -1 action forward hook yaw span deg 208"
+            },
+            {
+              "time": 13.562,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1746 turn 1 action forward hook yaw span deg 178"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3589 since white ms (-1 unknown) -1 wheel travel mm 2209 turn -1 action forward hook yaw span deg 121"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 14.43,
+              "message": "tip guard pitch deg -6.1 roll deg 12.6 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-607-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 10.928,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2180 turn -1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 15.712,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3835 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 20.496,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5497 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 25.28,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7152 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 30.064,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8816 turn -1 action forward hook yaw span deg 314"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-709-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 22.438,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3854 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 27.222,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5519 turn -1 action forward hook yaw span deg 320"
+            },
+            {
+              "time": 32.006,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7172 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 36.79,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8836 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 41.574,
+              "message": "suspected lockup range mm 96 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10486 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 46.358,
+              "message": "suspected lockup range mm 96 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12148 turn -1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 51.142,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13805 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 55.926,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 15466 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 60.71,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 17123 turn 1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 65.494,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18785 turn -1 action forward hook yaw span deg 311"
+            },
+            {
+              "time": 70.278,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 20441 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 75.062,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 22104 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 79.846,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23759 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 84.63,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 25423 turn -1 action forward hook yaw span deg 309"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 9.264,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1001 turn -1 action forward hook yaw span deg 208"
+            },
+            {
+              "time": 13.562,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1746 turn 1 action forward hook yaw span deg 179"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3589 since white ms (-1 unknown) -1 wheel travel mm 2209 turn -1 action forward hook yaw span deg 121"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 14.43,
+              "message": "tip guard pitch deg -6.1 roll deg 12.7 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-709-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 10.928,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2180 turn -1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 15.712,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3835 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 20.496,
+              "message": "suspected lockup range mm 98 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5497 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 25.28,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7152 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 30.064,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8816 turn -1 action forward hook yaw span deg 314"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 92.25800000007646
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-811-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 22.438,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3854 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 27.222,
+              "message": "suspected lockup range mm 113 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5519 turn -1 action forward hook yaw span deg 320"
+            },
+            {
+              "time": 32.006,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7172 turn 1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 36.79,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8836 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 41.574,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10486 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 46.358,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12148 turn -1 action forward hook yaw span deg 308"
+            },
+            {
+              "time": 51.142,
+              "message": "suspected lockup range mm 117 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13805 turn 1 action forward hook yaw span deg 310"
+            },
+            {
+              "time": 55.926,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 15466 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 60.71,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 17123 turn 1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 65.494,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18785 turn -1 action forward hook yaw span deg 311"
+            },
+            {
+              "time": 70.278,
+              "message": "suspected lockup range mm 116 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 20441 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 75.062,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 22104 turn -1 action forward hook yaw span deg 312"
+            },
+            {
+              "time": 79.846,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23759 turn 1 action forward hook yaw span deg 314"
+            },
+            {
+              "time": 84.63,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 25423 turn -1 action forward hook yaw span deg 309"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 9.264,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1001 turn -1 action forward hook yaw span deg 209"
+            },
+            {
+              "time": 13.562,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1746 turn 1 action forward hook yaw span deg 179"
+            },
+            {
+              "time": 17.654,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3589 since white ms (-1 unknown) -1 wheel travel mm 2209 turn -1 action forward hook yaw span deg 120"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 14.43,
+              "message": "tip guard pitch deg -6.2 roll deg 12.7 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 35.7410000000074
+          },
+          "winningProgram": 0,
+          "firstContact": 4.527,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-memory\\seed-811-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 10.928,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2180 turn -1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 15.712,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3835 turn 1 action forward hook yaw span deg 306"
+            },
+            {
+              "time": 20.496,
+              "message": "suspected lockup range mm 96 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5497 turn -1 action forward hook yaw span deg 313"
+            },
+            {
+              "time": 25.28,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7152 turn 1 action forward hook yaw span deg 309"
+            },
+            {
+              "time": 30.064,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8816 turn -1 action forward hook yaw span deg 314"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        }
+      ]
+    },
+    {
+      "directory": "logging-v4-duty",
+      "challenger": "examples\\weave_hook.py",
+      "incumbent": "examples\\pressure_full_duty.py",
+      "programHashes": [
+        "5f8eef50653d05caf4931043c5e7500e9bc5e49be7d0717a9b42ed02f56182d6",
+        "c9da55f2863620a2ffa25f9b2f2580b8221c9f0c6fb47bd039fbd43b6ecdefb7"
+      ],
+      "score": {
+        "wins": 2,
+        "draws": 5,
+        "losses": 1,
+        "score": 0.5625,
+        "faults": 0,
+        "promote": false
+      },
+      "comparisonKind": "same-seed runtime revalidation",
+      "bouts": [
+        {
+          "seed": 503,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-503-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 13.129,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 2198 turn 1 action forward hook yaw span deg 350"
+            },
+            {
+              "time": 17.913,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3863 turn -1 action forward hook yaw span deg 340"
+            },
+            {
+              "time": 22.697,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5518 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 27.481,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 7183 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 32.265,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8836 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 37.032,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10503 turn -1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 41.816,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 12159 turn 1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 46.6,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13819 turn -1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 51.384,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 15479 turn 1 action forward hook yaw span deg 328"
+            },
+            {
+              "time": 56.168,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 17139 turn -1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 60.952,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18795 turn 1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 65.736,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 20456 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 70.52,
+              "message": "suspected lockup range mm 114 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 22112 turn 1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 75.287,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23781 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 80.071,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 25436 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 84.855,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 27098 turn -1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 89.639,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 28753 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 94.406,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 30416 turn -1 action forward hook yaw span deg 330"
+            },
+            {
+              "time": 99.19,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 32078 turn 1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 103.974,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 33740 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 108.758,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 35395 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 113.542,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 37056 turn -1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 118.326,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 38711 turn 1 action forward hook yaw span deg 331"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 8.345,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 687 turn -1 action forward hook yaw span deg 155"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 503,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 51.02099999997179
+          },
+          "winningProgram": 0,
+          "firstContact": 4.484,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-503-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [],
+          "watchdogAlerts": [
+            {
+              "time": 8.374,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 752 turn -1 action forward hook yaw span deg 71"
+            },
+            {
+              "time": 14.994,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4126 wheel travel mm 369 turn 1 action forward hook yaw span deg 225"
+            },
+            {
+              "time": 20.264,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 9396 wheel travel mm 1058 turn -1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 23.904,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3137 since white ms (-1 unknown) 13036 wheel travel mm 1611 turn 1 action forward hook yaw span deg 59"
+            },
+            {
+              "time": 29.225,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 3918 wheel travel mm 394 turn -1 action forward hook yaw span deg 210"
+            },
+            {
+              "time": 34.408,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 8199 since white ms (-1 unknown) 3918 wheel travel mm 250 turn 1 action forward hook yaw span deg 216"
+            },
+            {
+              "time": 41.843,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 15634 since white ms (-1 unknown) 3935 wheel travel mm 260 turn -1 action forward hook yaw span deg 212"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 607,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-607-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 9.455,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1730 turn -1 action forward hook yaw span deg 300"
+            },
+            {
+              "time": 14.239,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3387 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 19.006,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5049 turn -1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 23.79,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6710 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 28.557,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8375 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 33.341,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10030 turn 1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 38.125,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11690 turn -1 action forward hook yaw span deg 326"
+            },
+            {
+              "time": 42.909,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13345 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 47.674,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14971 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 52.458,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 16630 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 57.225,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18296 turn -1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 62.009,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 19952 turn 1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 66.776,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 21616 turn -1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 71.56,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23270 turn 1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 76.327,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 24935 turn -1 action forward hook yaw span deg 325"
+            },
+            {
+              "time": 81.111,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 26593 turn 1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 85.861,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 28266 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 90.645,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 29926 turn 1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 95.429,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 31586 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 100.213,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 33247 turn 1 action forward hook yaw span deg 330"
+            },
+            {
+              "time": 104.978,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 34876 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 109.762,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 36531 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 114.546,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 38193 turn -1 action forward hook yaw span deg 328"
+            },
+            {
+              "time": 119.33,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 39849 turn 1 action forward hook yaw span deg 333"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 607,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 0,
+            "reason": "outside_floor_contact",
+            "time": 57.40699999995691
+          },
+          "winningProgram": 1,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-607-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 32.734,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 6535 wheel travel mm 2036 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 37.501,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 11300 wheel travel mm 3706 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 42.285,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 16084 wheel travel mm 5361 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 47.05,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 20851 wheel travel mm 6987 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 51.834,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 25635 wheel travel mm 8642 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 56.618,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 30419 wheel travel mm 10309 turn 1 action forward hook yaw span deg 338"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 10.565,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1431 turn -1 action forward hook yaw span deg 167"
+            },
+            {
+              "time": 14.118,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6571 since white ms (-1 unknown) -1 wheel travel mm 1926 turn 1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 19.698,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3241 since white ms (-1 unknown) 3916 wheel travel mm 262 turn -1 action forward hook yaw span deg 205"
+            },
+            {
+              "time": 23.253,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6794 since white ms (-1 unknown) 7469 wheel travel mm 760 turn 1 action forward hook yaw span deg 58"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 57.295,
+              "message": "tip guard pitch deg -14.0 roll deg -0.0 action retreat"
+            }
+          ]
+        },
+        {
+          "seed": 709,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-709-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 9.455,
+              "message": "suspected lockup range mm 97 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1730 turn -1 action forward hook yaw span deg 300"
+            },
+            {
+              "time": 14.239,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3387 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 19.023,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5048 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 23.807,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6709 turn 1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 28.557,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8375 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 33.341,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10032 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 38.106,
+              "message": "suspected lockup range mm 111 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11660 turn -1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 42.89,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13319 turn 1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 47.657,
+              "message": "suspected lockup range mm 98 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14981 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 52.441,
+              "message": "suspected lockup range mm 97 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 16642 turn 1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 57.208,
+              "message": "suspected lockup range mm 109 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18304 turn -1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 61.992,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 19961 turn 1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 66.776,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 21624 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 71.56,
+              "message": "suspected lockup range mm 116 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23282 turn 1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 76.327,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 24953 turn -1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 81.111,
+              "message": "suspected lockup range mm 106 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 26608 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 85.878,
+              "message": "suspected lockup range mm 95 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 28276 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 90.662,
+              "message": "suspected lockup range mm 114 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 29934 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 95.446,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 31596 turn -1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 100.23,
+              "message": "suspected lockup range mm 110 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 33255 turn 1 action forward hook yaw span deg 328"
+            },
+            {
+              "time": 105.014,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 34919 turn -1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 109.798,
+              "message": "suspected lockup range mm 116 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 36576 turn 1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 114.565,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 38240 turn -1 action forward hook yaw span deg 330"
+            },
+            {
+              "time": 119.349,
+              "message": "suspected lockup range mm 98 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 39895 turn 1 action forward hook yaw span deg 336"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 709,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": 1,
+            "reason": "outside_floor_contact",
+            "time": 33.01800000001375
+          },
+          "winningProgram": 0,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-709-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [],
+          "watchdogAlerts": [
+            {
+              "time": 10.565,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1431 turn -1 action forward hook yaw span deg 167"
+            },
+            {
+              "time": 14.118,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6571 since white ms (-1 unknown) -1 wheel travel mm 1926 turn 1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 19.717,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3258 since white ms (-1 unknown) 3933 wheel travel mm 271 turn -1 action forward hook yaw span deg 208"
+            },
+            {
+              "time": 23.27,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6813 since white ms (-1 unknown) 7488 wheel travel mm 758 turn 1 action forward hook yaw span deg 61"
+            }
+          ],
+          "tipGuards": []
+        },
+        {
+          "seed": 811,
+          "swapped": false,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-811-swap-0.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 9.455,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 1730 turn -1 action forward hook yaw span deg 300"
+            },
+            {
+              "time": 14.239,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 3387 turn 1 action forward hook yaw span deg 336"
+            },
+            {
+              "time": 19.023,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 5048 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 23.807,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 6709 turn 1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 28.557,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 8375 turn -1 action forward hook yaw span deg 331"
+            },
+            {
+              "time": 33.341,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 10032 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 38.106,
+              "message": "suspected lockup range mm 112 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 11660 turn -1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 42.89,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 13319 turn 1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 47.657,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 14981 turn -1 action forward hook yaw span deg 335"
+            },
+            {
+              "time": 52.441,
+              "message": "suspected lockup range mm 99 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 16642 turn 1 action forward hook yaw span deg 337"
+            },
+            {
+              "time": 57.208,
+              "message": "suspected lockup range mm 103 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 18304 turn -1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 61.992,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 19961 turn 1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 66.776,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 21624 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 71.56,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 23282 turn 1 action forward hook yaw span deg 334"
+            },
+            {
+              "time": 76.327,
+              "message": "suspected lockup range mm 104 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 24953 turn -1 action forward hook yaw span deg 339"
+            },
+            {
+              "time": 81.111,
+              "message": "suspected lockup range mm 105 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 26608 turn 1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 85.878,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 28276 turn -1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 90.662,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 29934 turn 1 action forward hook yaw span deg 332"
+            },
+            {
+              "time": 95.446,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 31596 turn -1 action forward hook yaw span deg 333"
+            },
+            {
+              "time": 100.23,
+              "message": "suspected lockup range mm 108 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 33255 turn 1 action forward hook yaw span deg 327"
+            },
+            {
+              "time": 105.014,
+              "message": "suspected lockup range mm 100 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 34919 turn -1 action forward hook yaw span deg 338"
+            },
+            {
+              "time": 109.798,
+              "message": "suspected lockup range mm 102 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 36576 turn 1 action forward hook yaw span deg 329"
+            },
+            {
+              "time": 114.565,
+              "message": "suspected lockup range mm 116 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 38240 turn -1 action forward hook yaw span deg 330"
+            },
+            {
+              "time": 119.349,
+              "message": "suspected lockup range mm 101 echo age ms (-1 unknown) 0 since white ms (-1 unknown) -1 wheel travel mm 39895 turn 1 action forward hook yaw span deg 336"
+            }
+          ],
+          "watchdogAlerts": [],
+          "tipGuards": []
+        },
+        {
+          "seed": 811,
+          "swapped": true,
+          "friction": 0.8,
+          "result": {
+            "winner": null,
+            "reason": "timeout",
+            "time": 120.00000000020893
+          },
+          "winningProgram": null,
+          "firstContact": 4.487,
+          "replay": "artifacts\\strategy-tournament\\logging-v4-duty\\seed-811-swap-1.json",
+          "runtime": "sync-subset-v4",
+          "compatibilityRepeat": false,
+          "programErrors": [
+            null,
+            null
+          ],
+          "suspectedLockups": [
+            {
+              "time": 33.721,
+              "message": "suspected lockup range mm 107 echo age ms (-1 unknown) 0 since white ms (-1 unknown) 7471 wheel travel mm 2068 turn -1 action forward hook yaw span deg 282"
+            }
+          ],
+          "watchdogAlerts": [
+            {
+              "time": 10.565,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) -1 wheel travel mm 1431 turn -1 action forward hook yaw span deg 167"
+            },
+            {
+              "time": 14.118,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6571 since white ms (-1 unknown) -1 wheel travel mm 1926 turn 1 action forward hook yaw span deg 60"
+            },
+            {
+              "time": 19.717,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3258 since white ms (-1 unknown) 3933 wheel travel mm 271 turn -1 action forward hook yaw span deg 208"
+            },
+            {
+              "time": 23.27,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6813 since white ms (-1 unknown) 7488 wheel travel mm 758 turn 1 action forward hook yaw span deg 62"
+            },
+            {
+              "time": 37.518,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 11268 wheel travel mm 2730 turn 1 action forward hook yaw span deg 61"
+            },
+            {
+              "time": 53.829,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 13121 wheel travel mm 3032 turn -1 action forward hook yaw span deg 236"
+            },
+            {
+              "time": 57.503,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 16797 wheel travel mm 3675 turn 1 action forward hook yaw span deg 74"
+            },
+            {
+              "time": 65.893,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 5009 wheel travel mm 773 turn -1 action forward hook yaw span deg 65"
+            },
+            {
+              "time": 72.878,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4629 wheel travel mm 666 turn 1 action forward hook yaw span deg 170"
+            },
+            {
+              "time": 79.585,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4663 wheel travel mm 652 turn -1 action forward hook yaw span deg 155"
+            },
+            {
+              "time": 83.087,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 6518 since white ms (-1 unknown) 8165 wheel travel mm 1135 turn 1 action forward hook yaw span deg 59"
+            },
+            {
+              "time": 88.495,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4975 wheel travel mm 604 turn -1 action forward hook yaw span deg 61"
+            },
+            {
+              "time": 101.565,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3449 since white ms (-1 unknown) 3865 wheel travel mm 274 turn 1 action forward hook yaw span deg 212"
+            },
+            {
+              "time": 109.017,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 5183 wheel travel mm 630 turn -1 action forward hook yaw span deg 64"
+            },
+            {
+              "time": 115.518,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3016 since white ms (-1 unknown) 4663 wheel travel mm 648 turn 1 action forward hook yaw span deg 161"
+            },
+            {
+              "time": 119.729,
+              "message": "watchdog blind drive range mm 2000 echo age ms (-1 unknown) 3207 since white ms (-1 unknown) 3935 wheel travel mm 262 turn -1 action forward hook yaw span deg 217"
+            }
+          ],
+          "tipGuards": [
+            {
+              "time": 29.493,
+              "message": "tip guard pitch deg -6.2 roll deg -12.8 action retreat"
+            }
+          ]
         }
       ]
     }

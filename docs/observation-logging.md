@@ -12,7 +12,7 @@ Prints count toward the 100,000-operation program budget. A burst of more than 1
 
 ## Historical results
 
-Existing strategy scores and archived replays were measured under `sync-subset-v3`, where each print used an extra 1 ms scheduler slot. The selected `weave_hook` score is labeled historical in the UI; it has not been revalidated under v4. Rankings can change with scheduling, even when physics is identical. Archived programs and evidence remain unchanged.
+Earlier strategy scores and archived replays were measured under `sync-subset-v3`, where each print used an extra 1 ms scheduler slot. The selected `weave_hook` has now been [revalidated in 16 v4 bouts](logging-v4-validation.md), with a current winning replay in the UI. Its historical v3 validation is preserved separately; other candidates have not all been reranked. Rankings can change with scheduling, even when physics is identical. Archived programs and evidence remain unchanged.
 
 Select the legacy profile explicitly to reproduce those trials:
 
@@ -23,4 +23,4 @@ Select the legacy profile explicitly to reproduce those trials:
 
 Verification includes exact logged-versus-quiet motion, sensor and physical-event comparisons over a 12-second refereed `weave_hook` match; controlled blocked-disk tests; copied-batch ordering across reset paths; overflow/error and shutdown behavior; and the print-flood CPU deadline.
 
-An archived v3 bout reproduced all 412 JSON-normalized frames and 177 events exactly, including its 20.527-second resolution. This is a compatibility check, not another independent strategy trial. `node tests/browser-observation.mjs` checks current metadata, the historical-score label, error visibility when the event count is unchanged, and continued robot execution after a disk-error notice.
+An archived v3 bout reproduced all 412 JSON-normalized frames and 177 events exactly, including its 20.527-second resolution. This is a compatibility check, not another independent strategy trial. `node tests/browser-observation.mjs` checks current metadata, a historical-score fixture, error visibility when the event count is unchanged, and continued robot execution after a disk-error notice.
