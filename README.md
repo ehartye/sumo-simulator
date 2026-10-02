@@ -54,7 +54,7 @@ The target is **synchronous Pybricks v4 style**, implemented with CPython device
 | `run_time`, `run_angle`, `run_target` | `then=Stop.COAST/BRAKE/HOLD`, `wait=True/False`; approximate controller |
 | `ColorSensor(Port.C).reflection()` | Downward ring reflectance 0–100 |
 | `UltrasonicSensor(Port.D).distance()` | Dense 3D cone, millimeters; 2000 for no valid return |
-| `PrimeHub()` | Relative/unwrapped `imu.heading()`, `imu.tilt()` pitch/roll in degrees ([assumptions](docs/imu.md)), `battery.voltage()` in mV |
+| `PrimeHub()` | Relative/unwrapped clockwise-positive `imu.heading()`, `imu.tilt()` pitch/roll in degrees ([assumptions](docs/imu.md)), `battery.voltage()` in mV |
 | `wait(ms)`, `StopWatch.time/reset` | Shared simulation clock, independent bot waits |
 | `Port`, `Direction`, `Stop`, `math`, limited `random` | Explicit enums and per-worker seeded PRNG |
 
@@ -76,7 +76,11 @@ The **Match record** timeline logs opponent echo acquisition/loss, program `prin
 
 The [ten-loop strategy report](docs/strategy-tournament.md) preserves every hypothesis, result and limitation. Reproduce a paired trial with `python -m tools.strategy_tournament <challenger.py> <incumbent.py> --out artifacts/strategy-tournament/new-trial`. Each trial saves exact program text/hashes, engine/robot/rule metadata, every match event and 50 ms replay frames with sensor diagnostics; these tournament replays do not contain the live viewer's full 100 Hz ultrasonic sample stream. Generated evidence remains local under `artifacts/strategy-tournament/`, served by `/trials/`. Capture the resolution sequence with `node tools/review_replay.mjs <bout.json>`.
 
-Three [lockup recovery presets](docs/stall-recovery.md) are available: `stall_hook` (brief release/gyro hook), `stall_geometry` (uncertain ring/echo history for direction), and `stall_pressure` (fresh close return and forward hook). Logs record suspicion, direction basis, turn error/timeouts and travel since white. These infer suspected lockup; wheel slip and gyro drift prevent exact position or opponent exclusion. The [results](experiments/results.json) record 146 bouts. Capture recovery frames with `node tools/review_replay.mjs --recovery <bout.json>`.
+Three [lockup recovery presets](docs/stall-recovery.md) are available: `stall_hook` (brief release/gyro hook), `stall_geometry` (uncertain ring/echo history for direction), and `stall_pressure` (fresh close return and forward hook). Logs record suspicion, direction basis, turn error/timeouts and travel since white. These infer suspected lockup; wheel slip and gyro drift prevent exact position or opponent exclusion. The [results](experiments/results.json) preserve the original bouts and the [ten additional variants](docs/recovery-round-two.md), fresh-seed comparisons and separately marked compatibility reruns. Capture recovery frames with `node tools/review_replay.mjs --recovery <bout.json>`.
+
+The additional search uses shallow forward arcs with one driven wheel at a time, rather than stationary spinning. Sustained blind-drive and close-engagement watchdogs log suspicion; bounded gyro hooks and stock-hub pitch/roll guards test responses. [Offline recovery analysis](tools/recovery_analysis.py) measures actual posture, travel and separation from saved observer frames, never controller inputs. The selected `weave_hook` is a training-best complete program, with weaker fresh-seed results and timing-sensitive outcomes. It is not a proven universal or hardware champion.
+
+Runtime v3 corrects the hardware heading API to Pybricks' clockwise-positive convention. Live feedback presets explicitly convert to their existing internal CCW yaw. Archived v1/v2 programs and replay fields retain their historical convention: use them for inspection with the recorded profile, or adapt signed heading reads before a new v3 run. [IMU conventions and assumptions](docs/imu.md) distinguish the hardware API from the legacy absolute observer yaw field. No mechanics or random streams changed.
 
 ## Match rules and physics
 

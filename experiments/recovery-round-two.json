@@ -1,0 +1,614 @@
+{
+  "trainingBouts": 120,
+  "validationBouts": 24,
+  "compatibilityRepeats": 24,
+  "fidelity": "uncalibrated",
+  "selected": {
+    "loop": 21,
+    "revision": "b",
+    "training": {
+      "wins": 9,
+      "draws": 2,
+      "losses": 1,
+      "score": 0.8333333333333334
+    },
+    "validation": {
+      "wins": 9,
+      "draws": 3,
+      "losses": 4,
+      "score": 0.65625
+    }
+  },
+  "trials": [
+    {
+      "loop": 14,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "d2d7e8d88c2d5292b39f7a1e4edfcb2561b1544290896eb1796966d72fc23400",
+          "score": {
+            "wins": 2,
+            "draws": 4,
+            "losses": 0,
+            "score": 0.6666666666666666,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 0,
+            "closeDuelAlerts": 0,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 0,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 19.67425212915649,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "d2d7e8d88c2d5292b39f7a1e4edfcb2561b1544290896eb1796966d72fc23400",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 0,
+            "closeDuelAlerts": 0,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 0,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 2.6539360486953187,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 15,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "c7ae33589d05848ce3896d219ea61804880e0e579d2f4dc9102434b973b4d664",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 3,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 3,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 3.1275240054107027,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "c7ae33589d05848ce3896d219ea61804880e0e579d2f4dc9102434b973b4d664",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 0,
+            "closeDuelAlerts": 0,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 0,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 2.6539360486953187,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 16,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "19f10409a5997e82f77aa5273f717de200fb412e27d5032b757b9ef7c947f8d8",
+          "score": {
+            "wins": 6,
+            "draws": 0,
+            "losses": 0,
+            "score": 1.0,
+            "faults": 0,
+            "promote": true
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 11,
+            "closeDuelAlerts": 1,
+            "notCloseDuelAlerts": 10,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 7,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 1,
+            "jitterOnlyAlerts": 1,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 17.88841017507972,
+          "inversions": 0,
+          "tipAlerts": 1
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "19f10409a5997e82f77aa5273f717de200fb412e27d5032b757b9ef7c947f8d8",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 3,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 3,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 2.979470242552576,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 17,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "3ba8a73ab0a466516ca3ae492d759e47d11e346709a4a72899f001e9c1e9eb88",
+          "score": {
+            "wins": 0,
+            "draws": 0,
+            "losses": 6,
+            "score": 0.0,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 26,
+            "closeDuelAlerts": 5,
+            "notCloseDuelAlerts": 21,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 19,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 3,
+            "jitterOnlyAlerts": 2,
+            "incompletePostWindows": 2
+          },
+          "maxTiltDeg": 28.256088193632863,
+          "inversions": 0,
+          "tipAlerts": 7
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "3ba8a73ab0a466516ca3ae492d759e47d11e346709a4a72899f001e9c1e9eb88",
+          "score": {
+            "wins": 0,
+            "draws": 0,
+            "losses": 6,
+            "score": 0.0,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 12,
+            "closeDuelAlerts": 12,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 12,
+            "incompletePostWindows": 6
+          },
+          "maxTiltDeg": 17.962905714737694,
+          "inversions": 0,
+          "tipAlerts": 6
+        }
+      ]
+    },
+    {
+      "loop": 18,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "3d11e8c4e14c1958f908d43e27a886ef36730b3dd83e8eeb7fe897049e8c9512",
+          "score": {
+            "wins": 6,
+            "draws": 0,
+            "losses": 0,
+            "score": 1.0,
+            "faults": 0,
+            "promote": true
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 20,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 17,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 15,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 2,
+            "jitterOnlyAlerts": 1,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 34.38841006993042,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "3d11e8c4e14c1958f908d43e27a886ef36730b3dd83e8eeb7fe897049e8c9512",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 3,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 3,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 2.979470242552576,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 19,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "8d69358b1ee0d974fb06c607ffe8da1c92e577cbe4f01303e2ec0506bed58a27",
+          "score": {
+            "wins": 1,
+            "draws": 0,
+            "losses": 5,
+            "score": 0.16666666666666666,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 41,
+            "closeDuelAlerts": 10,
+            "notCloseDuelAlerts": 31,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 28,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 2,
+            "jitterOnlyAlerts": 0,
+            "incompletePostWindows": 2
+          },
+          "maxTiltDeg": 19.473353409383183,
+          "inversions": 0,
+          "tipAlerts": 1
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "8d69358b1ee0d974fb06c607ffe8da1c92e577cbe4f01303e2ec0506bed58a27",
+          "score": {
+            "wins": 0,
+            "draws": 6,
+            "losses": 0,
+            "score": 0.5,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 150,
+            "closeDuelAlerts": 150,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 3,
+            "jitterOnlyAlerts": 147,
+            "incompletePostWindows": 3
+          },
+          "maxTiltDeg": 2.9142033207779683,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 20,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "2aa2b33659269453d0d0805c3f9a523a2fbaf5c4375c38d471b8c7ceef61629b",
+          "score": {
+            "wins": 4,
+            "draws": 0,
+            "losses": 2,
+            "score": 0.6666666666666666,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 26,
+            "closeDuelAlerts": 4,
+            "notCloseDuelAlerts": 22,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 21,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 1,
+            "jitterOnlyAlerts": 3,
+            "incompletePostWindows": 1
+          },
+          "maxTiltDeg": 19.87400271384069,
+          "inversions": 0,
+          "tipAlerts": 7
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "2aa2b33659269453d0d0805c3f9a523a2fbaf5c4375c38d471b8c7ceef61629b",
+          "score": {
+            "wins": 0,
+            "draws": 1,
+            "losses": 5,
+            "score": 0.08333333333333333,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 109,
+            "closeDuelAlerts": 106,
+            "notCloseDuelAlerts": 3,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 3,
+            "newSustainedSeparations": 3,
+            "newSustainedContactFreeIntervals": 6,
+            "jitterOnlyAlerts": 100,
+            "incompletePostWindows": 5
+          },
+          "maxTiltDeg": 17.90384657251416,
+          "inversions": 0,
+          "tipAlerts": 8
+        }
+      ]
+    },
+    {
+      "loop": 21,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "600184c6ee415de153ba935f43628e6238358490119861f13a65a24272840c6d",
+          "score": {
+            "wins": 3,
+            "draws": 2,
+            "losses": 1,
+            "score": 0.6666666666666666,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 50,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 47,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 45,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 1,
+            "jitterOnlyAlerts": 1,
+            "incompletePostWindows": 1
+          },
+          "maxTiltDeg": 19.946069521337105,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "600184c6ee415de153ba935f43628e6238358490119861f13a65a24272840c6d",
+          "score": {
+            "wins": 6,
+            "draws": 0,
+            "losses": 0,
+            "score": 1.0,
+            "faults": 0,
+            "promote": true
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 36,
+            "closeDuelAlerts": 36,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 36,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 2.529896340128807,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    },
+    {
+      "loop": 22,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "54df12e46e294d2321c31c79123bfaff931a24d9ec4abbc3bc43ba8743520b2e",
+          "score": {
+            "wins": 1,
+            "draws": 5,
+            "losses": 0,
+            "score": 0.5833333333333334,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 139,
+            "closeDuelAlerts": 139,
+            "notCloseDuelAlerts": 0,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 0,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 139,
+            "incompletePostWindows": 1
+          },
+          "maxTiltDeg": 4.458106404237606,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "54df12e46e294d2321c31c79123bfaff931a24d9ec4abbc3bc43ba8743520b2e",
+          "score": {
+            "wins": 3,
+            "draws": 3,
+            "losses": 0,
+            "score": 0.75,
+            "faults": 0,
+            "promote": true
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 87,
+            "closeDuelAlerts": 81,
+            "notCloseDuelAlerts": 6,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 6,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 3,
+            "jitterOnlyAlerts": 77,
+            "incompletePostWindows": 4
+          },
+          "maxTiltDeg": 20.55988244287727,
+          "inversions": 0,
+          "tipAlerts": 3
+        }
+      ]
+    },
+    {
+      "loop": 23,
+      "reports": [
+        {
+          "opponent": "duty",
+          "sourceHash": "05016c0bbe0b5a884050cb6511707e545ff8f709c999932411197060aaea94d6",
+          "score": {
+            "wins": 3,
+            "draws": 2,
+            "losses": 1,
+            "score": 0.6666666666666666,
+            "faults": 0,
+            "promote": false
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 50,
+            "closeDuelAlerts": 3,
+            "notCloseDuelAlerts": 47,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 45,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 1,
+            "jitterOnlyAlerts": 1,
+            "incompletePostWindows": 1
+          },
+          "maxTiltDeg": 19.946069521337105,
+          "inversions": 0,
+          "tipAlerts": 0
+        },
+        {
+          "opponent": "memory",
+          "sourceHash": "05016c0bbe0b5a884050cb6511707e545ff8f709c999932411197060aaea94d6",
+          "score": {
+            "wins": 6,
+            "draws": 0,
+            "losses": 0,
+            "score": 1.0,
+            "faults": 0,
+            "promote": true
+          },
+          "recovery": {
+            "bouts": 6,
+            "alerts": 78,
+            "closeDuelAlerts": 75,
+            "notCloseDuelAlerts": 3,
+            "unknownCloseDuelAlerts": 0,
+            "priorSeparationAlerts": 3,
+            "newSustainedSeparations": 0,
+            "newSustainedContactFreeIntervals": 0,
+            "jitterOnlyAlerts": 75,
+            "incompletePostWindows": 0
+          },
+          "maxTiltDeg": 7.787219007912741,
+          "inversions": 0,
+          "tipAlerts": 0
+        }
+      ]
+    }
+  ]
+}

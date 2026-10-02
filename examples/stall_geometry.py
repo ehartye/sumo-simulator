@@ -4,6 +4,7 @@ Uses real Pybricks device APIs only. Stable range is NOT proof of ground stall.
 On hardware, verify hub mounting and imu.ready() before the match countdown.
 """
 import math
+# Hardware heading is clockwise-positive; this policy uses internal CCW yaw.
 from pybricks.hubs import PrimeHub
 from pybricks.parameters import Direction, Port
 from pybricks.pupdevices import ColorSensor, Motor, UltrasonicSensor
@@ -66,7 +67,7 @@ clock = StopWatch()
 # These estimates never read the simulator's actual chassis position.
 x, z, uncertainty = 0., 152.4, 40.
 previous_left, previous_right = left.angle(), right.angle()
-previous_heading, previous_time = hub.imu.heading(), clock.time()
+previous_heading, previous_time = -hub.imu.heading(), clock.time()
 last_white, travel_since_white = None, 0.
 last_close, last_echo = -2000, -2000
 echo_heading = None
@@ -93,7 +94,7 @@ right.brake()
 
 while True:
     now = clock.time()
-    heading = hub.imu.heading()
+    heading = -hub.imu.heading()
     a, b = left.angle(), right.angle()
     distance = opponent.distance()
     white = edge.reflection() > 50

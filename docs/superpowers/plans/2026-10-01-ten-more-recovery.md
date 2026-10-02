@@ -1,0 +1,25 @@
+# Ten more recovery experiments
+
+**Goal:** Complete ten additional, evidence-driven challengers (14–23) looking for reliable recovery from close duels, retain failures and load qualifying improvements into the existing UI.
+
+**Architecture:** Freeze stock hardware, mechanics, motor limits, ultrasonic model and referee. Explicitly version the evidence-driven tilt extension and heading contract repair, with golden and full-bout parity checks. Controllers remain standalone synchronous Pybricks sources. Compare each against fixed full-duty (03) and close-memory (01) opponents; use offline observer measurements only to assess recovery, never as controller input. Keep the feature branch and wiki main workflows.
+
+**Execution:** Root develops experiments sequentially. Under subagent-driven-development, delegate independent offline evidence analysis and final review. No UI expansion is required. Evidence below justifies a bounded hardware tilt API extension.
+
+**Comparison bar:** Each challenger runs seeds 11/23/37, both sides, 120 seconds against each fixed opponent (12 bouts). A pooled score of at least 75%, no individual opponent score below 50%, and zero program/rule faults qualifies a potential promotion. Inspect actual close-duel triggers and achieved motion/contact changes before selecting a recovery improvement. A qualification score is not a universal/hardware superiority claim. If no source qualifies, preserve the prior selection and name the best unsuccessful approach.
+
+**Recovery evidence:** Classify alerts using recent physical contact, pre-alert chassis travel, achieved gyro/physical heading change and sustained separation after the maneuver. Contact jitter alone is not a successful escape. These are offline simulator diagnostics, not ground truth available on hardware. Report false alerts, failed turns, losses and draws. Compare the best program against both opponents on source-fresh seeds 503/607/709/811 after freezing it; do not tune on those validation results.
+
+- [x] Add tested offline recovery analysis for saved replays, keeping observer information isolated from program execution. Audit representative previous true/false alert cases.
+- [x] Execute loops 14–23 sequentially, preserving exact sources and 12 outcomes per loop; diagnose recovery and choose each next hypothesis using the preceding evidence.
+- [x] Load qualified improvements and their recorded replay into the UI; retain selected standalone examples without modifying archived candidates.
+- [x] Freeze and validate the best challenger on four new seeds per opponent, both sides. Inspect recovery and result sequences and independently audit hashes, side mappings, scores, legality and source isolation.
+- [x] Update the report, tracked compact results, verification and wiki living architecture/roadmap. Run relevant Python/browser checks and commit local feature work.
+
+Tentative hypotheses: pressure release without retreat; short retreat/recharge; longer retreat/gyro turn; asymmetric reverse; pulsed pushing; lower speed for traction; encoder-limited release; failed-turn adaptation; bounded flank sequence; feedback-selected recovery direction. These are a starting list, not ten preselected parameter tweaks: failed observations can replace later hypotheses. All powered phases retain deadlines and color priority. A front-only color sensor leaves reverse risk; no time/odometry heuristic certifies rear clearance.
+
+User steering: start with forward searching that alternates one driven wheel, avoiding habitual spinning. Keep search arcs near an inward heading established after border recovery. Add a separate watchdog for sustained commanded motion without opponent or white readings, and for failed gyro turns; absence of these observations is suspicion, not proof of standstill. Compare these policies directly before returning to longer retreat/flanking hypotheses.
+
+Evidence-driven scope correction: old 12b/13 failed turns were on an already inverted chassis with airborne wheels. Introduce only hardware-supported `imu.tilt()` as an explicit API/sensor extension for later prevention candidates. Pin firmware semantics; add assumed noise in a separate RNG domain and prove existing range/reflection/heading and mechanical trajectories remain unchanged. Mechanics, dimensions, power and mass stay frozen. Record runtime version/model metadata so v1/v2 runs are not silently conflated. Replay posture remains offline observation; the controller receives the new hardware-style pitch/roll reading. A front roll/pitch guard is necessary because the observed flip was mainly roll.
+
+Final validation amendment: after freezing the ten-loop best, use fresh seeds 503/607/709/811 on both sides versus both fixed opponents (16 bouts), and compare the final new approach (23) directly with the identified loop-21 best on those seeds (8 bouts). No controller changes follow these results. This makes the “try to beat the best” outcome directly reviewable, in addition to shared-opponent scores.

@@ -1,12 +1,25 @@
 {
-  "loop": 11,
-  "champion": "stall_hook",
-  "opponent": "pressure_full_duty",
+  "loop": 21,
+  "variantRevision": "b",
+  "champion": "weave_hook",
+  "opponent": "pressure_memory",
   "score": {
-    "wins": 5,
-    "draws": 1,
-    "losses": 0
+    "wins": 6,
+    "draws": 0,
+    "losses": 2
   },
-  "replayUrl": "/trials/loop-11b/seed-23-swap-1.json",
-  "variantRevision": "b"
+  "replayUrl": "/trials/round-two-v3-memory/seed-607-swap-0.json",
+  "pooledScore": 0.65625,
+  "pooledOutcomes": {
+    "wins": 9,
+    "draws": 3,
+    "losses": 4
+  },
+  "trainingPooledScore": 0.8333333333333334,
+  "trainingOutcomes": {
+    "wins": 9,
+    "draws": 2,
+    "losses": 1
+  },
+  "comparison": "Retained training-best; fresh-seed results weaker; 24 exact v2/v3 compatibility pairs"
 }

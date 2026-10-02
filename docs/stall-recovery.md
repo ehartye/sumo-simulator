@@ -4,7 +4,7 @@ The three new programs are `stall_hook`, `stall_geometry` and `stall_pressure`. 
 
 ## Hardware contract checked before implementation
 
-The [official PrimeHub reference](https://docs.pybricks.com/en/stable/hubs/primehub.html) defines heading as clockwise-positive, unwrapped degrees relative to program start. The hub provides gyro and accelerometer channels, calibration/readiness and mounting-axis configuration. A physical run must configure its actual mounting, allow stationary calibration and verify readiness before the competition countdown. The simulator implements heading only; its yaw-derived noise/drift channel is an uncalibrated approximation, not the firmware's complete fused 3D estimator.
+The [official PrimeHub reference](https://docs.pybricks.com/en/stable/hubs/primehub.html) defines heading as clockwise-positive, unwrapped degrees relative to program start. The hub provides gyro and accelerometer channels, calibration/readiness and mounting-axis configuration. A physical run must configure its actual mounting, allow stationary calibration and verify readiness before the competition countdown. The original controllers use the heading-only subset. The later [recovery round](recovery-round-two.md) adds [hardware-supported tilt](imu.md) under runtime v2; both signals remain uncalibrated approximations of firmware estimation.
 
 Pinned [v4.0.1 Python bindings](https://github.com/pybricks/pybricks-micropython/blob/v4.0.1/pybricks/common/pb_type_imu.c) request 3D heading. Pinned [IMU implementation](https://github.com/pybricks/pybricks-micropython/blob/v4.0.1/lib/pbio/src/imu.c) requires all motors coasting for `stationary()`. That calibration condition cannot identify a powered pushing lockup. Neither that API nor accelerometer-derived perfect speed has been added to the simulator.
 
@@ -18,7 +18,7 @@ Recovery releases pressure briefly, turns toward a 28-degree relative gyro targe
 
 `stall_hook` alternates escape direction and tests an 80 ms retreat. The front color sensor cannot see the rear rim while backing; this is a deliberate experimental tradeoff, not a safe physical guarantee. `stall_geometry` suppresses the retreat when its uncertain position estimate does not suggest enough clearance. Its uncertainty is a heuristic, not a certified error bound.
 
-`stall_pressure` requires a fresh valid return below 140 mm before acting, performs no lockup retreat, and uses one forward-powered wheel during its bounded escape turn. This third hypothesis follows visual evidence that the earlier detector could alert while bots were apart, and that counterrotation could remain blocked in a close duel. It still failed to beat the fixed full-duty opponent; the stricter gate reduces one false-alert case without establishing accurate contact detection.
+`stall_pressure` requires a fresh valid return below 140 mm before acting, performs no lockup retreat, and uses one forward-powered wheel during its bounded escape turn. This third hypothesis follows visual evidence that the earlier detector could alert while bots were apart, and that counterrotation could fail at close proximity. Later replay posture analysis found the inspected chassis already inverted with airborne tires, so this does not establish blocked upright turns. It still failed to beat the fixed full-duty opponent; the stricter gate reduces one false-alert case without establishing accurate contact detection.
 
 ## What geometry can establish
 

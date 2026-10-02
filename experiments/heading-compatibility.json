@@ -1,0 +1,6 @@
+{
+  "bouts": 24,
+  "comparison": "Exact full frames/events/results; only source and runtime metadata differ",
+  "independentValidation": false,
+  "physicsUnchanged": true
+}
