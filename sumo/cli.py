@@ -4,9 +4,9 @@ import json
 from pathlib import Path
 from uuid import uuid4
 
-from .physics import World
+from .physics import IMU_TILT_PROFILE, World
 from .robot import ROOT
-from .runtime import Runner
+from .runtime import RUNTIME_PROFILE, Runner
 from .rules import ATOMIC_EAGLES_2022
 from .ultrasonic import PROFILE as ULTRASONIC_PROFILE
 
@@ -56,7 +56,7 @@ def main():
         'programs': programs, 'programHashes': [hashlib.sha256(p.encode()).hexdigest() for p in programs],
         'robotHash': hashlib.sha256((ROOT/'artifacts/robot/robot.json').read_bytes()).hexdigest(),
         'arena': vars(ATOMIC_EAGLES_2022.arena(args.timeout)), 'rules': ATOMIC_EAGLES_2022.info(),
-        'ultrasonicModel': ULTRASONIC_PROFILE,
+        'ultrasonicModel': ULTRASONIC_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE, 'runtime': RUNTIME_PROFILE,
         'bouts': bouts}, indent=2))
 
 

@@ -9,6 +9,15 @@ from .robot import load_robot, make_model, rotate, wxyz
 from .ultrasonic import sample as sample_ultrasonic
 
 
+IMU_TILT_PROFILE = {
+    'id': 'orientation-tilt-v1', 'fidelity': 'uncalibrated',
+    'frame': 'robot forward +Z, left +X, up +Y; right-handed configured neutral mounting',
+    'output': 'pitch, roll in degrees; Pybricks v4.0.1 gravity-vector convention',
+    'sampleHz': 100, 'noiseStdDegrees': .1,
+    'assumptions': 'Orientation-derived calibrated tilt approximation; independent Gaussian angle noise. No firmware fusion, acceleration contamination, calibration transient or measured error model.',
+}
+
+
 @dataclass(frozen=True)
 class Arena:
     # House arena defaults, not an asserted external competition standard.
@@ -228,6 +237,17 @@ class World:
         values = {'distance': int(distance), 'reflection': int(np.clip(round(reflection+rng.normal(0, .8)), 0, 100)),
                   # Assumed gyro bias/drift, not an exact world heading exposed to programs.
                   'heading': math.degrees(math.atan2(forward[0], forward[2])) + .05*self.data.time + rng.normal(0, .08)}
+        # Pybricks' calibrated tilt uses an estimated gravity direction in the
+        # robot frame (forward, left, up), not raw acceleration or ground speed.
+        left_up = rotate(quaternion, [1, 0, 0])[1]
+        up_up = rotate(quaternion, [0, 1, 0])[1]
+        pitch = math.degrees(math.atan2(-forward[1], math.hypot(left_up, up_up)))
+        roll = math.degrees(math.atan2(left_up, up_up))
+        # Separate RNG domain preserves every pre-existing sensor noise draw.
+        tilt_rng = np.random.default_rng(np.random.SeedSequence([self.seed, bot, tick, 0x54494C54]))
+        pitch_noise, roll_noise = tilt_rng.normal(0, IMU_TILT_PROFILE['noiseStdDegrees'], 2)
+        values['tilt'] = (float(np.clip(pitch+pitch_noise, -90, 90)),
+                          float((roll+roll_noise+180) % 360-180))
         self.sensor_tick[bot] = tick
         self.sensor_cache[bot] = values
         return dict(values)

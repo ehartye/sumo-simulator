@@ -13,9 +13,9 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 import mujoco
 
-from .physics import World
+from .physics import IMU_TILT_PROFILE, World
 from .robot import ROOT, load_robot
-from .runtime import Runner
+from .runtime import RUNTIME_PROFILE, Runner
 from .rules import ATOMIC_EAGLES_2022
 from .ultrasonic import PROFILE as ULTRASONIC_PROFILE
 
@@ -68,7 +68,7 @@ class Step(BaseModel):
 @app.get('/api/info')
 def info():
     robot = load_robot()
-    return {'robot': robot, 'arena': vars(ATOMIC_EAGLES_2022.arena()), 'rules': ATOMIC_EAGLES_2022.info(), 'ultrasonicModel': ULTRASONIC_PROFILE, 'engine': f'MuJoCo {mujoco.__version__}',
+    return {'robot': robot, 'arena': vars(ATOMIC_EAGLES_2022.arena()), 'rules': ATOMIC_EAGLES_2022.info(), 'ultrasonicModel': ULTRASONIC_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE, 'runtime': RUNTIME_PROFILE, 'engine': f'MuJoCo {mujoco.__version__}',
             'examples': {p.stem: p.read_text() for p in sorted((ROOT/'examples').glob('*.py'))},
             'fidelity': 'Catalog geometry and mass; dynamics uncalibrated; synchronous Pybricks subset.'}
 
@@ -92,8 +92,8 @@ def reset(request: Start):
                     'programHashes': [hashlib.sha256(p.encode()).hexdigest() for p in request.programs],
                     'robotHash': hashlib.sha256((ROOT/'artifacts/robot/robot.json').read_bytes()).hexdigest(),
                     'engine': f'MuJoCo {mujoco.__version__}', 'timestep': world.model.opt.timestep,
-                    'arena': vars(world.arena), 'rules': ATOMIC_EAGLES_2022.info(), 'fidelity': 'uncalibrated', 'runtime': 'sync-subset-v1',
-                    'ultrasonicModel': ULTRASONIC_PROFILE, 'sensorLogFile': str(sensor_log_path)}
+                    'arena': vars(world.arena), 'rules': ATOMIC_EAGLES_2022.info(), 'fidelity': 'uncalibrated', 'runtime': RUNTIME_PROFILE,
+                    'ultrasonicModel': ULTRASONIC_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE, 'sensorLogFile': str(sensor_log_path)}
         metadata['sensorMetadataFile'] = str(sensor_log_path.with_suffix('.metadata.json'))
         metadata['eventLogFile'] = sensor_log_path.with_name(sensor_log_path.name.replace('-ultrasonic', '-events')).as_posix()
         sensor_log_path.with_suffix('.metadata.json').write_text(json.dumps(metadata, indent=2), encoding='utf-8')

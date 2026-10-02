@@ -8,10 +8,10 @@ import time
 
 import mujoco
 
-from sumo.physics import World
+from sumo.physics import IMU_TILT_PROFILE, World
 from sumo.robot import ROOT
 from sumo.rules import ATOMIC_EAGLES_2022
-from sumo.runtime import Runner
+from sumo.runtime import RUNTIME_PROFILE, Runner
 from sumo.ultrasonic import PROFILE
 
 
@@ -39,7 +39,7 @@ def run_bout(task):
                 'engine': f'MuJoCo {mujoco.__version__}', 'timestep': world.model.opt.timestep,
                 'arena': vars(world.arena), 'rules': ATOMIC_EAGLES_2022.info(),
                 'friction': task['friction'], 'ultrasonicModel': PROFILE,
-                'fidelity': 'uncalibrated', 'runtime': 'sync-subset-v1'}
+                'fidelity': 'uncalibrated', 'runtime': RUNTIME_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE}
     with Runner(world, programs, rules=ATOMIC_EAGLES_2022) as runner:
         frames = [runner.snapshot()]
         while not world.result:

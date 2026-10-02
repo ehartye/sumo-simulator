@@ -54,7 +54,7 @@ The target is **synchronous Pybricks v4 style**, implemented with CPython device
 | `run_time`, `run_angle`, `run_target` | `then=Stop.COAST/BRAKE/HOLD`, `wait=True/False`; approximate controller |
 | `ColorSensor(Port.C).reflection()` | Downward ring reflectance 0–100 |
 | `UltrasonicSensor(Port.D).distance()` | Dense 3D cone, millimeters; 2000 for no valid return |
-| `PrimeHub()` | Relative/unwrapped `imu.heading()`, `battery.voltage()` in mV |
+| `PrimeHub()` | Relative/unwrapped `imu.heading()`, `imu.tilt()` pitch/roll in degrees ([assumptions](docs/imu.md)), `battery.voltage()` in mV |
 | `wait(ms)`, `StopWatch.time/reset` | Shared simulation clock, independent bot waits |
 | `Port`, `Direction`, `Stop`, `math`, limited `random` | Explicit enums and per-worker seeded PRNG |
 

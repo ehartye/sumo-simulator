@@ -14,8 +14,11 @@ import traceback
 from types import ModuleType
 
 
+RUNTIME_PROFILE = 'sync-subset-v2'
+
+
 SUPPORTED_API = {
-    'pybricks.hubs': ['PrimeHub: imu.heading(), battery.voltage()'],
+    'pybricks.hubs': ['PrimeHub: imu.heading(), imu.tilt(calibrated=True), battery.voltage()'],
     'pybricks.pupdevices': [
         'Motor(A/B, positive_direction=CLOCKWISE): run, dc, stop, brake, hold, angle, speed, reset_angle, run_time, run_angle, run_target',
         'ColorSensor(C).reflection()', 'UltrasonicSensor(D).distance()',
@@ -29,6 +32,7 @@ SUPPORTED_API = {
                     'Encoders: integer degrees at 100 Hz; speed is the finite difference of these samples.',
                     'Motor run_* supports then=Stop.HOLD and wait=True/False.',
                     'Motor angle/speed use degrees and degrees/second; battery voltage uses millivolts.',
+                    'IMU tilt returns (pitch, roll) in degrees in the fixed robot neutral frame; calibrated=False is unsupported. Tilt error model is uncalibrated.',
                     'A program error loses the match; errors on the same scheduler tick draw. Completed programs coast.',
                     'No security sandbox; trusted local programs only.'],
 }
@@ -169,6 +173,11 @@ def _worker(connection, source, seed):
     class IMU:
         def heading(self):
             return rpc('heading')
+
+        def tilt(self, calibrated=True):
+            if calibrated is not True:
+                raise UnsupportedAPIError('Unsupported API: imu.tilt(calibrated=False); only calibrated tilt is modeled')
+            return rpc('sensor', 'tilt')
 
     class Battery:
         def voltage(self):
