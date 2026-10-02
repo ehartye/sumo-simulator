@@ -129,7 +129,7 @@ def test_runtime_and_saved_trial_metadata_declare_uncalibrated_tilt(tmp_path):
     from sumo.server import info
     from tools.strategy_tournament import run_bout
 
-    assert RUNTIME_PROFILE == 'sync-subset-v3'
+    assert RUNTIME_PROFILE == 'sync-subset-v4'
     assert 'imu.tilt(calibrated=True)' in SUPPORTED_API['pybricks.hubs'][0]
     assert info()['imuTiltModel'] == IMU_TILT_PROFILE
     path = tmp_path/'tilt-bout.json'

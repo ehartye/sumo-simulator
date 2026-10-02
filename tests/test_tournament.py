@@ -1,4 +1,5 @@
 from tools.strategy_tournament import score_bouts, run_bout
+import pytest
 
 
 def test_challenger_scoring_counts_draws_and_both_sides():
@@ -26,16 +27,19 @@ def test_recorded_rule_fault_result_blocks_promotion():
     assert score['faults'] == 6 and not score['promote']
 
 
-def test_recorded_trial_maps_swapped_winner_and_preserves_visual_replay(tmp_path):
+@pytest.mark.parametrize('runtime_profile', ['sync-subset-v3', 'sync-subset-v4'])
+def test_recorded_trial_maps_swapped_winner_and_preserves_visual_replay(tmp_path, runtime_profile):
     import json
     trial = run_bout({
         'programs': ['raise ValueError("test fault")', 'pass'], 'names': ['challenger', 'incumbent'],
         'seed': 11, 'swapped': True, 'timeout': 1, 'friction': .8,
         'path': str(tmp_path/'bout.json'),
+        'runtime_profile': runtime_profile,
     })
     assert trial['winningProgram'] == 1 and trial['challengerFault']
     replay = json.loads((tmp_path/'bout.json').read_text())
     assert replay['metadata']['names'] == ['incumbent', 'challenger']
+    assert replay['metadata']['runtime'] == runtime_profile
     assert replay['metadata']['programs'][1].startswith('raise')
     assert replay['frames'][-1]['result']['winner'] == 0
     assert replay['events'][-1]['type'] == 'match_ended'

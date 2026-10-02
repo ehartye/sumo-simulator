@@ -2,7 +2,8 @@
 
 Workers are process-isolated for lifecycle control, NOT a security sandbox. Run only
 trusted programs. Hardware calls take one 1 ms scheduler slot; wait uses simulated
-time. Python CPU-only work must reach its next hardware call within cpu_timeout.
+time. Diagnostic prints consume no simulated time in v4. Python CPU-only work
+must reach its next hardware call within cpu_timeout.
 """
 import ast
 import builtins
@@ -10,11 +11,14 @@ from enum import Enum, IntEnum
 import math
 import multiprocessing
 import random
+import time
 import traceback
 from types import ModuleType
 
 
-RUNTIME_PROFILE = 'sync-subset-v3'
+RUNTIME_PROFILE = 'sync-subset-v4'
+RUNTIME_PROFILES = ('sync-subset-v3', RUNTIME_PROFILE)
+PRINT_BURST_LIMIT = 1024
 
 
 SUPPORTED_API = {
@@ -29,6 +33,8 @@ SUPPORTED_API = {
     'standard_library': ['math', 'random: random, randint, randrange, uniform, choice, seed'],
     'limitations': ['Synchronous Python only; no async/await, multitask or DriveBase.',
                     '1 ms hardware-call scheduling; sensors update at 100 Hz.',
+                    'v4 diagnostic prints take no simulated time; they are not a model of real hub print latency. v3 scheduling remains selectable for historical trials.',
+                    'Prints count toward the operation limit; a burst over 1024 without a hardware yield is rejected.',
                     'Encoders: integer degrees at 100 Hz; speed is the finite difference of these samples.',
                     'Motor run_* supports then=Stop.HOLD and wait=True/False.',
                     'Motor angle/speed use degrees and degrees/second; battery voltage uses millivolts.',
@@ -264,13 +270,17 @@ class Runner:
     stops at a match result or the simulation limit. Completed programs coast.
     Always close(), or use this object as a context manager, to reap workers.
     """
-    def __init__(self, world, programs, *, cpu_timeout=1.0, operation_limit=100000, rules=None):
+    def __init__(self, world, programs, *, cpu_timeout=1.0, operation_limit=100000, rules=None,
+                 runtime_profile=RUNTIME_PROFILE):
         if len(programs) != 2 or any(not isinstance(program, str) for program in programs):
             raise ValueError('Runner needs exactly two Python source strings')
         if not math.isclose(world.model.opt.timestep, .001, abs_tol=1e-12):
             raise ValueError('Program runner requires a 1 ms physics timestep')
         if not 0 < cpu_timeout <= 30 or not isinstance(operation_limit, int) or operation_limit < 1:
             raise ValueError('Invalid CPU timeout or operation limit')
+        if runtime_profile not in RUNTIME_PROFILES:
+            raise ValueError('Unsupported runtime profile')
+        self.runtime_profile = runtime_profile
         self.world, self.cpu_timeout, self.operation_limit = world, cpu_timeout, operation_limit
         from .rules import StartProtocol
         self.rules = StartProtocol(rules, world) if rules is not None else None
@@ -359,29 +369,40 @@ class Runner:
         if self.waiting[bot] is not None:
             return
         connection = self.connections[bot]
-        if not connection.poll(self.cpu_timeout):
-            self._stop(bot, 'error', f'CPU time limit: program did not yield within {self.cpu_timeout:g} wall seconds')
-            return
-        try:
-            message = connection.recv()
-        except (EOFError, OSError):
-            self._stop(bot, 'error', 'Python worker exited without a completion message')
-            return
-        if message[0] == 'done':
-            self._stop(bot, 'done')
-            return
-        if message[0] == 'error':
-            self._stop(bot, 'error', message[1])
-            return
-        self.programs[bot]['operations'] += 1
-        if self.programs[bot]['operations'] > self.operation_limit:
-            self._stop(bot, 'error', f'Program operation limit exceeded ({self.operation_limit})')
-            return
-        _, operation, args = message
-        try:
-            self._dispatch(bot, operation, args)
-        except (ValueError, TypeError, KeyError) as error:
-            connection.send(('error', str(error)))
+        prints = 0
+        deadline = time.monotonic() + self.cpu_timeout
+        while True:
+            remaining = deadline-time.monotonic() if self.runtime_profile == RUNTIME_PROFILE else self.cpu_timeout
+            if remaining <= 0 or not connection.poll(remaining):
+                self._stop(bot, 'error', f'CPU time limit: program did not yield within {self.cpu_timeout:g} wall seconds')
+                return
+            try:
+                message = connection.recv()
+            except (EOFError, OSError):
+                self._stop(bot, 'error', 'Python worker exited without a completion message')
+                return
+            if message[0] == 'done':
+                self._stop(bot, 'done')
+                return
+            if message[0] == 'error':
+                self._stop(bot, 'error', message[1])
+                return
+            self.programs[bot]['operations'] += 1
+            if self.programs[bot]['operations'] > self.operation_limit:
+                self._stop(bot, 'error', f'Program operation limit exceeded ({self.operation_limit})')
+                return
+            _, operation, args = message
+            if operation == 'print' and self.runtime_profile == RUNTIME_PROFILE:
+                prints += 1
+                if prints > PRINT_BURST_LIMIT:
+                    self._stop(bot, 'error', f'Diagnostic print burst limit exceeded ({PRINT_BURST_LIMIT})')
+                    return
+            try:
+                self._dispatch(bot, operation, args)
+            except (ValueError, TypeError, KeyError) as error:
+                connection.send(('error', str(error)))
+            if operation != 'print' or self.runtime_profile != RUNTIME_PROFILE:
+                return
 
     def _dispatch(self, bot, operation, args):
         value = None

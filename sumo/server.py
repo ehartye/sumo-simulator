@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 import mujoco
 
 from .physics import IMU_TILT_PROFILE, World
+from .observation_log import ObservationLogWriter
 from .robot import ROOT, load_robot
 from .runtime import RUNTIME_PROFILE, Runner
 from .rules import ATOMIC_EAGLES_2022
@@ -27,29 +28,38 @@ LOG_ROOT = ROOT/'.cache/runs'
 sensor_log_path = None
 sensor_log_count = 0
 event_log_count = 0
+log_writer = None
 
 
-def flush_sensor_log():
+def queue_observation_log():
     global sensor_log_count, event_log_count
     samples = runner.world.ultrasonic_log[sensor_log_count:]
     if samples:
-        with sensor_log_path.open('a', encoding='utf-8') as stream:
-            for sample in samples:
-                stream.write(json.dumps(sample)+'\n')
+        log_writer.submit(sensor_log_path, samples)
         sensor_log_count += len(samples)
     events = runner.world.events[event_log_count:]
     if events:
-        with Path(metadata['eventLogFile']).open('a', encoding='utf-8') as stream:
-            for event in events:
-                stream.write(json.dumps(event)+'\n')
+        log_writer.submit(metadata['eventLogFile'], events)
         event_log_count += len(events)
 
 
 @asynccontextmanager
 async def lifespan(app):
-    yield
-    if runner:
-        runner.close()
+    global runner, log_writer
+    log_writer = ObservationLogWriter()
+    try:
+        yield
+    finally:
+        with lock:
+            if runner:
+                queue_observation_log()
+                runner.close()
+                runner = None
+        log_writer.close()
+
+
+def observation_status():
+    return {'scope': 'server lifetime', **log_writer.status()} if log_writer else None
 
 
 app = FastAPI(lifespan=lifespan)
@@ -99,8 +109,8 @@ def reset(request: Start):
         sensor_log_path.with_suffix('.metadata.json').write_text(json.dumps(metadata, indent=2), encoding='utf-8')
         snapshot = runner.snapshot()
         recording = [snapshot]
-        flush_sensor_log()
-        return {**snapshot, 'events': list(world.events)}
+        queue_observation_log()
+        return {**snapshot, 'events': list(world.events), 'observationLog': observation_status()}
 
 
 @app.get('/api/strategy-selection')
@@ -116,7 +126,8 @@ def strategy_selection():
         source = examples[name].read_text(encoding='utf-8')
         selection[role] = {'name': name, 'source': source}
         raw += source.encode()
-    return {**selection, 'revision': hashlib.sha256(raw).hexdigest()}
+    raw += RUNTIME_PROFILE.encode()
+    return {**selection, 'currentRuntime': RUNTIME_PROFILE, 'revision': hashlib.sha256(raw).hexdigest()}
 
 
 @app.post('/api/step')
@@ -133,8 +144,8 @@ def step(request: Step):
             recording.append(snapshot)
         else:
             recording[-1] = snapshot
-        flush_sensor_log()
-        return {**snapshot, 'events': runner.world.events[previous_count:]}
+        queue_observation_log()
+        return {**snapshot, 'events': runner.world.events[previous_count:], 'observationLog': observation_status()}
 
 
 @app.get('/api/replay')
@@ -142,14 +153,15 @@ def replay():
     with lock:
         return {'version': 1, 'metadata': metadata, 'frames': recording,
                 'events': list(runner.world.events) if runner else [],
-                'ultrasonicSamples': list(runner.world.ultrasonic_log) if runner else []}
+                'ultrasonicSamples': list(runner.world.ultrasonic_log) if runner else [],
+                'observationLog': observation_status()}
 
 
 @app.get('/api/events')
 def events():
     with lock:
         return {'logFile': metadata.get('eventLogFile'),
-                'events': list(runner.world.events) if runner else []}
+                'events': list(runner.world.events) if runner else [], 'observationLog': observation_status()}
 
 
 @app.get('/api/diagnostics')
@@ -157,7 +169,7 @@ def diagnostics():
     with lock:
         return {'model': ULTRASONIC_PROFILE, 'logFile': str(sensor_log_path) if sensor_log_path else None,
                 'metadataFile': metadata.get('sensorMetadataFile'),
-                'samples': list(runner.world.ultrasonic_log) if runner else []}
+                'samples': list(runner.world.ultrasonic_log) if runner else [], 'observationLog': observation_status()}
 
 
 app.mount('/assets', StaticFiles(directory=ROOT/'artifacts/robot'), name='assets')

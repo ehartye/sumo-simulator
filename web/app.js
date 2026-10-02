@@ -143,12 +143,15 @@ function eventText(event) {
 function displayEvents(frame) {
   const filter = $('event-filter').value;
   const occurred = events.filter(event => event.id < frame.eventCount);
-  const key = `${occurred.length}:${filter}`;
+  const log = frame.observationLog || loadedReplay?.observationLog;
+  const loggingIncomplete = !!(log?.error || log?.failedBatches || log?.droppedBatches);
+  const key = `${occurred.length}:${filter}:${loggingIncomplete}`;
   if (key === eventViewKey) return;
   eventViewKey = key;
   const first = type => occurred.find(event => event.type === type);
   const spotted = first('opponent_spotted'), contact = first('contact_started');
   $('event-summary').textContent = `${spotted ? 'First opponent echo '+spotted.time.toFixed(3)+' s' : 'No opponent spotted'} · ${contact ? 'First robot contact '+contact.time.toFixed(3)+' s' : 'No robot contact'} · ${occurred.length} events recorded`;
+  if (loggingIncomplete) $('event-summary').textContent += ' · Disk logging incomplete; save the replay to retain observations.';
   const filtered = occurred.filter(event => filter === 'all' ||
     (filter === 'sensor' && event.type.startsWith('opponent_')) ||
     (filter === 'contact' && event.type.startsWith('contact_')) ||
@@ -242,8 +245,9 @@ async function control(action) {
 function showBestSelection() {
   $('load-best').disabled = $('inspect-best').disabled = !bestSelection;
   if (!bestSelection) { $('best-label').textContent = 'No tested strategy selected yet'; return; }
-  const { champion, opponent, loop, score, revision } = bestSelection;
-  $('best-label').textContent = `${revision === appliedRevision ? 'Loaded' : 'Available'} incumbent · ${champion.name.replaceAll('_', ' ')} · loop ${loop} · ${score.wins}W / ${score.draws}D / ${score.losses}L vs ${opponent.name.replaceAll('_', ' ')}`;
+  const { champion, opponent, loop, score, revision, testedRuntime, currentRuntime } = bestSelection;
+  const historical = testedRuntime && currentRuntime && testedRuntime !== currentRuntime;
+  $('best-label').textContent = `${revision === appliedRevision ? 'Loaded' : 'Available'} incumbent · ${champion.name.replaceAll('_', ' ')} · loop ${loop} · ${score.wins}W / ${score.draws}D / ${score.losses}L vs ${opponent.name.replaceAll('_', ' ')}${historical ? ' · Score measured with older logging timing; current timing unvalidated.' : ''}`;
 }
 function applyBestSelection() {
   if (!bestSelection) return;

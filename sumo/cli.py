@@ -6,7 +6,7 @@ from uuid import uuid4
 
 from .physics import IMU_TILT_PROFILE, World
 from .robot import ROOT
-from .runtime import RUNTIME_PROFILE, Runner
+from .runtime import RUNTIME_PROFILE, RUNTIME_PROFILES, Runner
 from .rules import ATOMIC_EAGLES_2022
 from .ultrasonic import PROFILE as ULTRASONIC_PROFILE
 
@@ -23,6 +23,7 @@ def main():
     batch.add_argument('--seed', type=int, default=0)
     batch.add_argument('--timeout', type=float, default=120, help='Simulation limit in seconds (profile default: 120)')
     batch.add_argument('--out', type=Path, default=Path('artifacts/batch.json'))
+    batch.add_argument('--runtime-profile', choices=RUNTIME_PROFILES, default=RUNTIME_PROFILE)
     args = parser.parse_args()
     if args.command == 'serve':
         import uvicorn
@@ -38,7 +39,7 @@ def main():
     for pair in range(args.pairs):
         for swapped in (False, True):
             order = programs[::-1] if swapped else programs
-            with Runner(World(seed=args.seed+pair, arena=ATOMIC_EAGLES_2022.arena(args.timeout), outward_start=True), order, rules=ATOMIC_EAGLES_2022) as runner:
+            with Runner(World(seed=args.seed+pair, arena=ATOMIC_EAGLES_2022.arena(args.timeout), outward_start=True), order, rules=ATOMIC_EAGLES_2022, runtime_profile=args.runtime_profile) as runner:
                 final = runner.run_until_done()
                 result = final['result']
                 winner = result['winner'] if result else None
@@ -56,7 +57,7 @@ def main():
         'programs': programs, 'programHashes': [hashlib.sha256(p.encode()).hexdigest() for p in programs],
         'robotHash': hashlib.sha256((ROOT/'artifacts/robot/robot.json').read_bytes()).hexdigest(),
         'arena': vars(ATOMIC_EAGLES_2022.arena(args.timeout)), 'rules': ATOMIC_EAGLES_2022.info(),
-        'ultrasonicModel': ULTRASONIC_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE, 'runtime': RUNTIME_PROFILE,
+        'ultrasonicModel': ULTRASONIC_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE, 'runtime': args.runtime_profile,
         'bouts': bouts}, indent=2))
 
 

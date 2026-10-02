@@ -11,7 +11,7 @@ import mujoco
 from sumo.physics import IMU_TILT_PROFILE, World
 from sumo.robot import ROOT
 from sumo.rules import ATOMIC_EAGLES_2022
-from sumo.runtime import RUNTIME_PROFILE, Runner
+from sumo.runtime import RUNTIME_PROFILE, RUNTIME_PROFILES, Runner
 from sumo.ultrasonic import PROFILE
 
 
@@ -33,14 +33,15 @@ def run_bout(task):
     names = task['names'][::-1] if swapped else task['names']
     world = World(seed=task['seed'], arena=ATOMIC_EAGLES_2022.arena(task['timeout']),
                   outward_start=True, friction=task['friction'])
+    runtime_profile = task.get('runtime_profile', RUNTIME_PROFILE)
     metadata = {'seed': task['seed'], 'programs': programs, 'names': names,
                 'programHashes': [hashlib.sha256(p.encode()).hexdigest() for p in programs],
                 'robotHash': hashlib.sha256((ROOT/'artifacts/robot/robot.json').read_bytes()).hexdigest(),
                 'engine': f'MuJoCo {mujoco.__version__}', 'timestep': world.model.opt.timestep,
                 'arena': vars(world.arena), 'rules': ATOMIC_EAGLES_2022.info(),
                 'friction': task['friction'], 'ultrasonicModel': PROFILE,
-                'fidelity': 'uncalibrated', 'runtime': RUNTIME_PROFILE, 'imuTiltModel': IMU_TILT_PROFILE}
-    with Runner(world, programs, rules=ATOMIC_EAGLES_2022) as runner:
+                'fidelity': 'uncalibrated', 'runtime': runtime_profile, 'imuTiltModel': IMU_TILT_PROFILE}
+    with Runner(world, programs, rules=ATOMIC_EAGLES_2022, runtime_profile=runtime_profile) as runner:
         frames = [runner.snapshot()]
         while not world.result:
             frames.append(runner.step(.05))
@@ -71,6 +72,7 @@ def main():
     parser.add_argument('--timeout', type=float, default=120)
     parser.add_argument('--friction', type=float, default=.8)
     parser.add_argument('--jobs', type=int, choices=(1, 2), default=2)
+    parser.add_argument('--runtime-profile', choices=RUNTIME_PROFILES, default=RUNTIME_PROFILE)
     args = parser.parse_args()
     seeds = [int(s) for s in args.seeds.split(',')]
     if args.out.exists() or not seeds or min(seeds) < 0 or not 1 <= args.timeout <= 120:
@@ -78,7 +80,7 @@ def main():
     args.out.mkdir(parents=True)
     paths = [args.challenger, args.incumbent]
     programs = [p.read_text(encoding='utf-8') for p in paths]
-    tasks = [{'programs': programs, 'names': [p.stem for p in paths], 'seed': seed, 'swapped': swapped,
+    tasks = [{'programs': programs, 'names': [p.stem for p in paths], 'seed': seed, 'swapped': swapped, 'runtime_profile': args.runtime_profile,
               'timeout': args.timeout, 'friction': args.friction,
               'path': str(args.out/f'seed-{seed}-swap-{int(swapped)}.json')}
              for seed in seeds for swapped in (False, True)]

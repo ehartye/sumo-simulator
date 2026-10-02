@@ -60,6 +60,8 @@ The target is **synchronous Pybricks v4 style**, implemented with CPython device
 
 Use CLOCKWISE on A and COUNTERCLOCKWISE on B for forward motion. Encoders are integer degrees at 100 Hz; speed is sampled finite difference. Hardware calls consume a 1 ms scheduling slot, a declared approximation. Sensors sample on the simulation clock at 100 Hz, including when no program reads them. Noise depends on seed/bot/sample time, so viewer polling does not affect outcomes.
 
+Runtime `sync-subset-v4` captures diagnostic prints without adding simulated ticks and moves live JSONL writes to a bounded background thread. Hardware scheduling and physics rates are unchanged. Logging status exposes backlog, overflow and disk errors; full observations remain in replay memory. Real hub print costs remain uncalibrated. [Logging timing and compatibility](docs/observation-logging.md) describes the limits and selectable legacy v3 profile. The incumbent's displayed score remains historical v3 evidence until revalidated under v4.
+
 Async tasks, `multitask`, `DriveBase`, gears, advanced control tuning and unlisted modes/APIs fail explicitly. The device interface exposes no opponent pose. Python introspection can bypass the convenience restrictions; only run trusted scripts.
 
 ## Sensor diagnostics
@@ -92,7 +94,7 @@ The UI and CLI use a **provisional Atomic Eagles 2022 profile with the user's 18
 
 The source ambiguously describes a minimum-radius arc; the user explicitly specified the stationary-wheel about-face used here. Ring height is assumed 25.4 mm because the source conflicts between 1 inch and 1.5 inches. Source spacing also says “gap”; current placement uses center separation. Tournament identity remains unconfirmed. The 10-second start deadline, 15-second deadlock reset, disabled-robot judgments and tournament scoring are not implemented. Full provenance and limitations are returned by `/api/info` and saved in replays.
 
-First physical outside-floor contact loses; simultaneous contact draws. Program faults and opening violations lose; same-tick faults draw. A completed program coasts while the bout continues. CPU-only code must yield within one wall second; the per-program cap is 100,000 hardware calls. `World()` alone retains the original 770 mm test arena and has no referee unless a rule profile is supplied.
+First physical outside-floor contact loses; simultaneous contact draws. Program faults and opening violations lose; same-tick faults draw. A completed program coasts while the bout continues. CPU-only code and diagnostic prints must reach a hardware yield within one wall second; the per-program cap is 100,000 operations, including prints. `World()` alone retains the original 770 mm test arena and has no referee unless a rule profile is supplied.
 
 Physics uses 1 ms steps, gravity, 3D chassis motion, wheel hinges, a passive caster ball and inter-bot contact. Torque comes from voltage/back-EMF, never imposed chassis velocity. Primitive collision proxies carry uniform-density inertia estimates. Same-robot parts do not self-collide; deformation, backlash, cable forces and chassis flex are absent.
 

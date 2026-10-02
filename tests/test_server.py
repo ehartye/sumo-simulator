@@ -10,6 +10,8 @@ def test_promoted_strategy_selection_and_scoped_replay_access():
         data = selection.json()
         assert len(data['revision']) == 64
         assert data['loop'] >= 1
+        assert data['testedRuntime']=='sync-subset-v3'
+        assert data['currentRuntime']=='sync-subset-v4'
         examples = client.get('/api/info').json()['examples']
         for role in ('champion', 'opponent'):
             assert data[role]['source'] == examples[data[role]['name']]
@@ -39,6 +41,7 @@ def test_http_match_replay_validation_and_program_failure():
         assert replay['events'][-1]['result'] == result['result']
         from pathlib import Path
         import json
-        saved = [json.loads(line) for line in Path(replay['metadata']['eventLogFile']).read_text().splitlines()]
-        assert saved == replay['events']
         assert client.post('/api/step', json={'seconds': .02}).json()['events'] == []
+    # File persistence is eventual; shutdown drains queued records.
+    saved = [json.loads(line) for line in Path(replay['metadata']['eventLogFile']).read_text().splitlines()]
+    assert saved == replay['events']

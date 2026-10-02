@@ -1,6 +1,7 @@
 {
   "loop": 21,
   "variantRevision": "b",
+  "testedRuntime": "sync-subset-v3",
   "champion": "weave_hook",
   "opponent": "pressure_memory",
   "score": {
